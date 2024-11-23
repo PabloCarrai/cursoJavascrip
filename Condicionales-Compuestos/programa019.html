@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     /*
+     Realizar  un  programa que solicite
+     la carga por teclado de dos numeros enteros
+     si el primero es  mayor al segundo informar
+     su suma y diferencia.  en caso contrario
+     informar el  producto y la division del primer con
+     el segundo
+     */   
+
+     let numero=parseInt(prompt("Ingrese un numero   "))
+     let numero1=parseInt(prompt("Ingrese otro numero  "))
+     let suma=numero+numero1
+     let resta=numero-numero1
+     let producto=numero*numero1
+     let division=numero/numero1
+     if (numero>numero1){
+        document.write("El primer numero es mas grande   ")
+        document.write("<br>")
+        document.write("Su suma es "+suma)
+        document.write("<br>")
+        document.write("Su resta es  "+resta)
+     }else {
+        document.write("El segundo numero es mas grande o igual   ")
+        document.write("<br>")
+        document.write("Su producto es "+producto)
+        document.write("<br>")
+        document.write("Su division es  "+division)
+
+     }
+
+    </script>
+</body>
+</html>
