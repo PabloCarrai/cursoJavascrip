@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Ingresar dos valores enteros por
+        teclado. Efectuar y mostrar la division del primero
+        respecto al segundo. Mostrar unmensaje que no se puede
+        efectuar la division en caso que el segundo valor
+        seaigual a cero
+
+        */
+
+        let num=parseInt(prompt("Ingrese un numero      "))
+        let num1=parseInt(prompt("Ingrese otro numero   "))
+        let division=num/num1
+        if (num1==0) {
+            document.write("El segundo numero es igual a 0")
+            document.write("<br>")
+            document.write("No se puede dividir por 0")
+        } else {
+            document.write("La division da "+division)
+        }
+
+        
+
+    </script>
+</body>
+</html>
