@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        /*
+        
+        Un postulante  aunempleo, realiza
+        untest de capacitaciony se obtiene la  siguiente
+        informacion. 
+        Cantidad total de preguntas que se realizaron
+        y la canidad de preguntas que contesto correctamente
+        Se pide confeccionar un programa que ingrese los dos
+        datos por teclado e informe el nivel del mismo  segun porcentaje 
+        de respuestas correctas que ha obtenido y sambiendo que
+
+        Nivel maximo: Porcentaje>=90%
+        Nivel medio: Porcentaje>=75% y <90%
+        Nivel regular: Porcentaje>=50% y <75%
+        Fuera de nivel: Porcentaje <50%
+        
+        */
+
+       let totalp=parseInt(prompt("Cantidad de preguntas? "))
+       let totalr=parseInt(prompt("Cantidad de aciertos? "))
+       let porcentaje=(totalr*100)/totalp
+       if (porcentaje>=90) {
+        document.write("Nivel Maximo  ")
+       }else {
+        if (porcentaje>=75) {
+            document.write("Nivel Medio ")
+        }else {
+            if (porcentaje>=50) {
+                document.write("Nivel Regular   ")
+            }else  {
+                document.write("Fuera de Nivel  ")
+            }            
+        }
+       } 
+
+    </script>
+</body>
+</html>
