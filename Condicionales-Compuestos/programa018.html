@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     /*
+     Ingresar por  teclado 3 notas de un alumno.
+     Calcular el promedio.Mostrar un  mensaj por pantalla
+     que diga "Promocionado" en caso de que el promedio sea
+     mayo o igual a 7
+     
+     */  
+      let nota=parseInt(prompt("Ingrese la primer nota "))  
+      let nota1=parseInt(prompt("Ingrese la segunda nota "))  
+      let nota2=parseInt(prompt("Ingrese la tercer nota "))  
+      let promedio = (nota + nota1 + nota2) / 3
+      if (promedio>=7) {
+        document.write("Promocionado")
+        document.write("<br>")
+        document.write("Su promedio es "+promedio)
+      }
+      
+    </script>
+</body>
+</html>
