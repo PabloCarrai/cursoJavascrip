@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Se cargan por  teclado tres numeros enteros
+        Mostrar por pantalla el mayor de ellos
+        
+        */
+       let num=parseInt(prompt("Ingrese el primer numero   "))
+       let num1=parseInt(prompt("Ingrese el segundo numero   "))
+       let num2=parseInt(prompt("Ingrese el tercer numero   "))
+       if (num>num1) {
+        if (num>num2) {
+            document.write("El numero mayor es "+num)
+        }else {
+            document.write("El numero mayor es "+num2)
+        }
+       }else {
+        if (num1>num2) {
+            document.write("El numero mayor es  "+num1)
+        }else {
+            document.write("El numero mayor es "+num2)
+        }
+       }
+
+    </script>
+</body>
+</html>

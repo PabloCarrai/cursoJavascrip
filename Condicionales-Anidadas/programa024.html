@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+
+        Se ingresa por teclado un valor entero.
+        Mostrar en el documento, y enla consola si
+        el numero es positivo,negativo o nulo
+        
+        
+        */
+        
+        let num=parseInt(prompt("Ingrese un numero"))
+        if (num==0) {
+            document.write("El numero es nulo "+num)
+            console.log("El numero es nulo "+num)
+        }else {
+            if (num>0){
+                document.write("El numero es positivo "+num)
+                console.log("El numero es positivo "+num)
+            }else {
+                document.write("El numero es negativo "+num)
+                console.log("El numero es negativo "+num)
+            }
+
+        }
+
+    </script>
+</body>
+</html>
