@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Confeccionar un programa  que pida por teclado
+        tres notas  de un alumno, calcule el promedio
+        e imprima  alguno de  estos mensajes
+        Si el  promedio es >=7 mosrar "Promocionado"
+        Si el  promedio es >=4 y <7 mostrar "Regular"
+        Si el  promedio es <4 mostrar "Reprobado"
+        
+        
+        */
+       let nota=parseFloat(prompt("Ingrese primer nota     "))
+       let nota1=parseFloat(prompt("Ingrese segunda nota   "))
+       let nota2=parseFloat(prompt("Ingrese tercer nota    "))
+       let promedio=(nota+nota1+nota2)/3
+       if (promedio>=7) {
+        document.write("Promocionado "+promedio)
+       } else if (promedio>=4 && promedio<7) {
+        document.write("Regular "+promedio)        
+       } else {
+        document.write("Reprobado "+promedio)
+       }
+       
+
+    </script>
+</body>
+</html>
