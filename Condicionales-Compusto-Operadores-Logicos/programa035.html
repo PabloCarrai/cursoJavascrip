@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Ingresar 3  valores enteros por teclados
+        Si  al menos uno de los valores ingresados  es
+        menor a 10, imprimir en pantalla la leyenda
+        "Alguno  de los  numeros es menor a diez" 
+        
+        */
+       let valor=parseInt(prompt("Ingrese un valor     "))
+       let valor1=parseInt(prompt("Ingrese otro valor    "))
+       let valor2=parseInt(prompt("Ingrese otro valor    "))
+       if (valor < 10 || valor1 < 10 || valor2 < 10) {
+        document.write("Alguno  de los  numeros es menor a diez")
+        document.write("<br>")
+        document.write("Valor: "+valor+" Valor1: "+valor1+" Valor2: "+valor2)
+       }
+       
+        
+
+    </script>
+</body>
+</html>

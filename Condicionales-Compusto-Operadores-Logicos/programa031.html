@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Se carga  una fecha(dia, mes, año) por teclado en
+        tres  variables distintas.
+        Mostrar  un mensaje si  corresponde al primer trimestre del año
+        dia: 10 mes:1 año:2022
+        
+        
+        */
+
+        let dia=parseInt(prompt("Ingrese dia "))
+        let mes=parseInt(prompt("Ingrese mes "))
+        let ano=parseInt(prompt("Ingrese año "))
+        if (mes==1 || mes==2 || mes==3) {
+            document.write("Pertenece al primer trimestre")
+            document.write("<br>")
+            document.write("Dia: "+dia+" Mes: "+mes+" Año: "+ano)
+        }
+        
+
+    </script>
+</body>
+</html>
