@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Ingresar  por teclado alguna de estas
+        dos comidas(pollo o tallarines) y seguidamente en otra 
+        variable ingresar un postre(helado o  flan)
+        Se sabe que el precio de dichos alimentos es:
+        pollo      $7
+        tallarines $4
+        helado     $3
+        flan       $2
+        
+        */
+       let comida=prompt("Ingrese un plato(pollo o tallarines)")
+       let postre=prompt("Ingrese un postre(helado o flan)")
+       if (comida=="pollo" && postre=="helado"){
+        document.write("Usted gasto $10")
+       }else {
+        if (comida=="pollo" && postre=="flan"){
+        document.write("Usted gasto $9")
+       }else {
+        if (comida=="tallarines" && postre=="helado"){
+            document.write("Usted gasto $7") 
+        }else {
+            if (comida=="tallarines" && postre=="flan"){
+                document.write("Usted gasto $6")  
+            }
+        }
+       }
+    }
+
+
+
+
+        
+
+    </script>
+</body>
+</html>

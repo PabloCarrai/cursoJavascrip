@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Codificar un programa en el cual
+        dada una lista de tres valores numericos enteros
+        se calcule e informe su rango de variacion
+        (Debe mostrar el menos y el mayor de ellos)
+        
+        */
+       let n1=parseInt(prompt("Ingrese un numero  "))
+       let n2=parseInt(prompt("Ingrese otro numero "))
+       let n3=parseInt(prompt("Ingrese otro numero"))
+       let mayor
+       let intermedio
+       let menor
+
+       if (n1>n2 && n1>n3) {
+        mayor=n1
+       }else {
+        if (n2>n1 && n2>n3 ){
+            mayor=n2
+        }else {
+            mayor=n3
+        }
+       }
+
+       if (n1<n2 && n1<n3) {
+        menor=n1
+       }else {
+        if (n2<n1 && n2<n3){
+            menor=n2
+        }else {
+            menor=n3
+        }
+       }
+
+       document.write("El mayor es "+mayor)
+       document.write("<br>")
+       document.write("El menor es  "+menor)
+
+        
+
+    </script>
+</body>
+</html>

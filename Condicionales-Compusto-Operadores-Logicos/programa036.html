@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Escribir un programa que pida
+        ingresar la coordenada deun punto en el plano
+        es decir  valores x e i(distinto a 0)
+        Posteriormente imprimir en pantalla en que cuadrante
+        se ubica dicho punto. 
+        Sabiendoque
+        1 cuadrante si  x > 0 y y > 0
+        2 cuadrante si  x < 0 y y > 0
+        3 cuadrante si  x < 0 y y < 0
+        4 cuadrante si  x > 0 y y < 0
+        
+        
+        */
+       let posicionx=parseInt(prompt("Ingrese la posicion de x "))
+       let posiciony=parseInt(prompt("Ingrese la posicion de y "))
+       if (posicionx>0 && posiciony>0) {
+        document.write("Primer Cuadrante ")
+        document.write("<br>")
+        document.write("Posicion x: "+posicionx)
+        document.write("<br>")
+        document.write("Posicion y: "+posiciony)       
+       }else {
+        if (posicionx<0 && posiciony>0) {
+        document.write("Segundo Cuadrante ")
+        document.write("<br>")
+        document.write("Posicion x: "+posicionx)
+        document.write("<br>")
+        document.write("Posicion y: "+posiciony)       
+       }else {
+        if (posicionx<0 && posiciony<0) {
+        document.write("Tercer Cuadrante ")
+        document.write("<br>")
+        document.write("Posicion x: "+posicionx)
+        document.write("<br>")
+        document.write("Posicion y: "+posiciony)       
+       }else {
+        if (posicionx>0 && posiciony<0) {
+        document.write("Cuarto Cuadrante ")
+        document.write("<br>")
+        document.write("Posicion x: "+posicionx)
+        document.write("<br>")
+        document.write("Posicion y: "+posiciony)       
+       }else {}
+       document.write("Se encuentra en los ejes ")
+       document.write("<br>")
+       document.write("Posicion x: "+posicionx)
+       document.write("<br>")
+       document.write("Posicion y: "+posiciony) 
+       }
+       }
+       }
+
+        
+
+    </script>
+</body>
+</html>
