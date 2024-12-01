@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Solicitar al operador el ingreso por teclado
+        de dos colores primarios(rojo,amarillo,azul), un
+        color en cada variable. Por ejemplo podemos llamar a las variables
+        color1, color2
+        Luego mostrar el color que se genere con su combinacion,
+        tener en cuenta que si se ingresa:
+        Rojo + Amarillo = Naranja
+        Azul + Rojo = Violeta
+        Amarillo + Azul = Verde
+
+        Pero tener cuidado ya que el operador puede cargar:
+        Amarillo + Rojo = Naranja
+        Rojo + Azul = Violeta
+        Azul + Amarillo = Verde
+               
+        */
+       let color1=prompt("Ingrese un color primario(Rojo, Amarillo o Azul)")
+       let color2=prompt("Ingrese otro color primario(Rojo, Amarillo o Azul)")
+       if ((color1=="Rojo" && color2=="Amarillo") || (color1=="Amarillo" && color2=="Rojo")) {
+        document.write("El color formado es Naranja ")
+        document.write("<br>")
+        document.write("Ya que eligio como primer color "+color1+" y como segundo "+color2)
+       } else {
+        if ((color1=="Azul" && color2=="Rojo") || (color1=="Rojo" && color2=="Azul")) {
+            document.write("El color formado es Violeta ")
+            document.write("<br>")
+            document.write("Ya que eligio como primer color "+color1+" y como segundo "+color2)
+        } else {
+            if ((color1=="Amarillo" && color2=="Azul") || (color1=="Azul" && color2=="Amarillo")) {
+                document.write("El color formado es Verde ")
+                document.write("<br>")
+                document.write("Ya que eligio como primer color "+color1+" y como segundo "+color2)
+            } else {
+                document.write("Tienes que elegir un color primario Valido(rojo,amarillo,azul) ")
+            }
+        }
+       }
+
+    </script>
+</body>
+</html>

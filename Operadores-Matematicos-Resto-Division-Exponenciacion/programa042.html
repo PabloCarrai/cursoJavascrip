@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Ingresar un numero entero por teclado y mostrar 
+        si es un multiplo de 3, de 5 o de ambos(utilizar el operador
+        matematico para obtener el resto de una division "%")
+        
+        
+        */
+       let num=parseInt(prompt("Ingrese un numero     "))
+       if ((num%3==0) && (num%5==0)) {
+        document.write("El numero "+num+" es multiplo de 3 y 5")
+       } else{
+        if (num%3==0) {
+            document.write("El numero "+num+" es multiplo de 3")
+
+        }else {
+            if (num%5==0) {
+                document.write("El numero "+num+" es multiplo de 5")  
+            }
+        }
+       }
+        </script>
+</body>
+</html>
