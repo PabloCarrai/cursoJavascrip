@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Desarrollar un programa que permita la carga
+        de 10 valores por teclado y nos muestre posteriormente 
+        la suma de los valores por teclado y su promedio 
+        
+        
+        */
+       let x=1
+       let suma=0
+       while (x<=10){
+        let valor=parseInt(prompt("Ingrese un valor"))
+        suma=suma+valor
+        x=x+1
+       }
+       let promedio=suma/10
+       document.write("El promedio es "+promedio)
+       document.write("<br>")
+       document.write("La suma es "+suma)
+        
+
+    </script>
+</body>
+</html>

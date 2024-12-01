@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Una planta que fabrica perfiles de hierro
+        posee un lote de n piezas.
+        Confeccionar un programa que pida ingresar por teclado la
+        cantidad de pierzas a procesar(n) y luego ingrese la longitud
+        de cada perfil; sabiendo que la pieza cuya longitud este
+        comprendida en el rango de 1.20 y 1.30 son aptas.
+        Imprimir por pantalla la cantidad de piezas aptas
+        que hay en el lote. 
+        
+        
+        */
+       let x=1
+       let cantidad=0
+       let n=parseInt(prompt("Ingrese la cantidad de piezas a ingresar "))
+       while (x<=n) {
+        let largo=parseFloat(prompt("Ingrese el largo de la pieza "))
+        if (largo>=1.20 && largo<=1.30) {
+            cantidad=cantidad+1            
+        }
+        x=x+1
+       }
+       document.write("La cantidad de piezas validas son "+cantidad)
+       
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Escribir un programa que solicite
+        ingresar 10 notas de alumnos y nos informe cuantos tienen
+        notas mayores o iguales a 7 y cuantos menores
+        
+        */
+       let contador=1
+       let contadoraprob=0
+       let contadordesap=0
+       while (contador<=10) {
+        let notas=parseFloat(prompt("Ingrese una nota "))
+        if (notas<7) {
+            contadordesap=contadordesap+1
+        }else {
+            contadoraprob=contadoraprob+1
+        }
+        contador=contador+1
+       }
+       document.write("La cantidad de notas aprobadas ="+contadoraprob)
+       document.write("<br>")
+       document.write("La cantidad de notas desaprobados ="+contadordesap)     
+
+    </script>
+</body>
+</html>
