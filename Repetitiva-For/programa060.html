@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        
+        
+        Escribir un programa que lea n numeros enteros
+        y calcule la cantidad de valores mayores o iguales a 1000
+        n se carga por teclado
+        */
+
+        let cantidad=0
+        let n=parseInt(prompt("Ingrese una cantidad"))
+        for (let f=1; f<=n; f++) {
+            let valor=parseInt(prompt("Ingrese un valor "))
+            if (valor>=1000) {
+                cantidad++
+            }
+        }
+        document.write("La cantidad de valores mayores e igual a 1000 es "+cantidad)
+        
+
+    </script>
+</body>
+</html>

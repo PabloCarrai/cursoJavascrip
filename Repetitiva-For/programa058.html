@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Escribir un programa que lea 10 notas de
+        alumnos y nos informe cuantos tiene notas mayores o iguales
+        a 7 y cuantos menores.
+        
+        */
+        let aprobados=0
+        let naprobados=0
+        for (let f=1;f<=10;f++) {
+            let notas=parseInt(prompt("Ingrese una nota    "))
+            if (notas>=7) {
+                aprobados++
+            }else {
+                naprobados++
+            }
+
+        }
+        document.write("Los aprobados son un total de "+aprobados+"<br>")
+        document.write("Los no aprobados son un total de "+naprobados)
+
+
+
+        
+
+    </script>
+</body>
+</html>

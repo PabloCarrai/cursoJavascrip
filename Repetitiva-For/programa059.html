@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        
+        
+        
+        Escribir un programa que lea 10 numeros
+        enteros y luego muestre cuantos valores ingresados fueron
+        multiplo de 3 y cuantos de 5
+        
+        */
+       let mult3=0
+       let mult5=0
+       for (let f=1; f<=10; f++) {
+        let valores=parseInt(prompt("Ingrese un numero "))
+        if (valores%3==0) {
+            mult3++
+        }
+        if (valores%5==0) {
+            mult5++
+        }        
+       }
+       document.write("Multiplos de 3 tenemos "+mult3+"<br>")
+       document.write("Multiplos de 5 tenemos "+mult5)
+        
+
+    </script>
+</body>
+</html>
