@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Confeccionar un algoritmo que
+        solicite el ingreso de dos numeros.
+        Mostrar los numeros enteros comprendidos entre
+        dichos valores. 
+        Cuando se inicie el programa pedir primero el numero
+        menor y luego el mayor. Si no carga en dicho orden el operador,
+        mostrar un mensaje de error.
+        Por ejemplo si ingresa primero el 10 y luego el 30 de uno a uno. 
+        Si ingresa primero el 100 y luego el 70 debe mostrar un mensaje de error.         
+        
+        */
+
+
+        let primerNumero=parseInt(prompt("Ingrese un numero "))
+        let segundoNumero=parseInt(prompt("Ingrese otro numero"))
+        if (primerNumero>segundoNumero) {
+            document.write("El primer numero "+primerNumero+" ingresado tiene que se mayor al segundo "+segundoNumero)
+        }else {
+            let contador=primerNumero
+            while (contador<=segundoNumero) {
+                document.write(contador+"<br>")
+                contador=contador+1
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

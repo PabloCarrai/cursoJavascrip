@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        
+        
+        Desarrollar un programa que permita
+        cargar n numeros enteros y luego nos informe cuantos valores
+        fueron par y cuantos impartes.
+        Emplear el operador % en la condicion de la estructura
+        condicional:
+        if (valor%2==0)  // si el if da verdadero luego es par.
+        
+        */
+
+        let cantidadNumeros=parseInt(prompt("Cuantos numeros va a ingresar?   "))
+        let contador=1
+        let contadorPar=0
+        let contadorInPar=0
+        while(contador<=cantidadNumeros) {
+            let numeroIngresado=parseInt(prompt("Ingrese un numero "))
+            if (numeroIngresado%2==0) {
+                contadorPar=contadorPar+1
+            }else{
+                contadorInPar=contadorInPar+1
+            }
+            contador=contador+1
+
+        }
+        document.write(cantidadNumeros+" numeros"+"<br>")
+        document.write("Par "+contadorPar)
+        document.write("<br>")
+        document.write("Impar "+contadorInPar)
+        
+
+    </script>
+</body>
+</html>
