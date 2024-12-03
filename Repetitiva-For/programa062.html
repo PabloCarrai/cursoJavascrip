@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        
+        Desarrollar un programa que
+        solicite la carga de 10 numeros e imprima la suma de los
+        ultimos 5 valores ingresados.         
+        */
+        let ultimos5=0
+        for (let x=1; x<=10; x++) {
+            let num=parseInt(prompt("Ingrese un numero   "))
+
+            if (x>5) {
+                ultimos5=ultimos5+num
+            }
+        }
+        document.write("Suma: "+ultimos5)
+        
+        
+
+    </script>
+</body>
+</html>
