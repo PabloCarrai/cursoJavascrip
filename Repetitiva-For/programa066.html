@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Escribir un programa que pida ingresar coordenadas(x,y)
+        que representen puntos en el plano
+        Informar cuantos puntos se han ingresado en el primer,
+        segundo, tercer y cuarto cuadrante. Al comenzar el programa
+        se pide que ingrese la cantidad de puntos a procesar. 
+
+        (BASADO En )
+        Escribir un programa que pida
+        ingresar la coordenada deun punto en el plano
+        es decir  valores x e i(distinto a 0)
+        Posteriormente imprimir en pantalla en que cuadrante
+        se ubica dicho punto. 
+        Sabiendoque
+        1 cuadrante si  x > 0 y y > 0
+        2 cuadrante si  x < 0 y y > 0
+        3 cuadrante si  x < 0 y y < 0
+        4 cuadrante si  x > 0 y y < 0
+      
+        
+        */
+       
+
+       let cantidad=parseInt(prompt("Cuantos puntos va a cargar? "))
+       let cpc=0
+       let csc=0
+       let ctc=0
+       let ccc=0
+       for (let x=1;x<=cantidad;x++) {
+       let posicionx=parseInt(prompt("Ingrese la posicion de x "))
+       let posiciony=parseInt(prompt("Ingrese la posicion de y "))
+       if (posicionx>0 && posiciony>0) {
+        cpc++        
+       }else {
+        if (posicionx<0 && posiciony>0) {
+            csc++
+       }else {
+        if (posicionx<0 && posiciony<0) {
+            ctc++
+       }else {
+        if (posicionx>0 && posiciony<0) {
+            ccc++
+       }
+       }
+       }
+       }
+    }
+    document.write("Primer Cuadrante "+cpc)
+    document.write("<br>")
+    document.write("Segundo Cuadrante "+csc)
+    document.write("<br>")
+    document.write("Tercer Cuadrante "+ctc)
+    document.write("<br>")
+    document.write("Cuarto Cuadrante "+ccc)
+    document.write("<br>")
+    document.write("Se encuentra en los ejes "+ce)
+    document.write("<br>")        
+
+    </script>
+</body>
+</html>
