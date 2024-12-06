@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        
+        Escribir un programa que solicite la carga de 
+        un numero entre 0 y 999, y nos muestre un mensaje con la funcion alert
+        de cuantos digitos tiene el mismo. Finalizar el programa
+        cuando se cargue el valor 0
+        
+        */
+       let valor
+       do {
+        valor=parseInt(prompt("Ingrese un numero "))
+        if (valor>=100) {
+            alert("3 Digitos "+valor)
+        } else {
+            if (valor>=10) {
+                alert("2 Digitos "+valor)
+        } else {
+            alert("1 Digito "+valor)
+        }
+        }
+       }
+       while (valor!=0)
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        
+        Se realiza la carga de 10 valores enteros por teclado. Se
+        desea conocer:
+        1) Cantidad de valores negativos
+        2) Cantidad de valores positivos
+        3) Cantidad de multiplos de 15
+        4) El valor acumulado de los numeros ingresados que son pares.
+        */
+        let cnegativos=0
+        let cpositivos=0
+        let cmultiplos=0
+        let cacumulativo=0
+        for (let i=1; i<=10; i++) {
+            let valor=parseInt(prompt("Ingrese un valor   "))
+            if (valor<0) {
+                cnegativos++
+            } else {
+                if (valor>0) {
+                    cpositivos++
+                }                
+            }
+            if (valor%15==0) {
+                cmultiplos++
+            }
+            if (valor%2==0) {
+                cacumulativo=cacumulativo+valor
+            }
+            }
+                        
+        document.write("Negativos "+cnegativos+"<br>")
+        document.write("Positivos "+cpositivos+"<br>")
+        document.write("Multiplos de 15 "+cmultiplos+"<br>")
+        document.write("Acumulativo "+cacumulativo+"<br>")
+        
+
+    </script>
+</body>
+</html>
