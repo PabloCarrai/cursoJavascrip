@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+    
+    
+    
+    Solicitar el ingreso de dos numeros
+    enteros y mostrar su suma, mediante un alert
+    Luego preguntar al usuario si quiere realizar la suma de otros dos numero,
+    Si ingresa la cadena "si" o "SI" continuar dentro del buble do/while para solicitar
+    carga de otros dos numeros con cualquier otra respuesta finalizar el ciclo
+    Cuando termine el bucle mostrar la cantidad de operaciones efectuadas. 
+    */
+   let respuesta
+   let cant=0
+   do {
+    let valor=parseInt(prompt("Ingrese un valor  "))
+    let valor1=parseInt(prompt("Ingrese otro valor  "))
+    let suma=valor+valor1
+    alert(suma)
+    cant++
+    respuesta=prompt("Quiere seguir cargando valores (si o SI) ")
+   }
+   while (respuesta=="si"||respuesta=="SI")
+   document.write("cantidad de operaciones "+cant)
+        
+
+    </script>
+</body>
+</html>

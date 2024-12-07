@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+
+
+        Generar valores aleatorios enteros
+        comprendidos entre 0 y 100.
+        Mientras no se genere el valor 0 proceder a contar la
+        cantidad de pares e impares.
+        Luego cuando se genere el 0 mostrar la cantidad de pares
+        e impares. 
+        */
+       let valor
+       let par=0
+       let inpar=0
+       do {
+        valor=Math.floor(Math.random()*101)
+        document.write(valor+"<br>")
+        if (valor%2==0) {
+            par++
+        } else {
+            inpar++
+            }
+       }
+       while (valor!=0)
+       document.write("<br>"+"Par "+par+" Impar "+inpar+"<br>")
+     </script>
+</body>
+</html>

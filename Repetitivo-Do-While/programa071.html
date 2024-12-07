@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        
+        Generar dos valores aleatorios comprendidos
+        entre 1 y 6.
+        Cada uno de dichos numeros representa el tirado de un 
+        dado.
+        Mostrar por pantalla los valores que se generaron por cada dado.
+        Si los dados tienen distintos valor, volver a tirar los dados.
+
+        */
+        let dado
+        let dado1
+        do {
+            dado=Math.floor(Math.random()*6 )+1
+            dado1=Math.floor(Math.random()*6 )+1
+            document.write("dado 1 - "+dado+" dado 2 - "+dado1+"<br>")
+        }
+        while (dado!=dado1)        
+
+    </script>
+</body>
+</html>

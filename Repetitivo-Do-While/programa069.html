@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        Escribir un programa que solicite la carga de
+        numeros por teclado, obtener su promedio. 
+        Finalizar la carga de valores cuando se cargue el valor
+        0, no tener en cuenta el cero para el promedio. 
+
+        */
+       let suma=0
+       let cant=0
+       let valor
+       do {
+        valor=parseInt(prompt("Ingrese un valor     "))
+        if (valor!=0) {            
+            suma=suma+valor
+            cant++
+        }
+       } while (valor!=0) 
+       if (cant!=0) {
+        let promedio=suma/cant
+        document.write("Promedio: "+promedio)
+       } else {
+        document.write("No se ingresaron valores. ")
+       }
+
+    </script>
+</body>
+</html>

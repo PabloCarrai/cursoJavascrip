@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        
+        
+        Solicitar el ingreso de una clave por teclado.
+        Permitir hasta tres intentos.
+        Mostrar un mensaje por la consola de "clave correcta", 
+        "clave incorrecta" o que "no tiene mas intentos".
+        La clave correcta es el string "abc123" 
+        */
+        let intentos=0
+        let clave
+        do {
+            clave=prompt("Ingrese su clave   ")            
+            if (clave!="abc123") {
+                console.log("clave incorrecta")
+                intentos++
+            }
+        } while (intentos!=3 && clave!="abc123")
+        if (clave=="abc123") {
+            console.log("clave correcta")
+        } else {
+            console.log("no tiene mas intentos")
+        }        
+
+    </script>
+</body>
+</html>

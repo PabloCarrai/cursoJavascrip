@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        
+        Codificar un programa que solicite
+        la carga de valores enteros y muestre si dicho valor es par o
+        impar.
+        Finalizar el programa al ingresar el numero 0(no mostrar
+        un mensaje si es par o impar al ingresar el 0)
+        Utilizar la llamada a la funcion "alert" para mostrar si es par o impar
+        */
+        let valor
+        do {
+            valor=parseInt(prompt("Ingrese un valor "))
+            if (valor==0){
+                alert("Adios")
+            }else {
+                if (valor%2==0) {
+                alert("Par "+valor)
+                }else {
+                    alert("Inpar "+valor)
+            }
+            }            
+        }
+        while(valor!=0)
+    
+
+    </script>
+</body>
+</html>
