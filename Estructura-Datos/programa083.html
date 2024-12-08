@@ -9,23 +9,14 @@
 
     <body>
         <script>
-            let sueldos = [1200, 750, 820, 550, 498]
-            document.write(sueldos[0])
-            document.write("<br>")
-            document.write(sueldos[1])
-            document.write("<br>")
-            document.write(sueldos[2])
-            document.write("<br>")
-            document.write(sueldos[3])
-            document.write("<br>")
-            document.write(sueldos[4])
-            document.write("<br>")
-
-            for (let indice = 0; indice < 5; indice++) {
-                document.write(sueldos[indice]+"<br>")
-             }
-
-
+            let arreglo = []
+            for (let f = 0; f < 5; f++) {
+                let elemento = parseInt(prompt("Ingrese un valor entero "))
+                arreglo.push(elemento)
+            }
+            for (let f = 0; f < arreglo.length; f++) {
+                document.write(arreglo[f] + "<br>")
+            }
         </script>
     </body>
 
