@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        Una empresa tiene dos turnos (mañana y tarde) en 
+        los que trabajan 8 empleados(3 por la mañana 5 por la 
+        tarde)
+        Confeccionar un programa que permita almacenar los sueldos de
+        los empleados agrupados por turnos(dos arreglos)
+        Imprimir los sueldos y el total en sueldos de cada turno. 
+        */
+        let stm = []
+        let stt = []
+        let ctm = 0
+        let ctt = 0
+        let sueldos
+        // cargo los 3 valores para el turno mañana
+        for (let f = 0; f < 3; f++) {
+            sueldos = parseInt(prompt("Ingrese los 3 sueldos del turno mañana "))
+            stm.push(sueldos)
+        }
+        // cargo los 5 valores para el turno mañana
+        for (let f = 0; f < 5; f++) {
+            sueldos = parseInt(prompt("Ingrese los 5 sueldos del turno mañana "))
+            stt.push(sueldos)
+        }
+
+        for (let f = 0; f < stm.length; f++) {
+            document.write("Los sueldos del turno mañana son $" + stm[f] + "<br>")
+            ctm = ctm + stm[f]
+        }
+        document.write("El total de sueldos del turno mañana es $" + ctm + "<br>")
+
+
+        for (let f = 0; f < 5; f++) {
+            document.write("Los sueldos del turno tarde son $" + stt[f] + "<br>")
+            ctt = ctt + stt[f]
+        }
+        document.write("El total de sueldos del turno tarde es $" + ctt + "<br>")
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
