@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        
+        
+        Ingresar por teclado tres numeros que
+        representen el dia, el mes y el año
+        Si se ingresan por teclado:
+        dia 25
+        mes 12
+        año 2023
+
+        Posteriormente mostrar en la pagina con siguiente formato:
+        Hoy es 25 de diciembre del 2023
+        */
+        let dia=parseInt(prompt("Ingrese el dia "))
+        let mes=parseInt(prompt("Ingrese el mes "))
+        let anio=parseInt(prompt("Ingrese el año "))
+        switch (mes) {
+            case 1: mes="Enero"
+                break
+            case 2: mes="Febrero" 
+                break
+            case 3: mes="Marzo"
+                break
+            case 4: mes="Abril"
+                break
+            case 5: mes="Mayo" 
+                break
+            case 6: mes="Junio"
+                break
+            case 7: mes="Julio"
+                break
+            case 8: mes="Agosto"
+                break
+            case 9: mes="Septiembre"
+                break
+            case 10: mes="Octubre" 
+                break
+            case 11: mes="Noviembre"
+                break
+            case 12: mes="Diciembre"
+                break
+            default: document.write("Mes no valido")
+                break
+
+        }
+        document.write("Hoy es "+dia+" de "+mes+" de "+anio)
+
+    </script>
+</body>
+</html>
