@@ -20,25 +20,28 @@
         */
 
         // array de las notas del curso A
-        let alumnosA = [9, 10, 7, 6, 10]
+        let alumnosA = [9, 7, 10, 8, 6]
         // Contador del curso A
         let caA = 0
         // promedio del curso A
         let paA
         // array de notas del curso B
-        let alumnosB = [10, 10, 8, 10, 10, 6, 10, 10]
+        let alumnosB = [6, 3, 8, 3, 4, 6, 2, 3]
         // Contador del curso B
         let caB = 0
         //promedio del curso B
         let paB
+        // sumo las notas y hago el promedio
         for (let x = 0; x < alumnosA.length; x++) {
             caA = caA + alumnosA[x]
             paA = caA / alumnosA.length
         }
+        // sumo las notas y hago el promedio
         for (let x = 0; x < alumnosB.length; x++) {
             caB = caB + alumnosB[x]
             paB = caB / alumnosB.length
         }
+        // veo quien tiene el promedio mayor o igual
         if (paA > paB) {
             document.write("El promedio del curso A " + paA + " es mayor al B " + paB)
         } else {

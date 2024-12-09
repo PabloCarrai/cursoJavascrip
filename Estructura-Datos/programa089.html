@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        Cargar un arreglo de 6 elementos
+        enteros. Verificar posteriormente si 
+        el mismo esta ordenado de menor a mayor
+        Por ejemplo si ingresamos
+        10-40-120-80-170-190
+        tiene que decir que no esta ordenado
+        10-40-120-180-210-210
+        decir que esta ordenado de menor a mayor
+        */
+        let arreglo = []
+        for (let x = 0; x < 6; x++) {
+            let valores = parseInt(prompt("Ingrese un valor  "))
+            arreglo.push(valores)
+        }
+
+        document.write(arreglo+"<br>")
+        document.write(arreglo.length+"<br>")
+        for (let x = 0; x <= arreglo.length; x++) { 
+            if (arreglo[x]<arreglo[x+1]) {
+                document.write("Bien")
+            }else {
+                document.write("Mal")
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
