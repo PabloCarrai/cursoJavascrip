@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        Se desea almacenar los sueldos de un conjunto de operarios
+        Cuando se ejecuta el programa se 
+        debe pedir la cantidad de sueldos a ingresar. Luego almacenar
+        en un arreglo los n sueldos ingresados
+        mostrar el contenido del arreglo, la suma de todos sus elementos y el promedio
+        */
+        let csi = parseInt(prompt("Cuantos sueldos va a cargar ?    "))
+        // sumatoria de todos los sueldos
+        let cst = 0
+        // array donde guardo los sueldos
+        let sueldos = []
+        let pro
+        for (let x = 0; x < csi; x++) {
+            let valores = parseFloat(prompt("Ingrese el sueldo "))
+            sueldos.push(valores)
+            cst = cst + sueldos[x]
+        }
+        for (let x=0;x<sueldos.length;x++) {
+            document.write("Los sueldos ingresados son "+sueldos[x]+"<br>")
+        }
+        //  promedio de sueldos
+        pro = cst / sueldos.length
+        document.write("El promedio es "+pro+"<br>")
+
+    </script>
+</body>
+
+</html>
