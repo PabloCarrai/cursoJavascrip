@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        
+        Realizar un programa que cree dos
+        arreglos numericos enteros de 4 elementos(por asignacion)
+        Sumar los componentes de cada arreglos, dichos resultados
+        guardarlo en un tercer arreglo del mismo tamaño. Sumar componente a componente
+        Ej:
+        let arrego1=[10,40,70,4]
+        let arrego2=[10,50,10,1]
+        Se genere
+                    [20, 90,80,5]
+        */
+
+        let arreglo1 = [10, 40, 70, 4]
+        let arreglo2 = [10, 50, 10, 1]
+        let arreglo0 = []
+
+        for (let x = 0; x < arreglo1.length; x++) {
+            arreglo0.push(arreglo1[x] + arreglo2[x])
+        }
+        for (let x = 0; x < arreglo0.length; x++) {
+            document.write("El primer array  " + arreglo1[x] + "<br>")
+            document.write("El segundo array  " + arreglo2[x] + "<br>")
+            document.write("La suma da " + arreglo0[x] + "<br>")
+        }
+
+
+    </script>
+</body>
+
+</html>
