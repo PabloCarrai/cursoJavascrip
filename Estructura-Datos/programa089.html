@@ -26,15 +26,23 @@
             arreglo.push(valores)
         }
 
-        document.write(arreglo+"<br>")
-        document.write(arreglo.length+"<br>")
-        for (let x = 0; x <= arreglo.length; x++) { 
-            if (arreglo[x]<arreglo[x+1]) {
-                document.write("Bien")
-            }else {
-                document.write("Mal")
+        for (let f = 0; f < 6; f++) {
+            document.write(arreglo[f] + " - ")
+        }
+        document.write("<br>")
+        let ordenado = true
+        for (let x = 0; x < arreglo.length - 1; x++) {
+            if (arreglo[x] > arreglo[x + 1]) {
+                ordenado = false
+
             }
         }
+        if (ordenado) {
+            document.write("El arreglo ordenado")
+        } else {
+            document.write("Desordenado")
+        }
+
 
 
     </script>
