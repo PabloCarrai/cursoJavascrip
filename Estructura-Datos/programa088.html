@@ -19,11 +19,35 @@
         para evitar perder el tiempo cargando por teclado. 
         */
 
-        let alumnoasA = [10, 8, 7, 9, 10]
+        // array de las notas del curso A
+        let alumnosA = [9, 10, 7, 6, 10]
+        // Contador del curso A
         let caA = 0
-        let alumnoasB = [10, 8, 6, 9, 9, 4, 8, 9]
-        let caB
-
+        // promedio del curso A
+        let paA
+        // array de notas del curso B
+        let alumnosB = [10, 10, 8, 10, 10, 6, 10, 10]
+        // Contador del curso B
+        let caB = 0
+        //promedio del curso B
+        let paB
+        for (let x = 0; x < alumnosA.length; x++) {
+            caA = caA + alumnosA[x]
+            paA = caA / alumnosA.length
+        }
+        for (let x = 0; x < alumnosB.length; x++) {
+            caB = caB + alumnosB[x]
+            paB = caB / alumnosB.length
+        }
+        if (paA > paB) {
+            document.write("El promedio del curso A " + paA + " es mayor al B " + paB)
+        } else {
+            if (paA < paB) {
+                document.write("El promedio del curso B " + paB + " es mayor al A " + paA)
+            } else (
+                document.write("Promedio B " + paB + " y A " + paA + " Son iguales")
+            )
+        }
 
     </script>
 </body>
