@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        
+        
+        Desarrolloar un programa que permita ingresar un arreglo
+        de 8 elementos enteros por teclado, luego
+        Calcular e informar:
+        El valor acumulado de todos los elementos.
+        El valor acumulado de los elementos del arreglo que sean
+        mayores a 36.
+        Cantidad de valores mayores a 50
+        */
+
+        // contador de acumulados
+        let cat = 0
+        // contador para elementos mayores a 36
+        let cmt = 0
+        // contador elementos mayores a 50
+        let cmt5 = 0
+        // Array que uso
+        let total = []
+        // agregando los 8 valores al array
+        for (let x = 0; x < 8; x++) {
+            let valores = parseInt(prompt("Ingrese un valor "))
+            total.push(valores)
+            cat = cat + total[x]
+            if (total[x] > 36) {
+                cmt = cmt + total[x]
+            }
+            if (total[x] > 50) {
+                cmt5++
+            }
+
+        }
+        //document.write(total + "<br>")
+        document.write("El total de todo da " + cat + "<br>")
+        document.write("El total mayores a 36 da " + cmt + "<br>")
+        document.write("Cantidad elementos mayores a 50 da " + cmt5 + "<br>")
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
