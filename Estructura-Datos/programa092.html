@@ -33,16 +33,12 @@
             nombre.push(nombres)
             sueldo.push(sueldos)
         }
-        /*
-        document.write("<br>" + "Usted ingreso a los siguientes empleados" + "<br>")
-        for (let x = 0; x < nombre.length; x++) {
-            document.write("<br>" + "Nombre " + nombre[x] + " - Sueldo " + sueldo[x] + "<br>")
-        }*/
         let resultado
         let buscarnombre = prompt("Ingrese un nombre de empleado a buscar " + "<br>")
         for (let x = 0; x < nombre.length; x++) {
             if (nombre[x] == buscarnombre) {
                 resultado = "<br>" + "Nombre " + nombre[x] + " - Sueldo $" + sueldo[x] + "<br>"
+                break
             } else {
                 resultado = "Empleado no encontrado"
             }
