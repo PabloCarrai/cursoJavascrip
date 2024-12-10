@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        desarrolloar un programa que almacene en dos
+        arreglos en uno los nombres de personas y en otro paralelo
+        sus edades respectivas(cargar los datos por asignacion)
+        Imprimir todos los datos y posteriormente imprimir los nombres
+        de las personas mayores de edad(mayores o iguales a 18 años)
+        */
+
+
+        let nombres = ["Juan", "Ana", "Marcos", "Pablo", "Laura"]
+        let edades = [12, 21, 27, 14, 21]
+        document.write("Todos los datos juntos" + "<br>")
+        for (let x = 0; x < nombres.length ; x++) {
+            document.write("-" + nombres[x] + " : " + edades[x] + "<br>")
+        }
+        document.write("<br>" + "Mayores de edad:" + "<br>")
+        for (let x = 0; x < nombres.length ; x++) {
+            if (edades[x] >= 18) {
+                document.write("-" + nombres[x] + " : " + edades[x] + "<br>")
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

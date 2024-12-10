@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        
+        
+        Desarrollar una aplicacion que permita
+        ingresar el nombre de un empleado y su sueldo actual(cargar
+        los datos de 4 empleados)
+        Almacenar cada dato en un arreglo en las mismas posiciones
+        con el objetivo de trabajar con arreglos paralelos.
+        Ingresar posteriormente el nombre de un empleado, y en el caso 
+        que exista en el arreglo de nombres proceder a mostrar su
+        sueldo.
+        Mostrar un mensaje si no se encuentra cargado dicho nombre
+        (considerar que todos los empleados tienen nombre distintos.)
+        */
+
+        let nombre = []
+        let sueldo = []
+        for (let x = 0; x < 4; x++) {
+            let nombres = prompt("Ingrese el nombre de un empleado")
+            let sueldos = parseFloat(prompt("Ingrese su sueldo"))
+            nombre.push(nombres)
+            sueldo.push(sueldos)
+        }
+        /*
+        document.write("<br>" + "Usted ingreso a los siguientes empleados" + "<br>")
+        for (let x = 0; x < nombre.length; x++) {
+            document.write("<br>" + "Nombre " + nombre[x] + " - Sueldo " + sueldo[x] + "<br>")
+        }*/
+        let resultado
+        let buscarnombre = prompt("Ingrese un nombre de empleado a buscar " + "<br>")
+        for (let x = 0; x < nombre.length; x++) {
+            if (nombre[x] == buscarnombre) {
+                resultado = "<br>" + "Nombre " + nombre[x] + " - Sueldo $" + sueldo[x] + "<br>"
+            } else {
+                resultado = "Empleado no encontrado"
+            }
+        }
+        document.write(resultado)
+
+
+    </script>
+</body>
+
+</html>

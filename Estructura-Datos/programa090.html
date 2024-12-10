@@ -28,12 +28,13 @@
             sueldos.push(valores)
             cst = cst + sueldos[x]
         }
-        for (let x=0;x<sueldos.length;x++) {
-            document.write("Los sueldos ingresados son "+sueldos[x]+"<br>")
+        for (let x = 0; x < sueldos.length; x++) {
+            document.write("Los sueldos ingresados son $" + sueldos[x] + "<br>")
         }
         //  promedio de sueldos
         pro = cst / sueldos.length
-        document.write("El promedio es "+pro+"<br>")
+        document.write("La suma total de sueldos es $" + cst + "<br>")
+        document.write("El promedio es $" + pro + "<br>")
 
     </script>
 </body>
