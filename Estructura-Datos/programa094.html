@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        Cargar un arreglo de n elementos, el 
+        operador decide cuantos elementos se cargaran en el arreglo
+        Imprimir el menos y un mensaje si se repite dentro del 
+        arreglo
+        */
+        let arrayValores = []
+        let cantidad = parseInt(prompt("Cuantos valores va a cargar"))
+        // este lo necesito para cargar los valores en el array
+        for (let x = 0; x < cantidad; x++) {
+            let valores = parseInt(prompt("Ingrese un valor "))
+            arrayValores.push(valores)
+        }
+        let menor = arrayValores[0]
+        let repiteMenor
+        for (let x = 0; x <= arrayValores.length; x++) {
+            if (arrayValores[x] < menor) {
+                menor = arrayValores[x]
+            }
+        }
+        let repite=0
+        document.write(menor + "<br>")
+        for (let x = 0; x <= arrayValores.length; x++) {
+            if (menor == arrayValores[x]) {
+                
+                repite++
+            }
+        }
+        if (repite>1){
+            document.write("El menor se repite al menos "+repite+" veces")
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
