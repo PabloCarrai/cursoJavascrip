@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        Se debe crear un arreglo donde almacenar 5 
+        sueldos(por asignacion) Ordenar el arreglo sueldos de menor a mayor
+        */
+
+        let sueldos = [1200, 750, 820, 550]
+        let aux
+        for (let x = 0; x < sueldos.length - 1; x++) {
+            for (let f = 0; f < sueldos.length - 1 - x; f++) {
+                if (sueldos[f] > sueldos[f + 1]) {
+                    aux = sueldos[f]
+                    sueldos[f] = sueldos[f + 1]
+                    sueldos[f + 1] = aux
+                }
+            }
+        }
+        for (let f = 0; f < sueldos.length; f++) {
+            document.write(sueldos[f] + "<br>")
+        }
+
+
+
+    </script>
+</body>
+
+</html>

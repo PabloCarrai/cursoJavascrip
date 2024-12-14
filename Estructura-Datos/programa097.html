@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+
+
+        Definir un arreglo donde almacenar
+        los nombres de 5 paises. Confeccionar el algoritmos de 
+        ordenamiento alfabetico. Mostrar antes y despues del
+        ordenamiento.      
+        
+        */
+
+        let paises = ["Argentina","Paraguay", "Brasil", "España", "Chile", "Honduras"]
+        document.write("<br>")
+        document.write("Original ")
+        document.write("<br>")
+        for (let i = 0; i < paises.length; i++) {
+            document.write(paises[i] + "  -  ")
+        }
+        let aux
+        for (let x = 0; x < paises.length - 1; x++) {
+            for (let f = 0; f < paises.length - 1 - x; f++) {
+                if (paises[f] > paises[f + 1]) {
+                    aux = paises[f]
+                    paises[f] = paises[f + 1]
+                    paises[f + 1] = aux
+                }
+            }
+        }
+        document.write("<br>")
+        document.write("Ordenado ")
+        document.write("<br>")
+        for (let f = 0; f < paises.length; f++) {
+            document.write(paises[f] + " - ")
+        }
+
+    </script>
+</body>
+
+</html>
