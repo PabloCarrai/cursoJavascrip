@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        Se tiene el siguiente valor almacenado en sueldos
+        */
+        let sueldos = [1200, 750, 820, 550, 490]
+        for (let f = 0; f < sueldos.length; f++) {
+            document.write(sueldos[f] + " - ")
+        }
+        document.write("<br>")
+
+        for (let k = 0; k < sueldos.length; k++) {
+            let menor = sueldos[k]
+            let pos = k
+            for (let f = k+1; f < sueldos.length; f++) {
+                if (sueldos[f] < menor) {
+                    menor = sueldos[f]
+                    pos = f
+                }
+            }
+            let aux = sueldos[k]
+            sueldos[k] = sueldos[pos]
+            sueldos[pos] = aux
+        }
+        for (let f = 0; f < sueldos.length; f++) {
+            document.write(sueldos[f] + " - ")
+        }
+        document.write("<br>")
+
+    </script>
+</body>
+
+</html>

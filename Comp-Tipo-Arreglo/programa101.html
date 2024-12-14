@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        
+        Se tiene un arreglo con componentes
+        de tipo arreglo.
+        Cada componente almacena el nombre de un club y la 
+        cantidad de puntos
+        Ordenar de mayor a menor teniendo en cuenta los puntos del club
+        */
+
+
+        let clubes = [["River", 15], ["Boca", 12], ["Belgrano", 17], ["Talleres", 14]]
+
+
+
+        for (let k = 0; k < clubes.length - 1; k++) {
+            for (let f = 0; f < clubes.length - 1 - k; f++) {
+                if (clubes[f] > clubes[f + 1]) {
+                    let auxclubes = clubes[f]
+                    clubes[f] = clubes[f + 1]
+                    clubes[f + 1] = auxclubes
+                }
+            }
+        }
+        document.write("Ordenado por Puntaje" + "<br>")
+        for (let f = 0; f < clubes.length; f++) {
+            document.write(clubes[f] + " - ")
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

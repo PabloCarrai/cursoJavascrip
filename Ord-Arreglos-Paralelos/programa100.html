@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        
+        Se tiene un arreglo con los nombres
+        de 4 clubes de futbol y otro arreglo paralelo con los puntos
+        obtenidos por cada club
+        Ordenar el arreglo de puntos y mostrar luego los nombres
+        de clubes y sus puntos
+        */
+
+        let clubes = ["River", "Boca", "Belgrano", "Talleres"]
+        let puntos = [15, 12, 17, 14]
+
+        for (let k = 0; k < puntos.length - 1; k++) {
+            for (let f = 0; f < puntos.length - 1 - k; f++) {
+                if (puntos[f] < puntos[f + 1]) {
+                    let auxpuntos = puntos[f]
+                    puntos[f] = puntos[f + 1]
+                    puntos[f + 1] = auxpuntos
+                    let auxclub = clubes[f]
+                    clubes[f] = clubes[f + 1]
+                    clubes[f + 1] = auxclub
+                }
+            }
+        }
+        document.write("Ordenado por Puntaje" + "<br>")
+        for (let f = 0; f < clubes.length; f++) {
+            document.write(clubes[f] + " - " + puntos[f] + "<br>")
+
+        }
+
+    </script>
+</body>
+
+</html>

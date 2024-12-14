@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+
+<body>
+    <script>
+        /*
+        
+        Ordenar alfabeticamente primero y proceder a
+        mostrar los datos, luego ordenar por la cantidad de 
+        habitantes y mostrar. 
+        
+        */
+
+        let paises = ["Argentina", "Chile", "Paraguay", "Colombia"]
+        let habitantes = [4500000, 1900000, 7000000, 50000000]
+        for (let k = 0; k < paises.length - 1; k++) {
+            for (let f = 0; f < paises.length - 1 - k; f++) {
+                if (paises[f] > paises[f + 1]) {
+                    let auxpais = paises[f]
+                    paises[f] = paises[f + 1]
+                    paises[f + 1] = auxpais
+                    let auxhabitante = habitantes[f]
+                    habitantes[f] = habitantes[f + 1]
+                    habitantes[f + 1] = auxhabitante
+
+                }
+            }
+        }
+        document.write("Ordenado por Paises"+"<br>")
+
+        for (let f = 0; f < paises.length; f++) {
+            document.write(paises[f] + " - " + habitantes[f] + "<br>")
+
+        }
+        for (let k = 0; k < paises.length - 1; k++) {
+            for (let f = 0; f < paises.length - 1 - k; f++) {
+                if (habitantes[f] > habitantes[f + 1]) {
+                    let auxpais = paises[f]
+                    paises[f] = paises[f + 1]
+                    paises[f + 1] = auxpais
+                    let auxhabitante = habitantes[f]
+                    habitantes[f] = habitantes[f + 1]
+                    habitantes[f + 1] = auxhabitante
+
+                }
+            }
+        }
+        document.write("Ordenado por habitantes"+"<br>")
+        for (let f = 0; f < paises.length; f++) {
+            document.write(paises[f] + " - " + habitantes[f] + "<br>")
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
