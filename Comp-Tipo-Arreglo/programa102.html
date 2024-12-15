@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+
+        /*
+
+        Crear un arreglo por asignacion.
+        El arreglo tiene que tener 2 elementos. Cada elemento
+        debe ser un arreglo de 4 enteros.
+        Calcular y mostrar la suma de cada elemento contenido 
+        en el arreglo principal
+        */
+        let arreglo = [[1, 1, 1, 1], [2, 2, 2, 2]]
+        let contador1 = arreglo[0][0] + arreglo[0][1] + arreglo[0][2] + arreglo[0][3]
+        let contador2 = arreglo[1][0] + arreglo[1][1] + arreglo[1][2] + arreglo[1][3]
+        document.write(contador1 + "<br>")
+        document.write(contador2 + "<br>")
+        document.write("<br>")
+        contador1 = 0
+        contador2 = 0
+        for (let x = 0; x < arreglo[0].length; x++) {
+            contador1 = contador1 + arreglo[0][x]
+            contador2 = contador2 + arreglo[1][x]
+        }
+        document.write(contador1 + "<br>")
+        document.write(contador2 + "<br>")
+        document.write("<br>")
+
+
+
+    </script>
+</body>
+
+</html>

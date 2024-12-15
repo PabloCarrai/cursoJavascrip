@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        Ingresar por teclado la cantidad de componentes
+        del arreglo principal, luego ir pidiendo la cantidad de
+        elementos de los arreglos anidados y sus elementos
+        Mostrar las componentes recorriendo el arreglo con for
+        anidados
+        Cuantos elementos el arreglo principal?
+        */
+
+        let arreglo = []
+        let cant1 = parseInt(prompt("Cantidad de elementos del array?"))
+        for (let i = 0; i < cant1; i++) {
+            arreglo.push([])
+            let cant2 = parseInt(prompt("Cantidad elementos de cada array?"))
+            for (let j = 0; j < cant2; j++) {
+                let elementos = parseInt(prompt("Ingrese el elemento"))
+                arreglo[i].push(elementos)
+            }
+        }
+        for (let x = 0; x < arreglo.length; x++) {
+            for (let y = 0; y < arreglo[x].length; y++) {
+                document.write(arreglo[x][y])
+            }
+            document.write("<br>")
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        
+        Crear un arreglo por asignacion. El 
+        arreglo tiene que tener 5 elementos.
+        Cada elemento debe ser un arreglo, el primer arreglo
+        tiene que tener un elemento, el segundo dos elementos, el
+        tercero tres elementos y asi sucesivamente
+        Sumar todos los valores del arreglo
+        */
+
+        let suma = 0
+        let arreglo = [[1], [2, 3], [4, 5, 6], [7, 8, 9, 10], [11, 12, 13, 14, 15]]
+        for (let x = 0; x < arreglo.length; x++) {
+            for (let y = 0; y < arreglo[x].length; y++) {
+                suma = suma + arreglo[x][y]
+            }
+        }
+        document.write("La sumatoria da ")
+        document.write(suma)
+        document.write("<br>")
+
+    </script>
+</body>
+
+</html>
