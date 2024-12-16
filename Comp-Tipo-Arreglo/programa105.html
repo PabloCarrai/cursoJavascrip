@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*Se tiene el siguiente arreglo:
+
+        let arreglo1 = [[100, 7, 85, 8], [4, 8, 56, 25], [67, 89, 23, 1], [78, 56]]
+
+        Imprimir el arreglo.
+        Fijar con el valor cero a todos los elementos mayores a 50
+        del primer elemento del arreglo principal
+        Volver a imprimir el arreglo.
+        Fijar con cero todos los elementos de la ultima
+        componente del arreglo principal
+
+        */
+
+
+        let arreglo1 = [[100, 7, 85, 8], [4, 8, 56, 25], [67, 89, 23, 1], [78, 56]]
+
+        document.write("Todos los elementos son ")
+        document.write("<br>")
+
+        for (let x = 0; x < arreglo1.length; x++) {
+            for (let y = 0; y < arreglo1[x].length; y++) {
+                document.write(arreglo1[x][y])
+                document.write("<br>")
+
+            }
+        }
+
+        //arreglo1[0]
+        document.write("<br>")
+        document.write("tenemos los siguientes valores ")
+        document.write("<br>")
+        document.write(arreglo1[0])
+        for (let x = 0; x < 1; x++) {
+            for (let y = 0; y < arreglo1[x][y]; y++) {
+                if (arreglo1[x][y] > 50) {
+                    arreglo1[x][y] = 0
+                }
+            }
+        }
+        document.write("<br>")
+        document.write("Quedo lo siguiente")
+        document.write("<br>")
+        document.write(arreglo1[0])
+        document.write("<br>")
+
+        document.write("<br>")
+        document.write("tenemos los siguientes valores ")
+        document.write("<br>")
+        document.write(arreglo1[arreglo1.length - 1])
+        let ultimo = arreglo1[arreglo1.length - 1]
+
+
+        for (let x = 0; x <= arreglo1.length; x++) {
+            for (let y = 0; y <= arreglo1.length; y++) {
+                if (arreglo1[arreglo1.length - 1][y] > 50) {
+                    arreglo1[arreglo1.length - 1][y] = 0
+                }
+            }
+        }
+
+        document.write("<br>")
+        document.write("Quedo lo siguiente")
+        document.write("<br>")
+        document.write(arreglo1[arreglo1.length - 1])
+        document.write("<br>")
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
