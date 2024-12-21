@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        
+        Confaccionar una aplicacion para administrar los dias que
+        han faltado los 3 empleados de una empresa.
+        Definir un arreglo de 3 elementos de tipo string para
+        cargar los nombres y un arreglo paralelo para cargar los dias
+        que ha faltado cada empleado(cargar cada uno de los numeros 
+        de dias que falto)
+        Cada elemento del segundo arreglo representan los dias
+        que falto cada empleado
+        Mostrar los empleados con la cantidad de inasistencias
+        Mostrar la cantidad de empleados que no han faltado
+        */
+
+        let empleados = []
+        let faltas = []
+        for (let i = 0; i < 3; i++) {
+            const nombre = prompt("Nombre?")
+            empleados.push(nombre)
+            const cant = parseInt(prompt("Faltas"))
+            faltas.push([])
+            for (let j = 0; j < cant; j++) {
+                const dia = parseInt(prompt("numero de dia de la falta"))
+                faltas[i].push(dia)
+            }
+        }
+        for (let i = 0; i < empleados.length; i++) {
+            document.write(empleados[i] + ":")
+            for (let j = 0; j < faltas[i].length; j++) {
+                document.write(faltas[j])
+            }
+            document.write("<br>")
+        }
+        document.write("<hr>")
+
+
+        for (let i = 0; i < empleados.length; i++) {
+            document.write(empleados[i] + ":")
+            document.write(faltas[i].length + "<br>")
+        }
+        document.write("<hr>")
+        let cant = 0
+        for (let i = 0; i < empleados.length; i++) {
+            if (faltas[i].length == 0) {
+                cant++
+            }
+        }
+        document.write("Cantidad empleados no han faltado " + cant)
+
+
+    </script>
+</body>
+
+</html>
