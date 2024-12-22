@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+
+        /*
+        
+        
+        Crear y cargar por asignacion un arreglo de 2 elementos y
+        cada componete un arreglo de 4 elementos
+
+        let arreglo = [[1, 2, 3, 4],
+                       [5, 6, 7, 8]]
+
+        Imprimir el arreglo completo
+        Intercambiar la primera componente del arreglo principal
+        con el segundo elemento, de tal forma que el arreglo quede
+        con la estructura:
+
+        let arreglo = [[5, 6, 7, 8],
+                       [1, 2, 3, 4]]
+
+        */
+
+        let arreglo = [[1, 2, 3, 4],
+        [5, 6, 7, 8]]
+
+
+        document.write("Arrancamos con " + "<br>")
+        for (let x = 0; x < arreglo.length; x++) {
+            for (let y = 0; y < arreglo[x].length; y++) {
+                document.write(arreglo[x][y])
+            }
+            document.write("<br>")
+        }
+
+        // el intercambio
+        let aux = arreglo[0]
+        arreglo[0] = arreglo[1]
+        arreglo[1] = aux
+
+        document.write("Quedamos con " + "<br>")
+        for (let x = 0; x < arreglo.length; x++) {
+            for (let y = 0; y < arreglo[x].length; y++) {
+                document.write(arreglo[x][y])
+            }
+            document.write("<br>")
+        }
+
+
+    </script>
+</body>
+
+</html>
