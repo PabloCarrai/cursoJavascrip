@@ -24,14 +24,28 @@
 
         */
         // aleatorio entre 3 y 10
-        let alentre3y10 = Math.floor(Math.random() * (10 - 3) + 3)
-        console.log(alentre3y10)
+        let componentes = Math.floor(Math.random() * (10 - 3) + 3)
+        console.log("componentes del array")
+        console.log(componentes)
         // aleatorio entre 1 y 10
-        let componente = Math.floor(Math.random() * (10 - 1) + 1)
-        console.log(componente)
+        console.log("Valores del cada componente array")
+        let ccomponentes = Math.floor(Math.random() * (10 - 1) + 1)
+        console.log(ccomponentes)
         // aleatorio entre 1 y 100
-        let ae1y100 = Math.floor(Math.random() * (100 - 1) + 1)
-        console.log(ae1y100)
+        console.log("Valor de elemento del array")
+        let a1100 = Math.floor(Math.random() * (100 - 1) + 1)
+        console.log(a1100)
+
+        let arrayAusar = []
+        for (let x = 0; x < componentes; x++) {
+            arrayAusar.push([])
+        }
+        console.log("Cantidad de componentes del array " + arrayAusar.length)
+        for (let x = 0; x < arrayAusar.length; x++) { 
+            arrayAusar[x].push(ccomponentes)
+        }
+
+
 
 
     </script>
