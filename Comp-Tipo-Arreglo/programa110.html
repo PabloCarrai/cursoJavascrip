@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        Crear un arreglo por asignacion con valores enteros,
+        todos distintos.
+        Identificar el mayor elemento del arreglo e indicar en
+        que posicion se encuentra respecto al arreglo principal y su
+        posicion dentro del arreglo anidado. 
+
+        let arreglo = [[1, 2, 3, 5, 90], [12, 20, 30, 51, 96], [100, 200], [34, 13]]
+
+
+        */
+        let arreglo = [[1, 2, 3, 5, 90], [12, 20, 30, 51, 96], [100, 200], [34, 13]]
+        let maximo = arreglo[0][0]
+        let posx = 0
+        let posy = 0
+        for (let i = 0; i < arreglo.length; i++) {
+            for (e = 0; e < arreglo[i].length; e++) {
+                if (arreglo[i][e] > maximo) {
+                    posx = i
+                    posy = e
+                    maximo = arreglo[i][e]
+                }
+            }
+        }
+        document.write("Maximo " + maximo + "<br>")
+        document.write("Fila  " + posx + "<br>")
+        document.write("Columna " + posy + "<br>")
+    </script>
+</body>
+
+</html>
