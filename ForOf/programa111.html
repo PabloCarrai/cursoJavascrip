@@ -49,11 +49,11 @@
             if (e > mayor) {
                 mayor = e
             }
-            if (e >= 10) {
-                mayoresigualesadiez.push(e)
-            }
+
             if (e < 10) {
                 menoresadiez.push(e)
+            } else {
+                mayoresigualesadiez.push(e)
             }
 
         }
@@ -63,8 +63,6 @@
         document.write("Menores a diez " + menoresadiez + "<br>")
         document.write("<hr>")
         document.write("Mayores e iguales a diez " + mayoresigualesadiez + "<br>")
-
-
     </script>
 </body>
 

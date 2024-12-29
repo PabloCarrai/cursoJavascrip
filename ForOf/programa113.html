@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        Crear un arreglo en el cual cada
+        componente represente uan carta de un mayo de naipes.
+        */
+        let cartas = [[2, "Diamantes"], [3, "Treboles"], [4, "Picas"], [5, "Corazones"], [5, "Picas"]]
+        let cdiamante = 0
+        let ctreboles = 0
+        let cpicas = 0
+        let ccorazones = 0
+        document.write("Cartas " + "<br>")
+        for (let x of cartas) {
+            for (let y of x) {
+                document.write(y+" - ")
+                if (y == "Diamantes") {
+                    cdiamante++
+                } else {
+                    if (y == "Treboles") {
+                        ctreboles++
+                    } else {
+                        if (y == "Picas") {
+                            cpicas++
+                        } else {
+                            if (y == "Corazones") {
+                                ccorazones++
+                            }
+                        }
+                    }
+                }
+            }
+            document.write("<br>")
+        }
+        document.write("<hr>")
+        document.write("Cantidad de cartas " + "<br>")
+        document.write("Diamantes " + cdiamante + "<br>")
+        document.write("Treboles " + ctreboles + "<br>")
+        document.write("Picas " + cpicas + "<br>")
+        document.write("Corazones " + ccorazones + "<br>")
+
+    </script>
+</body>
+
+</html>

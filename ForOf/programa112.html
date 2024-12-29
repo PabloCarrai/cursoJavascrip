@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        Crear un arreglo con componentes del tipo arreglo.
+        Utilizar el for of para imprimir sus elementos
+        */
+
+        let arreglo = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        for (let componentearreglo of arreglo) {
+            for (let elementos of componentearreglo) {
+                document.write(elementos + " - ")
+
+            }
+            document.write("<br>")
+        }
+
+        document.write("<hr>")
+
+        let palabra = "Administracion"
+        for (let letra of palabra) {
+            document.write(letra + " - ")
+        }
+
+    </script>
+</body>
+
+</html>
