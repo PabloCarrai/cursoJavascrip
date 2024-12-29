@@ -8,11 +8,63 @@
 
 <body>
     <script>
+        /*
+        Ejemplo del for of
+        */
+
         let arreglo = [10, 15, 20, 25, 30, 35, 40, 45, 50]
-        let suma=0
+        let suma = 0
         for (let elemento of arreglo) {
-            document.write(elemento)
+            document.write(elemento + "<br>")
+            suma = suma + elemento
         }
+        document.write("La suma es: " + suma + "<br>")
+
+        /*
+        Crear un arreglo de n elementos (el operador
+        ingresa por teclado n y sus valores)
+        - Imprimir el arreglo.
+        - Obtener el elemento mayor del arreglo.
+        -Generar otros dos arreglos, en uno almacenar todos los 
+        elementos menores a 10 y en otro los mayores o iguales a 10.
+
+        
+
+        */
+
+        let elementosn = parseInt(prompt("Ingrese cantidad de elementos del arreglo"))
+        let arreglo1 = []
+        for (let i = 0; i < elementosn; i++) {
+            let valores = parseInt(prompt("Ingrese un valor "))
+            arreglo1.push(valores)
+        }
+
+        let mayor = arreglo1[0]
+        let menoresadiez = []
+        let mayoresigualesadiez = []
+        document.write("<hr>")
+        document.write("Recorremos el arreglo" + "<br>")
+        for (let e of arreglo1) {
+            document.write(e + "<br>")
+            if (e > mayor) {
+                mayor = e
+            }
+            if (e >= 10) {
+                mayoresigualesadiez.push(e)
+            }
+            if (e < 10) {
+                menoresadiez.push(e)
+            }
+
+        }
+        document.write("<hr>")
+        document.write("El numero mayor es " + mayor + "<br>")
+        document.write("<hr>")
+        document.write("Menores a diez " + menoresadiez + "<br>")
+        document.write("<hr>")
+        document.write("Mayores e iguales a diez " + mayoresigualesadiez + "<br>")
+
+
     </script>
 </body>
 
