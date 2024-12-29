@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        
+        Desarrollar un programa con dos
+        funciones. La primera solicita el ingreso de un numero y
+        muestra un alert si es positivo, negativo o nulo. 
+        La segunda solicita la carga de dos valores y muestra el 
+        producto de los mismos.
+        Llamar a ambas funciones para que se ejecuten. 
+        */
+
+        function esmegativoPositivoNulo() {
+            const valor = parseInt(prompt("Ingrese un valor  "))
+            if (valor == 0) {
+                alert("El valor " + valor + " es nulo")
+            } else {
+                if (valor > 0) {
+                    alert("El valor " + valor + " es positivo")
+                } else {
+                    alert("El valor " + valor + " es negativo")
+                }
+            }
+        }
+
+        function elProductodeDos() {
+            const valor = parseInt(prompt("Ingrese un valor  "))
+            const valor1 = parseInt(prompt("Ingrese un valor  "))
+            const producto = valor * valor1
+            document.write("El producto del valor " + valor + " y el valor " + valor1 + " es " + producto + "<br>")
+        }
+        esmegativoPositivoNulo()
+        elProductodeDos()
+    </script>
+</body>
+
+</html>

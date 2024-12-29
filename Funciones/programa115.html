@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        Confeccionar una aplicacion que solicite la carga
+        de un valor entero y muestre su cuadrado
+        Repetir la carga e impresion 3 veces
+
+        Mostrar una linea separadora despues de cada vez que
+        ingresamos el valor y calculamos su cuadrado
+
+        Dividir el algoritmo en dos funciones la carga con el calculo
+        del cuadrado y por otro lado la funcion que imprime la linea
+        separadora
+        */
+
+        function calculocuadrado() {
+            const valor = parseInt(prompt("Ingrese un valor "))
+            const cuadrado = valor ** 2
+            document.write("El cuadrado de " + valor + " es " + cuadrado)
+
+        }
+        function lineaseparadora() {
+            document.write("<hr>")
+        }
+
+        for (let x = 0; x < 3; x++) {
+            calculocuadrado()
+            lineaseparadora()
+        }
+
+    </script>
+</body>
+
+</html>

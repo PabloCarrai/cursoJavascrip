@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        
+        Desarrollar una funcion que solicite la
+        carga de tres valores y muestre el menor.
+        Luego llamar 2 veces a dicha funcion(sin utilizar 
+        una estructura repetitiva)
+        */
+
+        function elMenordeTres() {
+            const valor = parseInt(prompt("Ingrese un valor "))
+            const valor1 = parseInt(prompt("Ingrese segundo valor "))
+            const valor2 = parseInt(prompt("Ingrese tercer valor "))
+            let menor
+            if (valor < valor1 && valor < valor2) {
+                menor = valor
+                alert("El menor es " + menor)
+            } else {
+                if (valor1 < valor && valor1 < valor2) {
+                    menor = valor1
+                    alert("El menor es " + menor)
+
+                } else {
+                    if (valor2 < valor && valor2 < valor1) {
+                        menor = valor2
+                        alert("El menor es " + menor)
+                    }
+                }
+            }
+
+        }
+        function temuestroDosveces() {
+            elMenordeTres()
+            elMenordeTres()
+        }
+
+        temuestroDosveces()
+
+    </script>
+</body>
+
+</html>

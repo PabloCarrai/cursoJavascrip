@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        Calcular una aplicacion que muestre una 
+        presentacion en pantalla del programa. Solicite la carga de dos 
+        valores y nos muestre la suma. Mostrar finalmente un
+        mensaje de despedida del programa. 
+        */
+
+        function mostrarMensaje(mensaje) {
+            alert(mensaje)
+
+        }
+        function cargarSuma() {
+            const valor = parseInt(prompt("Ingrese un valor"))
+            const valor1 = parseInt(prompt("Ingrese un valor"))
+            const suma = valor + valor1
+            document.write("La suma es " + suma + "<br>")
+        }
+
+        mostrarMensaje("El programa calcula la suma de dos valores ingresados")
+        cargarSuma()
+        mostrarMensaje("Gracias por usar este programa")
+
+    </script>
+</body>
+
+</html>
