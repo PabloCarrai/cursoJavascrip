@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        
+        
+        Desarrollar una funcion que reciba una palabra en
+        minuscula como parametro y nos muestre la 
+        cantidad de vocales. Llamarla a la funcion 3 veces con
+        distintos strings. 
+
+        function cantidadVocales(palabra) { }
+        cantidadVocales("hola")
+        cantidadVocales("mundo")
+        cantidadVocales("programacion")
+        for (let letra of palabra) {
+
+        }
+
+
+        */
+
+        function cantidadVocales(palabras) {
+            document.write("<hr>")
+            document.write("La palabra elegida es " + "<br>" + palabras + "<br>")
+            document.write("<hr>")
+            ca = 0
+            ce = 0
+            ci = 0
+            co = 0
+            cu = 0
+            for (let vocal of palabras) {
+                switch (vocal) {
+                    case "a": ca++
+                        break
+                    case "e": ce++
+                        break
+                    case "i": ci++
+                        break
+                    case "o": co++
+                        break
+                    case "u": cu++
+                        break
+                }
+            }
+            document.write("Cantidad de vocales<br>")
+            document.write("<hr>")
+            document.write("a = " + ca + "<br>")
+            document.write("e = " + ce + "<br>")
+            document.write("i = " + ci + "<br>")
+            document.write("o = " + co + "<br>")
+            document.write("u = " + cu + "<br>")
+        }
+
+        cantidadVocales("hola")
+        cantidadVocales("mundo")
+        cantidadVocales("programacion")
+        cantidadVocales("supercalifragilisticoespialidoso")
+
+
+    </script>
+</body>
+
+</html>

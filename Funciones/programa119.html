@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        Confeccionar una funcion que reciba tres enteros
+        y nos muestre el mayor de ellos. La carga de los valores
+        hacerlo por teclado en otra funcion
+        */
+
+        function mayorDeTres(valor, valor1, valor2) {
+            let mayor
+            if (valor > valor1 && valor > valor2) {
+                mayor = valor
+                document.write("El mayor es " + mayor + "<br>")
+            } else {
+                if (valor1 > valor && valor1 > valor2) {
+                    mayor = valor1
+                    document.write("El mayor es " + mayor + "<br>")
+                } else {
+                    if (valor2 > valor && valor2 > valor1) {
+                        mayor = valor2
+                        document.write("El mayor es " + mayor + "<br>")
+                    }
+                }
+            }
+        }
+
+        function cargarTresValores() {
+            const valor = parseInt(prompt("Ingrese un valor"))
+            const valor1 = parseInt(prompt("Ingrese un valor"))
+            const valor2 = parseInt(prompt("Ingrese un valor"))
+            mayorDeTres(valor, valor1, valor2)
+        }
+
+        cargarTresValores()
+    </script>
+</body>
+
+</html>

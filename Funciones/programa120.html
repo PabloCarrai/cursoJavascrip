@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        
+        
+        Desarrollar un programa que permita ingresar el 
+        lado de un cuadrado. Luego preguntar si quiere calcular su
+        perimetro o su superficio y mostrar el resultado. 
+        Implementar las funciones :
+
+        function mostrarPerimetro(lado) { }
+        function mostrarSuperficie(lado) { }
+        function cargarDato(){}
+        cargarDato()
+
+
+
+        */
+        function mostrarPerimetro(lado) {
+            const perimetro = lado + lado + lado + lado
+            document.write("El perimetro del cuadrado cuyo lado " + lado + " es " + perimetro)
+        }
+
+        function mostrarSuperficie(lado) {
+            const superficie = lado * lado
+            document.write("La superficie  del cuadrado cuyo lado " + lado + " es " + superficie)
+        }
+
+        function cargarDato() {
+            const lado = parseInt(prompt("Ingrese el lado de un cuadrado"))
+            const desicion = parseInt(prompt("Que quiere calcular el perimetro(1) o la superficie(2) del cuadrado?" + "<br>"))
+            if (desicion === 1) {
+                mostrarPerimetro(lado)
+            } else {
+                if (desicion === 2) {
+                    mostrarSuperficie(lado)
+                } else {
+                    document.write("Debe elegir entre 1 o 2")
+                }
+            }
+        }
+
+        cargarDato()
+
+
+    </script>
+</body>
+
+</html>

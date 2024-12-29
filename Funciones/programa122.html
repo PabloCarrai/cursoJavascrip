@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        /*
+             
+            
+            
+            Confeccionar una funcion que reciba
+            tres enteros, y los muestre ordenados de menor a mayor.
+            En otra funcion solicitar la carga de 3 enteros por teclados y 
+            proceder a llamar a la primer funcion definida. 
+    
+            function ordenarImprimir(v1, v2, v3) { }
+            function cargar(){}
+            cargar()
+    
+            */
+
+
+        function ordenarImprimir(v1, v2, v3) {
+            let menor
+            let medio
+            let mayor
+            // el mayor lo saco con 
+            if (v1 > v2 && v1 > v3) {
+                mayor = v1
+                document.write("El mayor es " + mayor + "<br>")
+            } else {
+                if (v2 > v1 && v2 > v3) {
+                    mayor = v2
+                    document.write("El mayor es " + mayor + "<br>")
+                } else {
+                    if (v3 > v1 && v3 > v2) {
+                        mayor = v3
+                        document.write("El mayor es " + mayor + "<br>")
+                    }
+                }
+            }
+
+            // el menor
+            if (v1 < v2 && v1 < v3) {
+                menor = v1
+                document.write("El menor es " + menor + "<br>")
+            } else {
+                if (v2 < v1 && v2 < v3) {
+                    menor = v2
+                    document.write("El menor es " + menor + "<br>")
+                } else {
+                    if (v3 < v1 && v3 < v2) {
+                        menor = v3
+                        document.write("El menor es " + menor + "<br>")
+                    }
+                }
+            }
+            medio = (v1 + v2 + v3) - (mayor + menor)
+            document.write("Ordenados irian <br>")
+            document.write("Menor " + menor + "<br>")
+            document.write("Medio " + medio + "<br>")
+            document.write("Mayor " + mayor + "<br>")
+
+        }
+        function cargar() {
+            const v1 = parseInt(prompt("Ingrese un valor"))
+            const v2 = parseInt(prompt("Ingrese un valor"))
+            const v3 = parseInt(prompt("Ingrese un valor"))
+            ordenarImprimir(v1, v2, v3)
+
+        }
+        cargar()
+    </script>
+</body>
+
+</html>
