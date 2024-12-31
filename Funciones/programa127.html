@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Definir dos arreglos vacios.
+    Elaborar una unica funcion que cargue un vector con 5 
+    enteros. Llamarla a la funcion dos veces pasando en forma
+    sucesica el primer y segundo arreglo vacio. 
+    Imprimir los dos arreglos haciendo una unica funcion
+    llamandola 2 veces. 
+    */
+
+    function cargar(arreglo) {
+        for (let x = 0; x < 5; x++) {
+            const valor = parseInt(prompt("Ingrese un valor"))
+            arreglo.push(valor)
+        }
+    }
+
+    function imprimir(titulo, arreglo) {
+        document.write(titulo + "<br>")
+        for (let valor of arreglo) {
+            document.write(valor + " - ")
+        }
+        document.write("<br>")
+        document.write("<hr>")
+    }
+    let arreglo1 = []
+    let arreglo2 = []
+    cargar(arreglo1)
+    cargar(arreglo2)
+    imprimir("Arreglo 1: ", arreglo1)
+    imprimir("Arreglo 2: ", arreglo2)
+
+</script>
+
+<body>
+</body>
+
+</html>

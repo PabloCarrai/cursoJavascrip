@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Confeccionar una funcion que retorne un arreglo
+    con 5 enteros.
+    Luego implementar otras dos funciones que reciban el arreglo
+    y nos retorne una de ellas su suma y otra el mayor de ellos
+    */
+
+    function retornarCincoEnteros() {
+        let arreglo = []
+        for (let i = 0; i < 5; i++) {
+            let valor = parseInt(prompt("Ingrese un valor"))
+            arreglo.push(valor)
+        }
+        return arreglo
+    }
+
+    function retornarSumaArreglo(arreglo) {
+        let suma = 0
+        for (let i = 0; i < arreglo.length; i++) {
+            suma = suma + arreglo[i]
+        }
+        return suma
+    }
+
+    function retornarMayorArreglo(arreglo) {
+        let mayor = arreglo[0]
+        for (let i = 0; i < arreglo.length; i++) {
+            if (arreglo[i] > mayor) {
+                mayor = arreglo[i]
+            }
+        }
+        return mayor
+    }
+    let arreglo1 = retornarCincoEnteros()
+    document.write(arreglo1 + "<br>")
+    document.write("La sumatoria del arreglo es " + retornarSumaArreglo(arreglo1) + "<br>")
+    document.write("El mayor del arreglo es  " + retornarMayorArreglo(arreglo1) + "<br>")
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

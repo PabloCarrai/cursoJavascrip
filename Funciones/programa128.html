@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Definir un arreglo vacio.
+    Implementar las siguientes funciones.
+    - Una funcion que reciba un arreglo vacio y almacene 50
+    valores alteatorios comprendidos entre 0 y  1000.
+    - Otra funcion que reciba el arreglo y los ordene de menor a
+    mayor.
+    - Y una ultima funcion que imprima el contenido del arreglo. 
+    
+    "Ordenamiento Burbuja"
+
+
+    function generarArreglo(arreglo) { }
+    function ordenar(arreglo) { }
+    function imprimir(titulo, arreglo) { }
+    let arreglo1 = []
+    generarArreglo(arreglo1)
+    imprimir("Arreglo sin ordenar", arreglo1)
+    ordenar(arreglo1)
+    imprimir("Arreglo ordenado", arreglo1)
+
+
+    */
+
+    function generarArreglo(arreglo) {
+        for (let x = 0; x < 50; x++) {
+            let aleatorio = Math.floor(Math.random() * 1001);
+            arreglo.push(aleatorio)
+        }
+    }
+
+    function ordenar(arreglo) {
+        for (let i = 0; i < arreglo.length - 1; i++) {
+            for (let e = 0; e < arreglo.length - 1 - i; e++) {
+                if (arreglo[e] > arreglo[e + 1]) {
+                    let aux = arreglo[e]
+                    arreglo[e] = arreglo[e + 1]
+                    arreglo[e + 1] = aux
+                }
+            }
+        }
+    }
+
+    function imprimir(titulo, arreglo) {
+        document.write(titulo + "<br>")
+        for (let x of arreglo) {
+            document.write(x + "-")
+        }
+        document.write("<hr>")
+    }
+
+    let arreglo1 = []
+    generarArreglo(arreglo1)
+    imprimir("Arreglo sin ordenar", arreglo1)
+    ordenar(arreglo1)
+    imprimir("Arreglo ordenado", arreglo1)
+
+</script>
+
+<body>
+
+</body>
+
+</html>

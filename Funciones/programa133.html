@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Elaborar dos funciones:
+    La primera debe recibir tres enteros y retornar el valor
+    promedio de los mismos.
+    La segunda debe recibir un numero y retornar su cuadrado
+
+    function retornarPromedio(v1, v2, v3) { }
+    function retornarCuadrado(v1) { }
+
+    */
+
+
+
+
+    function retornarPromedio(v1, v2, v3) {
+        const promedio = (v1 + v2 + v3) / 3
+        return promedio
+    }
+
+    function retornarCuadrado(v1) {
+        const cuadrado = v1 ** 2
+        return cuadrado
+    }
+
+
+    let valor = retornarPromedio(8, 6, 10)
+    document.write("El promedio de 8,6,9 es " + valor + "<br>")
+    let valor1 = retornarCuadrado(3)
+    document.write("El cuadrado de 3 es " + valor1 + "<br>")
+
+</script>
+
+<body>
+
+</body>
+
+</html>

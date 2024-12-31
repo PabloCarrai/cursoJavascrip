@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    Confeccionar una funcion que le enviemos dos
+    valores numericos y nos retorne el mayor de ellos
+    */
+
+    function retornarMayordeDos(v, v1) {
+        if (v > v1) {
+            return v
+        } else {
+            return v1
+        }
+
+    }
+
+    const valor = parseInt(prompt("Ingrese un valor"))
+    const valor1 = parseInt(prompt("Ingrese otro valor"))
+
+    document.write("El mayor entre " + valor + " y " + valor1 + " es " + retornarMayordeDos(valor, valor1))
+
+</script>
+
+<body>
+
+</body>
+
+</html>
