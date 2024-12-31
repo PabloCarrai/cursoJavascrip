@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    
+    Definir un arreglo vacio.
+    elaborar tres funciones, la primera recibe la referencia del
+    arreglo y se procede a cargar por teclado 5 valores, la 
+    segunda recibe el arreglo e imprime el mayor valor y la 
+    ultima recibe el arreglo e imprime la suma.
+
+    function cargar(arreglo) { }
+    function mayorValor(arreglo) { }
+    function sumarValores(arreglo) { }
+
+    let arreglo1 = []
+    cargar(arreglo1)
+    mayorValor(arreglo1)
+    sumarValores(arreglo1)
+
+
+    */
+    function cargar(arreglo) {
+        for (let x = 0; x < 5; x++) {
+            const valor = parseInt(prompt("Ingrese un valor"))
+            arreglo.push(valor)
+        }
+    }
+    function mayorValor(arreglo) {
+        let maximo = arreglo[0]
+        for (let x = 0; x < arreglo.length; x++) {
+            if (arreglo[x] > maximo) {
+                maximo = arreglo[x]
+            }
+        }
+        document.write("Maximo valor " + maximo + "<br>")
+    }
+    function sumarValores(arreglo) {
+        let contador = 0
+        for (let valor of arreglo) {
+            contador = contador + valor
+        }
+        document.write("Sumatoria " + contador + "<br>")
+        //document.write(arreglo)
+    }
+    let arreglo1 = []
+    cargar(arreglo1)
+    mayorValor(arreglo1)
+    sumarValores(arreglo1)
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

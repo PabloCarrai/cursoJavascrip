@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Definir un arreglo que represente un bolillero
+    con los numeros del 1 al 10
+    Confeccionar una funcion para mezclar 
+    los valores contenidos en el bolillero
+    */
+    function mezclar(arreglo) {
+        for (let x = 0; x < 10000; x++) {
+            const aleatorio = Math.floor((Math.random() * arreglo.length))
+            const aleatorio1 = Math.floor((Math.random() * arreglo.length))
+            const aux = arreglo[aleatorio]
+            arreglo[aleatorio] = arreglo[aleatorio1]
+            arreglo[aleatorio1] = aux
+
+        }
+
+    }
+    function mostrar(arreglo) {
+        for (let x = 0; x < arreglo.length; x++) {
+            document.write(arreglo[x] + "-")
+        }
+        document.write("<br>")
+    }
+    let arreglo1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    for (let x = 0; x < 3; x++) {
+        mostrar(arreglo1)
+        mezclar(arreglo1)
+        mostrar(arreglo1)
+    }
+
+    //let aleatorio = Math.floor((Math.random() * (10 - 1)))
+    //document.write(aleatorio)
+
+</script>
+
+<body>
+
+</body>
+
+</html>

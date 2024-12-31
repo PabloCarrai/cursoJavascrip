@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*
+        
+        Definir dos funciones, la primera recibe como 
+        parametro, si un arreglo vacio, en la misma se deben cargar 5 elementos
+        por teclado, la segunda funcion debe imprimir el arreglo
+        */
+
+
+        function cargar(arreglo) {
+            for (let i = 0; i < 5; i++) {
+                const valor = parseInt(prompt("Ingrese valor"))
+                arreglo.push(valor)
+            }
+
+        }
+        function imprimir(arreglo) {
+            for (let i = 0; i < arreglo.length; i++) {
+                document.write(arreglo[i] + " - ")
+            }
+            document.write("<br>")
+        }
+
+        let arreglo1 = []
+        cargar(arreglo1)
+        imprimir(arreglo1)
+    </script>
+</body>
+
+</html>
