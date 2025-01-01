@@ -1,0 +1,37 @@
+<! DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <script>
+        /*
+        
+        Plantear una funcion que reciba una
+        palabra y retorne la cantidad de letras 'a' o "A" que 
+        contiene.
+        */
+
+        function contaraoA(palabra) {
+            let ca = 0
+            for (let a of palabra) {
+                if (a === "a" || a === "A") {
+                    ca++
+                }
+            }
+            return ca
+        }
+
+        let prueba = contaraoA("supercalifragilisticoespiAlidoso")
+        document.write("Cantidad de a o A " + prueba)
+
+
+    </script>
+
+    <body>
+
+    </body>
+
+    </html>

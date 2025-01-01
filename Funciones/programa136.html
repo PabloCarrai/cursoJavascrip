@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<script>
+    /*
+    Confeccionar una funcion que nos retorne el factorial de un numero. 
+    El factorial resulta de multiplicar todos los numeros
+    anteriores e igual a dicho numero. 
+    el factorial de 5 es 120
+    1*2*3*4*5
+    */
+
+    function factorial(numero) {
+        let factorial = 1
+        for (let aux = 1; aux <= numero; aux++) {
+            factorial = factorial * aux
+        }
+        return factorial
+    }
+
+    for (let x = 2; x < 11; x++) {
+        document.write("Factorial " + x + " = " + factorial(x) + "<br>")
+    }
+
+</script>
+
+<body>
+
+</body>
+
+</html>

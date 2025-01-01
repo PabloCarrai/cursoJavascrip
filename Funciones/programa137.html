@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    
+    Confeccionar una funcion que le 
+    enviemos un entero y nos retorne true si es par y false en 
+    caso contrario
+
+    Llamar a la funcion esPar 100 veces pasando los valores del 1 al 
+    100
+    */
+    function esPar(numero) {
+        if (numero % 2 == 0) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    for (let x = 1; x <= 100; x++) {
+        if (esPar(x)) {
+            document.write("Numero  " + x + "  par    " + "<br>")
+        } else {
+            document.write("Numero  " + x + "   impar    " + "<br>")
+
+        }
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>

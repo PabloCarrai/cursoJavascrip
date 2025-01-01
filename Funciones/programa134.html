@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Confeccionar una funcion que calcule la 
+    supertifice de un rectangulo y la retorne, la funcion recibe
+    como parametro los valores de su base y su altura:
+    Cargar por teclado los lados de dos rectangulos y luego
+    muestrar un mensaje cual de ellos tiene una supertifice mayor. 
+
+    function retornarSupertifice(base, altura) { }
+
+    */
+
+    function retornarSupertifice(base, altura) {
+        const superficie = base * altura
+        return superficie
+    }
+
+    function cargarRectangulos() {
+        let base1 = parseInt(prompt("Ingrese la base del primer rectangulo"))
+        let altura1 = parseInt(prompt("Ingrese la altura del primer rectangulo"))
+        let base2 = parseInt(prompt("Ingrese la base del segundo rectangulo"))
+        let altura2 = parseInt(prompt("Ingrese la altura del segundo rectangulo"))
+        let rectangulo1 = retornarSupertifice(base1, altura1)
+        let rectangulo2 = retornarSupertifice(base2, altura2)
+        //    document.write(rectangulo1 + "<br>")
+        //    document.write(rectangulo2 + "<br>")
+        if (rectangulo1 > rectangulo2) {
+            //document.write(rectangulo1)
+            document.write("Mayor rectangulo1 " + rectangulo1)
+        } else {
+            if (rectangulo1 < rectangulo2) {
+                //document.write(rectangulo2)
+                document.write("Mayor rectangulo2 " + rectangulo2)
+            } else {
+                document.write("Ambos son iguales " + "<br>")
+                document.write(rectangulo1 + "<br>")
+                document.write(rectangulo2 + "<br>")
+            }
+        }
+    }
+
+    cargarRectangulos()
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
