@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Confeccionar una funcion que reciba un 
+    arreglo y retorne por defecto la suma de todos sus elementos. 
+    Con un segundo parametro predeterminado debemos poder indicar
+    a partir de que elemento iniciar su suma. 
+    Finalmente un tercer parametro predeterminado indicar hasta
+    que valor efectuar su suma
+
+    */
+
+    function sumar(arreglo, desde = 0, hasta = arreglo.length) {
+        let sumatoria = 0
+        for (let x = desde; x < hasta; x++) {
+            sumatoria = sumatoria + arreglo[x]
+        }
+        return sumatoria
+    }
+    console.log(sumar([1, 2, 3, 4, 5]))
+    console.log(sumar([1, 2, 3, 4, 5], 3))
+    console.log(sumar([1, 2, 3, 4, 5], 0, 2))
+    console.log(sumar([1, 1, 1, 4, 5]))
+
+</script>
+
+<body>
+
+</body>
+
+</html>
