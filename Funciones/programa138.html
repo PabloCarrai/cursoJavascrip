@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function sumar2o3(v1, v2, v3 = 0) {
+        return v1 + v2 + v3
+    }
+
+    console.log(sumar2o3(10, 20))
+    console.log(sumar2o3(10, 20, 5))
+
+
+
+    function tablaMultiplicar(numero, terminos = 10) {
+        let tabla = []
+        for (let i = 1; i <= terminos; i++) {
+            let mult = numero * i
+            tabla.push(mult)
+        }
+        return tabla
+    }
+    console.log(tablaMultiplicar(3, 6))
+    console.log(tablaMultiplicar(7))
+
+</script>
+
+<body>
+
+</body>
+
+</html>
