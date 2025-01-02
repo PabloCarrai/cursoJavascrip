@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    Expresion de funcion
+    */
+
+    mostrarMensaje("Hola Mundo")
+    function mostrarMensaje(mensaje) {
+        alert(mensaje)
+    }
+
+    /*
+    Este muestra que no se la puede llamar desde cualquier lugar. 
+    Primero tiene que crearse y luego llamarse
+    */
+
+    //mostrarMensaje1("Hola Mundo1")
+
+    let mostrarMensaje1 = function (mensaje1) {
+        alert(mensaje1)
+    }
+    mostrarMensaje1("Hola Mundo1")
+
+    /*
+    
+    Ingresar el lado de un cuadrado, luego preguntar
+    si queremos calcular su perimetro o su superficie. Crear una 
+    espresion de funcion diferente por el verdadero y el falso
+    del if
+    */
+
+
+    /*
+    function perimetroCuadrado(lado) {
+        const perimetro = lado + lado + lado + lado
+        return perimetro
+    }
+    function superficieCuadrado(lado) {
+        const superficie = lado * lado
+        return superficie
+    }
+        */
+
+
+    const lado = parseInt(prompt("Ingrese el lado de un cuadrado"))
+    const respuesta = prompt("Quiere calcular el perimetro o la superficie de un cuadrado?(perimetro)/(superficie)")
+    let calcular
+
+    if (respuesta === "perimetro") {
+        calcular = function (lado) {
+            const perimetro = lado + lado + lado + lado
+            document.write("El perimetro del lado " + lado + " es " + perimetro + " <br> ")
+        }
+    } else {
+        if (respuesta === "superficie") {
+            calcular = function (lado) {
+                const superficie = lado * lado
+                document.write("La superficie del lado " + lado + " es " + superficie + " <br> ")
+            }
+        }
+    }
+    calcular(lado)
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

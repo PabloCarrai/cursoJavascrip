@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    
+    Parametros rest
+    */
+    function prueba(a, b, ...c) {
+        console.log(a)
+        console.log(b)
+        console.log(c)
+    }
+
+    prueba(10, 20, 30, 40, 50)
+
+    /*
+    
+    otro ejemplo
+    
+    */
+    function sumar(...numeros) {
+        let suma = 0
+        for (let elemento of numeros) {
+            suma = suma + elemento
+        }
+        return suma
+    }
+    console.log(sumar(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+
+    /*
+    
+    
+    Confeccionar una funcion que reciba como primer
+    parametro un arreglo.
+    El segundo parametro debe ser de tipo rest y recibir las 
+    posiciones de los elementos que se quieren sumar. 
+    */
+
+    function sumarPosiciones(arreglo, ...posiciones) {
+        for (let i = 0; i < posiciones.length; i++) {
+            let suma = suma + arreglo[posiciones[i]]
+        }
+        return suma
+    }
+    console.log(sumarPosiciones([2, 4, 6, 8], 0, 3))
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

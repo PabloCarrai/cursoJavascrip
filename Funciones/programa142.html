@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Elaborar una funcion que reciba y 
+    muestre los datos de una familia.
+    Mostrar el nombre el padre, su madre y en el caso de tener
+    hijos los recibe un parametro rest.
+    */
+
+
+
+    function mostrarFamilia(padre, madre, ...hijos) {
+        document.write("La familia<br>")
+        document.write("Padre: " + padre + "<br>")
+        document.write("Madre: " + madre + "<br>")
+        if (hijos.length > 0) {
+            document.write("Hijos/as: <br>")
+            for (let hijo of hijos) {
+                document.write(hijo + " - ")
+            }
+        }
+        document.write("<hr>")
+    }
+    mostrarFamilia("Jose", "Ana", "Carlos", "Maria", "Laura")
+    mostrarFamilia("Pablo", "Cristina")
+    mostrarFamilia("Raul", "Julieta", "Lautaro", "Miguel", "Yesica", "Romina")
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

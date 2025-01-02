@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    expresion flechas
+    */
+    // retorna el cuadrado de un valor
+    const cuadrado = valor => valor ** 2
+    console.log(cuadrado(5))
+    // sumar dos numeros
+    const sumar = (v1, v2) => v1 * v2
+    console.log(sumar(20, 30))
+
+    // retornar hola mundo
+    const holaMundo = () => "Hola Mundo"
+    console.log(holaMundo())
+
+    //retornar la suma de todos lo numeros pasados
+    const sumarTodos = (...valor) => {
+        let suma = 0
+        for (let v of valor) {
+            suma = suma + v
+        }
+        return suma
+    }
+    console.log(sumarTodos(1, 2, 3, 4, 5, 6))
+
+    /*
+    confeccionar una funcion que reciba 2 arreglos y retorne otro
+    arreglo que resulte de la suma de los elementos de la misma posicion
+    */
+
+    const sumaArray = (arreglo, arreglo1) => {
+        const arregloSuma = []
+        for (let i = 0; i < arreglo.length; i++) {
+            arregloSuma.push(arreglo[i] + arreglo1[i])
+        }
+        return arregloSuma
+    }
+    const arr1 = [1, 1, 1]
+    const arr2 = [4, 4, 4]
+    console.log(sumaArray(arr1, arr2))
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
