@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    Confeccionar una funcion flecha que reciba 2 arreglos y nos
+    retorne true si tiene la misma cantidad de elementos o false
+    en caso contrario. 
+
+    Confeccionar una segunda funcion que reciba 2 arreglos y nos 
+    retorne si tienen la misma informacion en las mismas 
+    posiciones. 
+    
+    */
+
+    const igualTamaño = (arreglo, arreglo1) => {
+        for (let x = 0; x < arreglo.length; x++) {
+            if (arreglo.length == arreglo1.length) {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+    const iguales = (arreglo, arreglo1) => {
+        for (let x = 0; x < arreglo.length; x++) {
+            if (arreglo[x] == arreglo1[x]) {
+                document.write(arreglo[x]+"-"+arreglo1[x])
+                //return "Misma elementos misma cantidad"
+            } else {
+                //return "Diferentes elementos o cantidad"
+            }
+
+        }
+    }
+    const arreglo1 = [1, 2, 3]
+    const arreglo2 = [7, 8, 5, 3]
+    console.log(igualTamaño(arreglo1, arreglo2))
+
+    const arreglo3 = [1, 4, 3, 4]
+    const arreglo4 = [1, 2, 3, 5]
+    console.log(iguales(arreglo3, arreglo4))
+
+</script>
+
+<body>
+
+</body>
+
+</html>
