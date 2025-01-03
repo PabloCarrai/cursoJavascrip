@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Ejemplo de funcion callback
+    */
+
+    function sumar(v1, v2) {
+        return v1 + v2
+    }
+    function multiplicar(v1, v2) {
+        return v1 * v2
+    }
+
+    function operar(v1, v2, cb) {
+        const resultado = cb(v1, v2)
+        return resultado
+    }
+
+    console.log(operar(10, 5, sumar))
+    console.log(operar(10, 5, multiplicar))
+
+    /*
+    
+    otra forma de llamar a la funcion
+    */
+
+    console.log(operar(60, 10, (valor1, valor2) => valor1 + valor2))
+    console.log(operar(60, 10, (valor1, valor2) => valor1 * valor2))
+
+
+    /*
+    
+    otra forma de llamar a la funcion
+
+    */
+
+    /*
+    
+    Confeccionar una funcion llamada "filtrar" que
+    reciba un arreglo y una funcion callback
+    La funcion callback debe recibir como parametro un numero
+    y retornar true o false. 
+    Crear un nuevo arreglo con los elementos que cumplen la
+    condicion de la funcion callback
+    La funcion filtrar retorna el arreglo generado
+    */
+
+    function filtrar(arreglo, cb) {
+        const arregloNuevo = []
+        for (let elemento of arreglo) {
+            if (cb(elemento)) {
+                arregloNuevo.push(elemento)
+            }
+        }
+        return arregloNuevo
+
+    }
+
+    const arreglo = [1, 2, 10, 192, 7, 200, 6, 885, 50]
+
+    // retornar un arreglo con todos los elementos pares
+    const arreglo1 = filtrar(arreglo, (elemento) => elemento % 2 == 0)
+    console.log(arreglo1)
+    // retornar todos los elementos que tengan 2 o mas digitos
+    const arreglo2 = filtrar(arreglo, (elemento) => elemento >= 10)
+    console.log(arreglo2)
+    // retornar todos los elementos comprendidos entre 10 y 200
+    const arreglo3 = filtrar(arreglo, (elemento) => (elemento > 9) && (elemento <= 200))
+    console.log(arreglo3)
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

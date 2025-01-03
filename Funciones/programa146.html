@@ -19,31 +19,34 @@
     */
 
     const igualTamaño = (arreglo, arreglo1) => {
-        for (let x = 0; x < arreglo.length; x++) {
-            if (arreglo.length == arreglo1.length) {
-                return true
-            } else {
-                return false
-            }
+        if (arreglo.length == arreglo1.length) {
+            return true
+        } else {
+            return false
         }
     }
-    const iguales = (arreglo, arreglo1) => {
-        for (let x = 0; x < arreglo.length; x++) {
-            if (arreglo[x] == arreglo1[x]) {
-                document.write(arreglo[x]+"-"+arreglo1[x])
-                //return "Misma elementos misma cantidad"
-            } else {
-                //return "Diferentes elementos o cantidad"
-            }
 
+    const iguales = (arreglo, arreglo1) => {
+        if (igualTamaño(arreglo, arreglo1)) {
+            let igual = true
+            for (let i = 0; i < arreglo.length; i++) {
+                if (arreglo[i] != arreglo1[i]) {
+                    igual = false
+                    break
+                }
+            }
+            return igual
+        } else {
+            return false
         }
     }
+
     const arreglo1 = [1, 2, 3]
-    const arreglo2 = [7, 8, 5, 3]
+    const arreglo2 = [7, 8, 5]
     console.log(igualTamaño(arreglo1, arreglo2))
 
-    const arreglo3 = [1, 4, 3, 4]
-    const arreglo4 = [1, 2, 3, 5]
+    const arreglo3 = [1, 2, 8]
+    const arreglo4 = [1, 2, 3]
     console.log(iguales(arreglo3, arreglo4))
 
 </script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Confeccionar una funcion que reciba un 
+    numero y una funcion callback. 
+    El algoritmos de la funcion debe implementar un for que se
+    repita desde el 1 hasta el valor que llega como parametro
+    llamar a la funcion callback con el contador del for. 
+
+    function contarHasta(valor, cb){
+        
+    }
+
+    Llamar a la funcion contarHasta dos veces, la primera enviar
+    una funcion flecha que muestre con un alert el valor que recibe
+    como parametro.
+    Por ejemplo si le enviamos un 5 debe mostrar con alert los 
+    valores desde el 1 al 5 de uno en uno. 
+    La segunda llamada a contarHasta la funcion flecha debe
+    mostrar el valor mediante un document.write
+
+    */
+
+    function contarHasta(valor, cb) {
+        for (let x = 1; x <= valor; x++) {
+            cb(x)
+        }
+    }
+
+    const prueba = contarHasta(5, (x) => alert(x))
+    console.log(prueba)
+    const prueba1 = contarHasta(7, (x) => document.write(x + "<br>"))
+    console.log(prueba1)
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
