@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*metodo filter objeto array*/
+    const arreglo = [1, 2, 3, 4, 5, 6]
+    // filtrar todos los elementos pares
+    const arreglo1 = arreglo.filter(elemento => elemento % 2 == 0)
+    console.log(arreglo)
+    console.log(arreglo1)
+    // filtrar todos los elementos comprendidos entre 2 y 4
+    const arreglo2 = arreglo.filter(elemento => (elemento >= 2) && (elemento <= 4))
+    console.log("Elementos entre 2 y 4")
+    console.log(arreglo2)
+    // filtrar todas las personas menores de edad
+    const personas = [["Juan", 23], ["Carlos", 13], ["Ana", 34], ["Marcos", 10]]
+    const arreglo3 = personas.filter(mayor => mayor[1] < 18)
+    console.log("Menores de edad")
+    console.log(personas)
+    console.log(arreglo3)
+
+</script>
+
+<body>
+
+</body>
+
+</html>

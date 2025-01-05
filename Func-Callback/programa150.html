@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Se tiene un arreglo con componentes de tipo arreglo que
+    representan un articulo. 
+    Se almacena el nombre del producto y su precio. 
+    Cargar en otro arreglo los articulos que tienen un precion mayor o
+    igual a 200. Primero resolverlo utilizando un for para recorrer el 
+    arreglo y luego resolver utilizando el metodo filterl del objeto
+    array.
+
+    const productos = [["Manzanas", 120], ["Naranjas", 150], ["Kiwis", 280], ["Peras", 240]]
+
+    */
+
+    const productos = [["Manzanas", 120], ["Naranjas", 150], ["Kiwis", 280], ["Peras", 240]]
+
+    let arregloparaFor = []
+    for (let x = 0; x < productos.length; x++) {
+        if (productos[x][1] > 200) {
+            arregloparaFor.push(productos[x])
+        }
+    }
+    console.log("El arreglo original es ")
+    console.log(productos)
+    console.log("Quedaria con el for ")
+    console.log(arregloparaFor)
+
+    const arregloparaFilter = productos.filter(elemento => elemento[1] >= 200)
+    console.log("Usando filter")
+    console.log(arregloparaFilter)
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
