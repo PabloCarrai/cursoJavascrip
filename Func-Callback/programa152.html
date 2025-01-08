@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Se tiene un arreglo con los nombres y claves de usuarios:
+    const usuarios = [["Juan", "sd32fsq"], 
+                      ["Carlos", "mbG65f4"], 
+                      ["Ana", "2,Frt5"], 
+                      ["Marcos", "sWf_·23s"]]
+
+    Crear un arreglo solo con los nombres.
+    Crear otro arreglo con nombres y la clave con un string vacio
+    Emplear en ambos casos el metodo map
+    */
+
+    const usuarios = [["Juan", "sd32fsq"], ["Carlos", "mbG65f4"], ["Ana", "2,Frt5"], ["Marcos", "sWf_·23s"]]
+
+    //  Crear un arreglo solo con los nombres.
+    const usuariosSoloNombre = usuarios.map(nombres => nombres[0])
+    console.log(usuariosSoloNombre)
+    //  Crear otro arreglo con nombres y la clave con un string vacio
+    const usuariosNombreclavevacia = usuarios.map(nombres => [nombres[0], " "])
+    console.log(usuariosNombreclavevacia)
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

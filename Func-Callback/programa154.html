@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Se tiene un arreglo con los nombres y claves de usuarios
+
+    const usuarios = [["Juan", "sd32fsq"], ["Carlos", "mbG65f4"], ["Ana", "2,Frt5"], ["Marcos", "sWf_·23s"]]
+
+    Mediante el metodo findIndex recuperar el indice de la componente
+    del arreglo usuarios de un nombre de usuario que ingresamos por teclado.
+    Mostrar la clave de dicho usuario
+    */
+
+    const usuarios = [["Juan", "sd32fsq"], ["Carlos", "mbG65f4"], ["Ana", "2,Frt5"], ["Marcos", "sWf_·23s"]]
+    const nombreBuscar = prompt("Ingrese un nombre a buscar")
+    const resultado = usuarios.findIndex(usuario => usuario[0] == nombreBuscar)
+
+    if (resultado != -1) {
+        console.log(usuarios[resultado][1])
+    } else {
+        console.log("Usuario no encontrado")
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>

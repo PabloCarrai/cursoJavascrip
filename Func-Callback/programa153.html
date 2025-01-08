@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    metodo find
+    */
+    const productos = [["Manzanas", 120], ["Naranjas", 150], ["Kiwis", 280], ["Peras", 240]]
+
+    //  Recuperar los componentes que alacena la fruta "Kiwis"
+    const producto = productos.find(producto => producto[0] == "Kiwis")
+    if (producto != undefined) {
+        console.log(producto)
+    } else {
+        console.log("No existe el producto Kiwis")
+    }
+
+
+    /*
+    findIndex*/
+
+    // Recuperar la posicion dentro del vector de la fruta "Manzanas"
+    const productoManzanas = productos.findIndex(producto => producto[0] == "Manzanas")
+    if (productoManzanas != -1) {
+        console.log(productoManzanas)
+        console.log(productos[productoManzanas])
+    } else {
+        console.log("No existe el producto Manzanas")
+    }
+
+</script>
+
+<body>
+
+</body>
+
+</html>
