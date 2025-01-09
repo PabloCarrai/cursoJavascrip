@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Crear un arreglo con 10 elementos con valores aleatorios
+    comprendidos entre 0 y 50.
+    Verificar si al menos se genero un valor 15.
+    Verificar luego si todos los valores generados son menores a 45.
+    */
+    let arreglo = []
+    for (let x = 1; x <= 10; x++) {
+        let valorAleatorio = Math.floor(Math.random() * 51)
+        arreglo.push(valorAleatorio)
+    }
+    console.log(arreglo)
+    //  Verificar si al menos se genero un valor 15.
+    const verificarUnQuince = arreglo.some(valor => valor == 15)
+    if (verificarUnQuince) {
+        console.log("Hay al menos un valor con el 15")
+    } else {
+        console.log("No existe ningun valor con el 15")
+    }
+    //  Verificar luego si todos los valores generados son menores a 45.
+    const verificarMenores = arreglo.every(valor => valor < 45)
+    if (verificarMenores) {
+        console.log("Todos los valores son menores a 45")
+    } else {
+        console.log("Al menos un valor es mayor o igual a 45")
+    }
+
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

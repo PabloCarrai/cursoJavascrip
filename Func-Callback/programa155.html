@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    metodo some
+    */
+
+    const arreglo = [11, 12, 5, 23, 801]
+    // Verificar si al menos hay un elemento par en el arreglo
+    const hayPares = arreglo.some(elemento => elemento % 2 == 0)
+    if (hayPares) {
+        console.log("Al menos hay un elemento par")
+    } else {
+        console.log("No hay elemento par")
+    }
+
+    const productos = [["Manzanas", 120], ["Naranjas", 150], ["Kiwis", 280], ["Peras", 240]]
+    // Verificar si todos los productos tienen un precio mayor a 100
+    const mayoACien = productos.every(elemento => elemento[1] > 100)
+    if (mayoACien) {
+        console.log("Todos los precios son mayores a 100")
+    } else {
+        console.log("No todos los precios son mayores a 100")
+    }
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
