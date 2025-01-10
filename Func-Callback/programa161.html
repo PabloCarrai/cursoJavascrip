@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // metodo reduce
+    const arreglo = [1, 2, 3, 4, 5]
+    const suma = arreglo.reduce((acumulador, valorActual) => acumulador + valorActual)
+    console.log(suma)
+
+    const articulos = ["papas", "manzanas", "peras", "uvas"]
+    const cadena = articulos.reduce((acumulador, valor) => acumulador + "-" + valor)
+    console.log(cadena)
+    // reduceRight lo hace al reves. 
+    const sueldoAño2022 = 120000
+    const sueldos2023 = [10000, 11000, 12000, 12000, 13000]
+    const sueldosTotal = sueldos2023.reduce((acumulador, valorActual) => acumulador + valorActual, sueldoAño2022)
+    console.log(sueldosTotal)
+
+    const empleadosSueldos = [["Ana", 3400], ["Carlos", 4000], ["Maria", 2000], ["Pedro", 1200]]
+    const gastoEnSueldos = empleadosSueldos.reduce((acumulador, empleado) => acumulador + empleado[1], 0)
+    console.log(gastoEnSueldos)
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

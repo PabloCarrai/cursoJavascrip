@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<script>
+    /*
+    
+    
+    Se tiene un arreglo con un conjunto de nombres.
+    Ordenar el arreglo en forma alfabetica y seguidamente generar un 
+    string con todos los nombres ordenados y separados por una coma. 
+
+    const nombres = ["juan", "ana", "luis", "carlos", "marcos"]
+
+    */
+
+    const nombres = ["juan", "ana", "luis", "carlos", "marcos"]
+    nombres.sort()
+    console.log(nombres)
+    const nombresUnidos = nombres.reduce((a, b) => a + "," + b)
+    console.log(nombresUnidos)
+</script>
+
+<body>
+
+</body>
+
+</html>

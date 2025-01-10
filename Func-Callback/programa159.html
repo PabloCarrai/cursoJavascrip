@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // metodo sort
+    const nombres = ["juan", "ana", "luis", "carlos", "marcos"]
+    nombres.sort()
+    console.log(nombres)
+
+    const arreglo = [10, 7, 2, 1, 4]
+    arreglo.sort()
+    console.log(arreglo)
+
+    /*
+    arreglo.sort((a, b) => {
+        if (a == b) {
+            return 0
+        } else {
+            if (a > b) {
+                return 1
+            } else {
+                return -1
+            }
+        }
+    })
+    console.log(arreglo)
+    */
+    // de menor a mayor
+    /*
+    arreglo.sort((a, b) => a - b)
+    console.log(arreglo)
+    */
+    // mayor a menor
+    arreglo.sort((a, b) => b - a)
+    console.log(arreglo)
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
