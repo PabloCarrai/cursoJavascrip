@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    
+    Crear un arreglo de 50 elementos que represente un bolillero
+    de loteria(valores entre 1 y 50).
+    La logica a emplear es generar un valor aleatorio comprendido
+    entre 1 y 50. Verificar si dichos numeros se encuentran contenido en
+    el arreglo, en caso negativo agregarlo con el metodo push.  Repetir
+    el proceso hasta que el bolillero tenga 50 elementos. 
+    Imprimir el bolillero.
+    Extraer e imprimir las dos primeras bolillas que coinciden con
+    las posiciones 0 y 1. 
+    Controlar que el bolillero haya quedado en 48 bolillas. 
+    */
+
+    //Crear un arreglo de 50 elementos que represente un bolillero
+    //de loteria(valores entre 1 y 50)
+    let bolillero = []
+    while (bolillero.length != 50) {
+        let aleatorio = Math.floor(Math.random() * 51)
+        if (bolillero.includes(aleatorio) == false) {
+            bolillero.push(aleatorio)
+        }
+    }
+    console.log(bolillero)
+    console.log(bolillero.shift())
+    console.log(bolillero.shift())
+    console.log(bolillero.length)
+
+</script>
+
+<body>
+
+</body>
+
+</html>
