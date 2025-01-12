@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    slice
+    */
+
+    const arreglo1 = [1, 2, 3, 4, 5]
+    const referencia = arreglo1
+    referencia[0] = 1000
+    console.log(referencia)
+    console.log(arreglo1)
+
+    /*
+    Metodo slice crea una copia de un arreglo. 
+    */
+
+    const arreglo3 = [1, 2, 3, 4, 5]
+    const arreglo4 = arreglo3.slice()
+    arreglo3[0] = 1000
+    console.log(arreglo3)
+    console.log(arreglo4)
+
+    /*
+    Metodo slice con parametros opcionales. 
+    */
+    const arreglo5 = [10, 20, 30, 40, 50]
+    const arreglo6 = arreglo5.slice(2)
+    console.log(arreglo5)
+    console.log(arreglo6)
+
+    /*
+    Metodo slice con parametro inicio y final
+    */
+    const arreglo7 = [10, 20, 30, 40, 50]
+    const arreglo8 = arreglo5.slice(2, 4)
+    console.log(arreglo7)
+    console.log(arreglo8)
+
+    /*
+    No funciona igual con los arreglos multidimension
+    */
+    const matriz9 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    const casiCopia = matriz9.slice()
+    matriz9[0][0] = 100
+    console.log(matriz9)
+    console.log(casiCopia)
+
+    /*
+    Se tiene que hacer un slice de cada arreglo interno para que funcione
+
+    */
+    const matriz10 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    const copia = matriz10.slice()
+    for (let i = 0; i < matriz10.length; i++) {
+        copia[i] = matriz10[i].slice()
+    }
+    matriz10[0][0] = 100
+    console.log(matriz10)
+    console.log(copia)
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

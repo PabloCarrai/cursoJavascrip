@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Confeccionar una funcion que le pasemos dos valores enteros y 
+    nos retorne un array que represente una matriz de n filas y m
+    columnoas.
+    Se deben inicializar todos los elementos de la matriz con 
+    cero
+
+    function retornarMatriz(filas, columnas) { }
+
+    Luego si llamanos con los valores 5 y 10 nos debe retornar un 
+    array con la siguiente estructura. 
+    
+    const matriz1=retornarMatriz(5,10)
+    console.log(matriz1)
+    
+    */
+
+    function retornarMatriz(filas, columnas) {
+        const matriz = new Array(filas)
+        for (let x = 0; x < matriz.length; x++) {
+            matriz[x] = new Array(columnas)
+            matriz[x].fill(0)
+        }
+        return matriz
+
+    }
+
+    const matriz1 = retornarMatriz(5, 10)
+    console.log(matriz1)
+
+</script>
+
+<body>
+
+</body>
+
+</html>
