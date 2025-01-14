@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Confeccionar una funcion que le pasemos un arreglo con
+    componentes de tipo arreglo y nos retorne una copia de un 
+    arreglo anidado de una determinada posicion. 
+    */
+
+    function copiarElemento(arreglo, posicion) {
+        let copia = arreglo[posicion].slice()
+        return copia
+    }
+    let matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    let arreglo = copiarElemento(matriz, 2)
+    matriz[2][0] = 100
+    console.log(matriz)
+    console.log(arreglo)
+
+</script>
+
+<body>
+
+</body>
+
+</html>
