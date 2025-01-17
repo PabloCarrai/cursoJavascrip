@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Concat, 
+    Concatena arrays
+    
+    const arreglo1 = [1, 2, 3]
+    const arreglo2 = [4, 5, 6]
+    const arreglo3 = [7, 8, 9]
+    // al primer array le agrega el contenido de los otros dos
+    const arregloTotal = arreglo1.concat(arreglo2, arreglo3)
+    arreglo1[0] = 1000
+    console.log(arregloTotal)
+    
+     // no funciona bien con metodos anidados
+    const arreglo1 = [[1, 2, 3], [4, 5, 6]]
+    const arreglo2 = [[7, 8, 9], [10, 11, 12]]
+    const copia = arreglo1.concat(arreglo2)
+    console.log(copia)
+    arreglo1[0][0] = 1000
+    console.log(copia)
+    */
+    // se puede hacer una copia de arreglo de arreglo de esta forma   
+    const arreglo1 = [[1, 2, 3], [4, 5, 6]]
+    const arreglo2 = [[7, 8, 9], [10, 11, 12]]
+    const copiaProfunda = []
+    for (let arreglo of arreglo1) {
+        copiaProfunda.push(arreglo.slice())
+    }
+    for (let arreglo of arreglo2) {
+        copiaProfunda.push(arreglo.slice())
+    }
+    arreglo1[0][0] = 1000
+    console.log(arreglo1)
+    console.log(copiaProfunda)
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

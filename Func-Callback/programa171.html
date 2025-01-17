@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Generar un arreglo con 50 numeros enteros que represente
+    un bolillero. Cargar valores aleatorios comprendidos entre 1 y
+    50, no permitir que se repitan.
+    Luego buscar en el arreglo el numero 25 y a partir de 
+    dicho valor inclusive, eliminar todos los elementos restantes
+    hasta final del areglo. 
+    Imprimir la cantidad de numeros que quedaron en el 
+    bolillero y dichos numeros. 
+    */
+
+
+    let bolillero = []
+    while (bolillero.length != 50) {
+        let aleatorio = Math.floor(Math.random() * 51)
+        if (bolillero.includes(aleatorio) == false) {
+            bolillero.push(aleatorio)
+        }
+    }
+    console.log(bolillero)
+    console.log("Cantidad de elementos del array original")
+    console.log(bolillero.length)
+    console.log("Posicion del 25 dentro del array")
+    console.log(bolillero.indexOf(25))
+    bolillero.splice([bolillero.indexOf(25)])
+    console.log("Quedan")
+    console.log(bolillero.length)
+    console.log("El array estaria asi")
+    console.log(bolillero)
+
+    //console.log(bolillero[bolillero.indexOf(25)])
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

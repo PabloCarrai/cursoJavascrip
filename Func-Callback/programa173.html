@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Se tiene el siguiente arreglo:
+
+    const arreglo = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    
+    Empleando el metodo concat proceder a generar una copia
+    sin arreglos anidados, debe quedar con la siguiente
+    Estructura:
+
+    [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    Esto se conoce como aplanar un arreglo
+    */
+
+    const arreglo = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    const aux = []
+    for (let x = 0; x < arreglo.length; x++) {
+        for (let y = 0; y < arreglo.length; y++) {
+            aux.push(arreglo[x][y])
+        }
+    }
+    console.log("El arreglo original")
+    console.log(arreglo)
+    console.log("El auxiliar")
+    console.log(aux)
+
+    /*
+    La solucion usando concat es
+    */
+    const copia = arreglo[0].concat(arreglo[1], arreglo[2])
+    console.log(copia)
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
