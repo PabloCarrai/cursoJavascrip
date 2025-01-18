@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Metodo join, devuelve de un array un string con un separador usado
+    arreglo.join(separador)
+    */
+
+    const arreglo = ["juan", "ana", "luis"]
+    // al no definir el separador usa , 
+    const cadena = arreglo.join()
+    console.log(cadena)
+
+    //caso de usar un guion de separador
+    const cadena1 = arreglo.join("-")
+    console.log(cadena1)
+
+    //caso de necesitar que no haya un separador se usa ''
+    const cadena2 = arreglo.join('')
+    console.log(cadena2)
+
+    //en un arreglo multidimensional el join aplana el arreglo del arreglo
+    const arreglo1 = [["juan", 24], ["ana", 31], ["luis", 12]]
+    const cadena3 = arreglo1.join()
+    console.log(cadena3)
+
+    //hay que tener cuidado con los arreglos multidimensionales por la manera en que se usa el separador
+    const cadena4 = arreglo1.join('-')
+    console.log(cadena4)
+
+    // con valores null undefined se convierten en cadenas vacias con el metodo join
+    const arreglo2 = ["juan", null, undefined, 'ana']
+    const cadena5 = arreglo2.join('')
+    console.log(cadena5)
+
+    //esto ultimo cambia cuando hay un separador
+    const cadena6 = arreglo2.join("-")
+    console.log(cadena6)
+
+</script>
+
+<body>
+
+</body>
+
+</html>

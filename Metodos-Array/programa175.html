@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    En este programa no deben utilizar el metodo join sino
+    implementar un algoritmo que remplace en algunas situaciones
+    el metodo join.
+    La funcion unir solo debe funcionar para arreglos
+    planos. Debe retornar un string con todos los elementos del 
+    arreglo separados por el valor del segundo parametro. 
+
+
+    
+
+    function unir(arreglo, separador = ",") {
+        let arregloaux
+        if (separador == ",") {
+            arregloaux = arreglo.join()
+        } else {
+            arregloaux = arreglo.join(separador)
+        }
+        return arregloaux
+    }
+        //esta era la forma que se me ocurrio
+        pero pedia otra cosa .
+    */
+
+    function unir(arreglo, separador = ",") {
+        let cadena = ''
+        for (let i = 0; i < arreglo.length; i++) {
+            if (i < arreglo.length - 1) {
+                cadena = cadena + arreglo[i] + separador
+            } else {
+                cadena = cadena + arreglo[i]
+            }
+        }
+        return cadena
+    }
+
+
+    const arreglo1 = [1, 2, 3, 4, 5]
+    const cadena1 = unir(arreglo1)
+    console.log(cadena1)
+    const cadena2 = unir(arreglo1, "-")
+    console.log(cadena2)
+
+</script>
+
+<body>
+
+</body>
+
+</html>

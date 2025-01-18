@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Metodo entries
+
+
+    const arreglo1 = ["uno", "dos", "tres"]
+    const iterador = arreglo1.entries()
+    const primero = iterador.next().value
+    console.log(primero)
+    const segundo = iterador.next().value
+    console.log(segundo)
+    const tercero = iterador.next().value
+    console.log(tercero)
+    const cuarto = iterador.next().value
+    console.log(cuarto)
+
+    for (let componente of arreglo1.entries()) {
+        console.log(componente)
+    }
+
+    */
+
+    /*
+    Se tiene un arreglo con valores numericos, obtener el 
+    mayor elemento del arreglo y su posicion
+    */
+    const arreglo = [10, 45, 120, 34, 16, 70]
+    let mayor = arreglo[0]
+    let posicion = 0
+    for (let componente of arreglo.entries()) {
+        if (componente[1] > mayor) {
+            mayor = componente[1]
+            posicion = componente[0]
+        }
+    }
+    console.log("El mayor valor es ", mayor)
+    console.log("Ubicado en la posicion ", posicion)
+
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
