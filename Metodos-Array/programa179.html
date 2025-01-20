@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // desustructuracion de un array
+
+    const arreglo = [10, 20, 30]
+    const [primero, segundo] = arreglo
+    console.log(primero)
+    console.log(segundo)
+    const [, , tercero] = arreglo
+    console.log(tercero)
+
+    // empaquetar valores en un arreglo
+    const arreglo1 = [5, 15, 25, 35]
+    const [valor1, valor2, ...resto] = arreglo1
+    console.log(valor1)
+    console.log(valor2)
+    console.log(resto)
+
+    // lo mismo usando variables
+    const arreglo2 = [10, 20, 30]
+    let primero1, segundo1, tercero1
+    [primero1, segundo1] = arreglo2;
+    [, , tercero1] = arreglo2
+    console.log(primero1)
+    console.log(segundo1)
+    console.log(tercero1)
+
+    // intercambiar valores de variables sin usar variables auxiliares
+    let x = 10
+    let y = 70
+    console.log(x, y);
+    [x, y] = [y, x]
+    console.log(x, y)
+
+    // Desustructuracion en arreglo en parametro de funcion
+
+    function mostrarCoordenada([x, y]) {
+        console.log(x, y)
+        document.write(x + "-" + y + "<br>")
+    }
+    const puntos = [[10, 3], [4, 6], [1, 3]]
+    for (let punto of puntos) {
+        mostrarCoordenada(punto)
+    }
+
+    // valores por defecto al desestructurar un arreglo
+    const arreglo3 = [10, 2]
+    let [x1, y1, z1 = 0] = arreglo3
+    console.log(x1, y1, z1)
+    arreglo3.push(70);
+    [x1, y1, z1 = 0] = arreglo3
+    console.log(x1, y1, z1)
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

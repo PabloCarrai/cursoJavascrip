@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Operador spread(expandir)
+    */
+    function sumar(v1, v2, v3) {
+        return v1 + v2 + v3
+    }
+    const arreglo = [1, 2, 3]
+    console.log(sumar(arreglo[0], arreglo[1], arreglo[2]))
+    // aca hace la magia(los ...) 
+    console.log(sumar(...arreglo))
+
+    // tambien sirve para copiar un array como si fuera slice
+    const arreglo1 = [1, 2, 3]
+    const arreglo2 = arreglo1.slice()
+    console.log(arreglo2)
+    const arreglo3 = [...arreglo1]
+    console.log(arreglo3)
+
+    // tambien sirve para concatenar varios array
+    const arreglo4 = [1, 2, 3]
+    const arreglo5 = [4, 5, 6]
+    const arreglo6 = [7, 8, 9]
+    const arregloTotal = [...arreglo4, ...arreglo5, ...arreglo6]
+    console.log(arregloTotal)
+
+    // obtener el mayo con metodo Math.max
+    const mayorValor = Math.max(10, 40, 17)
+    console.log(mayorValor)
+
+    // Si necesito usar el mayo en un arreglo uso el ...
+    const arreglo7 = [10, 40, 17, 5, 24]
+    const mayor = Math.max(...arreglo7)
+    console.log(arreglo7)
+    console.log(mayor)
+
+</script>
+
+<body>
+
+</body>
+
+</html>

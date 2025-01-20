@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+
+    const arreglo1 = [10, 45, 3, 50, 33, 16, 67, 2, 1, 12]
+
+    
+    1- Mediante el metodo slice de la clase Array extraer
+    los primeros 5 elementos del arreglo y luego llamar al metodo
+    max para obtener el mayor elemento. 
+    2- Hacer el mismo proceso con los 5 elementos
+    siguientes, pero obtener el menor elemento empleando el metodo
+    min de la clase Math.
+    3- Crear otro array que contenga los primeros tres
+    elementos y los ultimos tres elementos del arreglo. Empleas
+    el metodo slice y el operador spread
+    
+    
+    */
+
+
+
+    const arreglo1 = [10, 45, 3, 50, 33, 16, 67, 2, 1, 12]
+
+    //  1
+    const arregloSlice = arreglo1.slice(0, 5)
+    console.log("Primeros 5 elementos ", arregloSlice)
+    console.log("El mayor de ellos es ", Math.max(...arregloSlice))
+
+    //  2
+    const arregloMin = arreglo1.slice(5, arreglo1.length)
+    console.log(arregloMin)
+    console.log("El menor de ellos es ", Math.min(...arregloMin))
+
+    // 3
+
+    const primerosTres = arreglo1.slice(0, 3)
+    const ultimosTres = arreglo1.slice(arreglo1.length - 3, arreglo1.length)
+    const arregloUnion = [...primerosTres, ...ultimosTres]
+    console.log("Los primeros tres y los ultimos tres del arreglo son ", arregloUnion)
+
+</script>
+
+<body>
+
+</body>
+
+</html>
