@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Confeccionar una funcion que reciba un arreglo
+    con numeros y nos retorne un arreglo con el mayor y menor
+    elemento.
+    Cuando llamemos a la funcion proceder a desestructurar el 
+    arreglo devuelvo en dos tipos de datos primitivos. 
+    */
+
+    function mayorMenor(arreglo) {
+        let mayor = Math.max(...arreglo)
+        let menor = Math.min(...arreglo)
+        return [mayor, menor]
+
+    }
+    const arreglo = [10, 56, 2, 788, 12, 45]
+    // llamar a la funcion y desestructurar los dos numeros retornados
+    let [mayor, menor] = mayorMenor(arreglo);
+    console.log("El arreglo original es ", arreglo)
+    console.log("El mayor de sus elementos ", mayor)
+    console.log("El menor de sus elementos ", menor)
+
+</script>
+
+<body>
+
+</body>
+
+</html>

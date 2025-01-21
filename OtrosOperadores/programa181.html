@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    // operador de asignacion +=
+    const arreglo = [1, 2, 3, 4, 5]
+    let suma = 0
+    for (let elemento of arreglo) {
+        suma += elemento// una version concisa de suma = suma + elemento
+    }
+    console.log("La suma es", suma)
+    // operador  *=
+    // calcular el factorial de 5.
+    let factorial = 1
+    for (let x = 1; x <= 5; x++) {
+        factorial *= x
+    }
+    console.log("El factorial de 5 es ", factorial)
+
+    // operador not negacion !(niega una expresion) invierte la misma
+    const arreglo1 = []
+    while (arreglo1.length != 50) {
+        const valor = Math.floor(Math.random() * 50) + 1
+        if (!arreglo1.includes(valor)) {
+            arreglo1.push(valor)
+        }
+    }
+    console.log(arreglo1)
+
+    // operador condicional condicion?valor1:valor2
+    // si devuelve true devuelve valor 1 false valor2
+    const edad = 20
+    const resultado = edad >= 18 ? "Es mayor de edad" : "es menor de edad"
+    console.log(resultado)
+
+    /*
+    
+    Se tiene un arreglo con numeros de 1 o 2 digitos. Mostrar el numero
+    y un mensaje si tiene 1 o 2 digitos
+    */
+
+    const arreglo2 = [10, 4, 6, 45, 75, 8]
+    for (let elemento of arreglo2) {
+        console.log(elemento, elemento >= 10 ? "2 digitos" : "1 digito")
+    }
+
+
+    /*
+    
+    Se tiene un arreglo con una lista de valores. generar otro
+    arreglo con los elementos del primer arreglo, elevando al 
+    cuadrado los numeros pares y al cubo los numeros impares
+
+    */
+
+    const arreglo3 = [10, 4, 7, 40]
+    const arreglo4 = arreglo3.map(elemento1 => elemento1 % 2 == 0 ? elemento1 ** 2 : elemento1 ** 3)
+    console.log(arreglo4)
+
+</script>
+
+<body>
+
+</body>
+
+</html>

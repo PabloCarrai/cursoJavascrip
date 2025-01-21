@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    // objetos(diccionarios para los de python)
+    // definimos un objeto
+    const objeto = {}
+
+    // objeto persona 1 con tres propiedades
+    // cada propiedad tiene una clave y un valor
+    // nombre: (clave) :"Pablo Rodriguez"(valor)
+    // el separador es :
+    const persona1 = {
+        nombre: "Pablo Rodriguez",
+        edad: 22,
+        casado: true
+    }
+
+    // se usa el nombre de la propiedad como indice
+    console.log(persona1.nombre)
+    console.log(persona1.edad)
+
+    /*
+    
+    Crear dos objetos que representen articulos(sus 
+    propiedades son codigo, descripcion y precio)
+    Verificar cual es el que tiene un precio mayor y mostrar su
+    nombre, codigo y precio. 
+    Luego aumentar un 20% cada producto. Mostrar lso objetos por la 
+    consola. 
+    */
+
+    const articulos = {
+        codigo: 1,
+        descripcion: "Pelota",
+        precio: 10,
+    }
+    const articulos1 = {
+        codigo: 2,
+        descripcion: "Pelota Ping Pong",
+        precio: 20,
+    }
+
+    let resultado = articulos.precio > articulos1.precio ? "el mayor es " + articulos.descripcion + " Tiene un precio de " + articulos.precio : "el mayor es" + articulos1.descripcion + " Tiene un precio de " + articulos.precio
+    console.log(resultado)
+    console.log("Precio original ", articulos.precio)
+    console.log("Precio original", articulos1.precio)
+    articulos.precio *= 1.20
+    articulos1.precio *= 1.20
+    console.log("Aumentado 20% quedaria", articulos.precio)
+    console.log("Aumentado 20% quedaria", articulos1.precio)
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
