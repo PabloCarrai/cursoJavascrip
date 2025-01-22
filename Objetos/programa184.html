@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Definir un objeto que represente un 
+    alumno con las propiedades: nombre, materia, nota1,nota2
+    nota3.
+    Inicializar las propiedades con distintos valores.
+    Confeccionar una funcion que muestre todos los datos del 
+    alumno, mostrar tambien el promedio de las tres notas y un 
+    mensaje que promociono si su promedio es mayor o igual a 7
+    Desarrollar otra funcion que retorne el promedio de las tres notas
+    del alumno, llamar a la misma desde la primer funcion
+    */
+
+    function hacerPromedioNotas(objeto) {
+        let promedio = (objeto.nota1 + objeto.nota2 + objeto.nota3) / 3
+        if (promedio >= 7) {
+            return "Aprobado Promedio " + promedio
+        } else {
+            return "Desaprobado Promedio  " + promedio
+        }
+    }
+
+    function mostrarDatosAlumno(objeto) {
+        document.write("<h1>Datos del estudiante</h1>")
+        document.write("Estudiante:  " + objeto.nombre + "<br>")
+        document.write("Materia: " + objeto.materia + "<br>")
+        document.write("1 Nota: " + objeto.nota1 + "<br>")
+        document.write("2 Nota: " + objeto.nota2 + "<br>")
+        document.write("3 nota: " + objeto.nota3 + "<br>")
+        document.write(hacerPromedioNotas(objeto))
+        document.write("<hr>")
+    }
+
+    const alumno1 = {
+        nombre: "Yesica Sanchez",
+        materia: "Matematica",
+        nota1: 10,
+        nota2: 7,
+        nota3: 8
+    }
+
+    mostrarDatosAlumno(alumno1)
+
+</script>
+
+<body>
+
+</body>
+
+</html>

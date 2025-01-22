@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Se tienen definodos dos objetos que representan articulos:
+
+    const articulos1 = {
+        codigo: 1,
+        descripcion: "Pelota",
+        precio: 50,
+    }
+    const articulos2 = {
+        codigo: 2,
+        descripcion: "Set de Ping Pong",
+        precio: 45,
+    }
+
+    Confeccionar dos funciones, una que muestre todos los 
+    atributos del articulo:
+
+    function imprimir(articulo) { }
+
+    y otra que aumente el 20% su precio 
+
+    function aumentar20PorCiento(articulo) { }
+
+
+    */
+
+    const articulos1 = {
+        codigo: 1,
+        descripcion: "Pelota",
+        precio: 50,
+    }
+    const articulos2 = {
+        codigo: 2,
+        descripcion: "Set de Ping Pong",
+        precio: 45,
+    }
+
+    function imprimir(articulo) {
+        document.write("Codigo: " + articulo.codigo + "<br>")
+        document.write("Descripcion: " + articulo.descripcion + "<br>")
+        document.write("Precio: " + articulo.precio + "<hr>")
+    }
+
+    imprimir(articulos1)
+    imprimir(articulos2)
+
+    function aumentar20PorCiento(articulo) {
+        articulo.precio *= 1.20
+    }
+
+    aumentar20PorCiento(articulos1)
+    aumentar20PorCiento(articulos2)
+    document.write("Con el 20%+ seria <hr>")
+    imprimir(articulos1)
+    imprimir(articulos2)
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

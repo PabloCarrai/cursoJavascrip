@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Definir dos objetos que representen
+    jugadores, agregar como propiedad para cada objeto su
+    nombre, puntaje y nivel. 
+
+    Elaborar una funcion que reciba los datos de un jugador y los
+    muestre por pantalla. Llamar a la funcion pasando en la
+    primer llamada el jugador1 y en la segunda llamando el jugador2. 
+
+    Confeccionar una funcion que reciba como parametro los dos
+    jugadores y nos muestre el nombre del que tiene mayor 
+    puntaje. 
+    */
+
+
+    function mejorPuntaje(objeto, objeto1) {
+        let resultado
+        if (objeto.puntaje == objeto1.puntaje) {
+            resultado = "Igual puntaje "
+            return resultado
+        }
+        if (objeto.puntaje < objeto1.puntaje) {
+            resultado = "Mayor puntaje " + objeto1.nombre
+            return resultado
+        }
+        if (objeto.puntaje > objeto1.puntaje) {
+            resultado = "Mayor puntaje " + objeto.nombre
+            return resultado
+        }
+    }
+    function imprimir(objeto) {
+        document.write("<h1>El jugador </h1>")
+        document.write("Nombre: " + objeto.nombre + "<br>")
+        document.write("Puntaje: " + objeto.puntaje + "<br>")
+        document.write("Nivel: " + objeto.nivel + "<hr>")
+    }
+
+    const jugadores1 = {
+        nombre: "Cintia Leitz",
+        puntaje: 400,
+        nivel: 4
+    }
+
+    const jugadores2 = {
+        nombre: "Miguel Frontz",
+        puntaje: 500,
+        nivel: 7
+    }
+
+    imprimir(jugadores1)
+    imprimir(jugadores2)
+    document.write(mejorPuntaje(jugadores1, jugadores2))
+
+</script>
+
+<body>
+
+</body>
+
+</html>
