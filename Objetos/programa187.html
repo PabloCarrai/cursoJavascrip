@@ -38,7 +38,7 @@
         apellido: "Perez"
     }
     console.log(personal1)
-    delete personal1.apellido
+    //delete personal1.apellido
     console.log(personal1)
 
     /*
@@ -48,8 +48,37 @@
     producto, su descripcion y precio(cargar por teclado).
     Llamar dos veces a la funcion para crear dos productos.
     */
-    console.log(crearObjeto())
-    console.log(crearObjeto())
+    //console.log(crearObjeto())
+    //console.log(crearObjeto())
+
+    // se puede usar cualquier dato como propiedad
+    let personal2 = {
+        "apellido y nombre": "Perez Juan",
+        edad: 30,
+        estudios: true
+    }
+    console.log(personal2.edad)
+    // al acceder hago asi como si fuera un array
+    console.log(personal2["apellido y nombre"])
+
+    // acceder a una propiedad
+    let propiedad = prompt("Que quiere conocer de la personal2[nombre, apellido]?")
+    console.log(personal1[propiedad])
+
+    // operador in, retorna true si una propiedad esta definida en un objeto
+
+    let personal3 = {
+        apellido: "Perez Juan",
+        edad: 30,
+        estudios: true
+    }
+    let propiedad1 = prompt("Que quiere conocer de la personal3[nombre, apellido, edad]?")
+    if (propiedad1 in personal3) {
+        console.log(personal3[propiedad1])
+    } else {
+        console.log("No existe la propiedad " + propiedad1 + " en la personal3")
+    }
+
 
 </script>
 
