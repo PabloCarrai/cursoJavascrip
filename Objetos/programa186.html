@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Crear un objeto llamado empleado1 y
+    pensar que propiedades pondemos definir al mismo.
+    Crear otro objeto empleado2 con las mismas propiedades,
+    pero con otros valores.
+    Confeccionar una funcion que le enviemos un empleado y lo 
+    muestre. 
+    */
+
+    function mostrarDatos(objeto) {
+        document.write("<h1>Datos del empleado/a</h1>")
+        document.write("Nombre: " + objeto.nombre + "<br>")
+        document.write("Edad: " + objeto.edad + "<br>")
+        document.write("Especialidad: " + objeto.especialidad + "<br>")
+        document.write("Salario: $" + objeto.salario + "<br>")
+        document.write("<hr>")
+    }
+
+    const empleado1 = {
+        nombre: "Pedro Ortiz",
+        edad: 23,
+        especialidad: "Sistemas",
+        antiguedad: 3,
+        salario: 345654
+    }
+
+
+    const empleado2 = {
+        nombre: "Daniela Ortiz",
+        edad: 19,
+        especialidad: "Ingenieria",
+        antiguedad: 2,
+        salario: 5005072
+    }
+
+    mostrarDatos(empleado1)
+    mostrarDatos(empleado2)
+
+</script>
+
+<body>
+
+</body>
+
+</html>

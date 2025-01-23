@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    function crearObjeto() {
+        const productoValor = prompt("Ingrese el nombre del producto ")
+        const descripcionValor = prompt("Su descripcion ")
+        const precioValor = parseInt(prompt("Su precio "))
+        const nuevoObjeto = {
+            producto: productoValor,
+            descripcion: descripcionValor,
+            precio: precioValor
+        }
+        return nuevoObjeto
+    }
+
+    // objetos funcionalidades. 
+    // agregar propiedades al objeto. 
+    const personal = {
+        nombre: "Juan",
+        apellido: "Perez"
+    }
+    console.log(personal)
+    console.log(personal.edad)
+    // creo la propiedad edad y agrego el 30
+    personal.edad = 30
+    console.log(personal)
+
+    // eliminar propiedad
+    const personal1 = {
+        nombre: "Juan",
+        apellido: "Perez"
+    }
+    console.log(personal1)
+    delete personal1.apellido
+    console.log(personal1)
+
+    /*
+    
+    Confeccionar una funcion que cree y retorne un 
+    objeto, donde se almacene en forma dinamica el codigo de un 
+    producto, su descripcion y precio(cargar por teclado).
+    Llamar dos veces a la funcion para crear dos productos.
+    */
+    console.log(crearObjeto())
+    console.log(crearObjeto())
+
+</script>
+
+<body>
+
+</body>
+
+</html>
