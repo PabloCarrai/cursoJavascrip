@@ -8,6 +8,8 @@
 </head>
 <script>
 
+    /*
+
     function crearObjeto() {
         const productoValor = prompt("Ingrese el nombre del producto ")
         const descripcionValor = prompt("Su descripcion ")
@@ -52,6 +54,7 @@
     //console.log(crearObjeto())
 
     // se puede usar cualquier dato como propiedad
+    /*
     let personal2 = {
         "apellido y nombre": "Perez Juan",
         edad: 30,
@@ -78,6 +81,76 @@
     } else {
         console.log("No existe la propiedad " + propiedad1 + " en la personal3")
     }
+  
+
+    // variables en los valores de las propiedades
+    function crearPersona(nombre, edad, estudios) {
+        const persona = {
+            nombre: nombre,
+            edad: edad,
+            estudios: estudios
+
+        }
+        return persona
+    }
+
+    let persona1 = crearPersona("Juan", 30, "Ingeniero")
+    let persona2 = crearPersona("Pedro", 25, "Estudiante")
+    let persona3 = crearPersona("Maria", 20, "Estudiante")
+    console.log(persona1)
+    console.log(persona2)
+    console.log(persona3)
+ 
+
+    // otra forma de simplificar la funcion es 
+    // toma como propiedad el nombre de la variable, y el valor de la misma como valor.
+    function crearPersona(nombre, edad, estudios) {
+        const persona = {
+            nombre,
+            edad,
+            estudios
+
+        }
+        return persona
+    }
+    let persona1 = crearPersona("Juan", 30, "Ingeniero")
+    console.log(persona1)
+
+
+    // ciclo for in(para recorrer claves de un objeto)   
+
+    const persona = {
+        nombre: "Juan",
+        edad: 22,
+        estudios: "Vago"
+    }
+
+    // recorro el objeto persona
+    for (let clave in persona) {
+        console.log("Clave: " + clave)
+        console.log("Valor: " + persona[clave])
+    }
+    // Propiedad calculada. 
+    // sustituye el valor de una propiedad usando el valor de la variable
+    const estudios = "Universitario"
+    const persona = {
+        nombre: "Juan",
+        apellido: "Perez",
+        [estudios]: true
+    }
+    console.log(persona)
+    */
+    // Cuando se referencia un objeto es solo referencia, al cambiar el valor repercute en el original
+
+
+    const persona = {
+        nombre: "Juan",
+        edad: 22,
+        estudios: "Vago"
+    }
+    const referencia = persona
+    referencia.edad = 24
+    console.log(persona)
 
 
 </script>

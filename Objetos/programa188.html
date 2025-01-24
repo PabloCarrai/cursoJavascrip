@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Definir un objeto llamado computadora1
+    con dos propiedades, una llamada cpu con el valor i7 y 
+    memoria ram con el valor 16gb.
+    Llamar seguidamente a una funcion que le pasemos el objeto y 
+    nos imprima los nombres de las propiedades y sus valores
+    mediante un for in.
+    Seguidamente agregar por asignacion una tercer propiedad
+    llamada disco duro con el valor 1tb.
+    Cada modificacion del objeto llamar a la funcion imprimir.
+    Ingresar por teclado el nombre de una propiedad y su valor, 
+    agregar al objeto computadora.
+    Ingresar el nombre de una propiedad y mostrar su valor si
+    existe o un mensaje si no existe. 
+    Ingresar nuevamente un nombre de propiedad y eliminarlo del 
+    objeto
+    */
+
+    function imprimir(objeto) {
+        for (let clave in objeto) {
+            document.write("Clave: " + clave + "<br>")
+            document.write("Valor: " + objeto[clave] + "<br>")
+
+        }
+        document.write("<hr>")
+    }
+
+    const computadora1 = {
+        cpu: "i7",
+        "memoria ram": "16gb"
+    }
+
+    imprimir(computadora1)
+    computadora1["disco duro"] = "1tb"
+    imprimir(computadora1)
+
+    const propiedad = prompt("Ingrese una propiedad ")
+    const valor = prompt("Ingrese su valor")
+    computadora1[propiedad] = valor
+    imprimir(computadora1)
+    const propiedad1 = prompt("Ingrese una propiedad existente ")
+
+    const propiedad2 = prompt("Ingrese una propiedad existente para eliminar  ")
+    if (computadora1[propiedad2]) {
+        document.write("El valor de la propiedad es " + computadora1[propiedad1])
+        delete computadora1.propiedad2
+    }
+    document.write("HHHHHHHHH")
+    imprimir(computadora1)
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
