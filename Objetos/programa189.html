@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Cargar por teclado el codigo de cliente,
+    nombre y su email.
+    Confeccionar una funcion que le enviemos los tres datos
+    cargados por teclado y nos retorne un objeto cuyo atributos
+    se llamen codigo, nombre y email. 
+    Implementar una segunda funcon que nos imprima los datos del 
+    objeto cliente. 
+    Cambiar los valores, pero ahora por asignacion, volver a 
+    imprimir
+    */
+
+    function imprimir(objeto) {
+        document.write("Codigo " + objeto.codigo + "<br>")
+        document.write("Nombre " + objeto.nombre + "<br>")
+        document.write("Email " + objeto.email + "<hr>")
+
+
+    }
+
+    function crearObjetoPorTeclado(codCliente, nombre, email) {
+        const objeto = {}
+        objeto.codigo = codCliente
+        objeto.nombre = nombre
+        objeto.email = email
+        return objeto
+    }
+
+
+    const codigoCliente = parseInt(prompt("Ingrese el codigo"))
+    const nombreCliente = prompt("Ingrese nombre")
+    const emailCliente = prompt("Ingrese email")
+    const cliente1 = crearObjetoPorTeclado(codigoCliente, nombreCliente, emailCliente)
+    imprimir(cliente1)
+    cliente1.codigo = 238
+    cliente1.nombre = "Martutina"
+    cliente1.email = "arriba@arroba.com.ar"
+    imprimir(cliente1)
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

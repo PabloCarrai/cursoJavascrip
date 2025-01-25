@@ -21,18 +21,48 @@
     Ingresar por teclado el nombre de una propiedad y su valor, 
     agregar al objeto computadora.
     Ingresar el nombre de una propiedad y mostrar su valor si
-    existe o un mensaje si no existe. 
+    existe o un mensaje si no existe.
+
     Ingresar nuevamente un nombre de propiedad y eliminarlo del 
     objeto
     */
 
     function imprimir(objeto) {
         for (let clave in objeto) {
-            document.write("Clave: " + clave + "<br>")
-            document.write("Valor: " + objeto[clave] + "<br>")
-
+            console.log(clave + " " + objeto[clave])
         }
-        document.write("<hr>")
+    }
+
+    function agregarPropiedad(objeto, propiedad, valor) {
+        objeto[propiedad] = valor
+        return objeto
+    }
+
+    function agregarPropiedadPorTeclado(objeto) {
+        const propiedad = prompt("Ingrese una propiedad")
+        const valor = prompt("Ingrese un valor")
+        objeto[propiedad] = valor
+        return objeto
+    }
+
+    function chequearSiPropiedadExiste(objeto) {
+        const propiedad = prompt("Ingrese una propiedad existente")
+        if (propiedad in objeto) {
+            console.log("El valor de la propiedad es " + objeto[propiedad])
+        } else {
+            console.log("El valor de la propiedad " + objeto[propiedad] + " no existe")
+        }
+        return objeto
+    }
+
+    function eliminarPropiedadObjeto(objeto) {
+        const propiedad = prompt("Ingrese una propiedad para eliminar  ")
+        if (propiedad in objeto) {
+            delete objeto[propiedad]
+        } else {
+            console.log("El valor de la propiedad " + objeto[propiedad] + " no existe")
+        }
+        return objeto
     }
 
     const computadora1 = {
@@ -41,23 +71,14 @@
     }
 
     imprimir(computadora1)
-    computadora1["disco duro"] = "1tb"
+    agregarPropiedad(computadora1, "disco duro", "1tb")
     imprimir(computadora1)
-
-    const propiedad = prompt("Ingrese una propiedad ")
-    const valor = prompt("Ingrese su valor")
-    computadora1[propiedad] = valor
+    agregarPropiedadPorTeclado(computadora1)
     imprimir(computadora1)
-    const propiedad1 = prompt("Ingrese una propiedad existente ")
-
-    const propiedad2 = prompt("Ingrese una propiedad existente para eliminar  ")
-    if (computadora1[propiedad2]) {
-        document.write("El valor de la propiedad es " + computadora1[propiedad1])
-        delete computadora1.propiedad2
-    }
-    document.write("HHHHHHHHH")
+    chequearSiPropiedadExiste(computadora1)
     imprimir(computadora1)
-
+    eliminarPropiedadObjeto(computadora1)
+    imprimir(computadora1)
 
 
 
