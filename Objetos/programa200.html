@@ -59,12 +59,13 @@
     }
 
     curso1.mostrarDatos()
-    curso1.prerequisitos = ["CSS"]
+    curso1.prerequisitos.push("CSS")
     curso1.mostrarDatos()
     curso1.instructor.experiencia = 4
-    curso1.mostrarDatos()
+    console.log(curso1)
     delete curso1.instructor.descripcion
-    curso1.mostrarDatos()
+    console.log(curso1)
+    
 
 </script>
 
