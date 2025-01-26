@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    /*
+    
+    
+    Metodos de un objeto. 
+    En si son funciones, que manipulan atributos del objeto
+    */
+
+
+    // en la definicion del atributo creamos una funcion que hace algo con los valores de las propiedades
+    // this.edad hace uso del objeto persona1.edad
+    const persona1 = {
+        nombre: "Juan",
+        apellido: "Perez",
+        edad: 20,
+        esMayorEdad: function () {
+            if (this.edad >= 18) {
+                console.log(this.nombre + ", " + " Es mayor de edad")
+            }
+        },
+        mostrarNombreCompleto: function () {
+            console.log(this.nombre + ", " + this.apellido)
+        }
+    }
+    // aca llamamos a los metodos
+    persona1.esMayorEdad()
+    persona1.mostrarNombreCompleto()
+
+</script>
+
+<body>
+
+</body>
+
+</html>
