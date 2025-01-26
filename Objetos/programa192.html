@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    /*
+    Llamada a otro metodo del mismo objeto
+    */
+    const persona1 = {
+        nombre: "Juan",
+        apellido: "Perez",
+        edad: 17,
+        esMayor: function () {
+            if (this.edad >= 18) {
+                this.mensajeMayor()
+            } else {
+                this.mensajeMenor()
+            }
+        },
+        mensajeMayor: function () {
+            console.log(this.nombre + " Es mayor de edad")
+        },
+        mensajeMenor: function () {
+            console.log(this.nombre + " Es menor de edad")
+        }
+    }
+
+    persona1.esMayor()
+</script>
+
+<body>
+
+</body>
+
+</html>
