@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Se tiene la definicion de un objeto que representa
+    el bolillero de un bingo. 
+    Implementar los metodos para generar los 50 numeros
+    aleatorios e imprimir el orden de salida. 
+    Otro metodo para mostrar los 6 primeros valores 
+    del bolillero informando que son los numeros ganadores. 
+    Tambien implementar un metodo para mostrar la fecha del
+    sorteo
+    */
+
+
+    const bingo = {
+        bolillero: [],
+        generarBolillero() {
+            while (this.bolillero.length != 50) {
+                let valor = Math.floor(Math.random() * 51)
+                if (this.bolillero.includes(valor) == false) {
+                    this.bolillero.push(valor)
+                }
+            }
+        },
+        mostrarBolillas() {
+            document.write("El bolillero es <br>")
+            for (let elemento of this.bolillero) {
+                document.write(elemento + " - ")
+            }
+            document.write("<br>")
+            document.write("<hr>")
+        },
+        mostrarPrimerosSeis() {
+            document.write("Los ganadores son <br>")
+            for (let x = 0; x < 6; x++) {
+                document.write(this.bolillero[x] + " - ")
+            }
+            document.write("<hr>")
+        },
+        fechaSorteo: {
+            dia: 22,
+            mes: 2,
+            año: 2022
+        },
+        MostrarFechaSorteo() {
+            document.write("Fecha del sorteo <br>")
+            document.write("" + this.fechaSorteo.dia + " / " + this.fechaSorteo.mes + " / " + this.fechaSorteo.año)
+        }
+    }
+
+    bingo.generarBolillero()
+    bingo.mostrarBolillas()
+    bingo.mostrarPrimerosSeis()
+    bingo.MostrarFechaSorteo()
+
+</script>
+
+<body>
+
+</body>
+
+</html>

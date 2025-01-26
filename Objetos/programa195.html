@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Crear un objeto llamado cliente1 con dos propiedades
+    nombre y saldo. Definir tres metodos con notacion
+    abreviadas que permitan depositar, extraer e imprimir su
+    saldo
+    */
+
+
+    const cliente1 = {
+        nombre: "Juan",
+        saldo: 0,
+        depositar(monto) {
+            this.saldo += monto
+            console.log("Se deposito " + monto)
+        },
+        extraer(monto) {
+            this.saldo -= monto
+            console.log("Se extrajo " + monto)
+        },
+        imprimir() {
+            console.log(this.nombre + " posee un saldo de " + this.saldo)
+        }
+    }
+
+    cliente1.imprimir()
+    cliente1.depositar(3000)
+    cliente1.imprimir()
+    cliente1.extraer(10)
+    cliente1.imprimir()
+    cliente1.depositar(400)
+    cliente1.imprimir()
+    cliente1.extraer(100)
+    cliente1.imprimir()
+
+
+    // no funciona en objetos usar el las funciones flechas
+    const operacion = {
+        valor1: 10,
+        valor2: 7,
+        retornarValor: () => {
+            return this.valor1
+        }
+    }
+
+    console.log(operacion.retornarValor())
+</script>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Definir metodos abreviados
+    */
+
+    // es la forma que usamos
+    const operacion = {
+        valor1: 10,
+        valor2: 7,
+        sumar: function () {
+            return this.valor1 + this.valor2;
+        },
+        restar: function () {
+            return this.valor1 - this.valor2;
+        }
+    }
+
+    console.log(operacion.sumar())
+    console.log(operacion.restar())
+
+    // otra forma de abreviar esto seria
+    const operacion1 = {
+        valor1: 10,
+        valor2: 7,
+        // : function  es lo que quitamos
+        sumar() {
+            return this.valor1 + this.valor2;
+        },
+        restar() {
+            return this.valor1 - this.valor2;
+        }
+    }
+
+    console.log(operacion1.restar())
+    console.log(operacion1.sumar())
+
+</script>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    // objetos con otros tipos de datos dentro del mismo
+
+    const persona1 = {
+        nombre: "Diego",
+        apellido: "Garcia",
+        edad: 45,
+        idiomas: ["Español", "Ingles", "Frances"],
+        trabajo: {
+            empresa: "Google",
+            fechaingreso: {
+                dia: 1,
+                mes: 5,
+                año: 2022
+            },
+            salario: 100000
+        }
+    }
+    console.log(persona1)
+    console.log(persona1.nombre)
+    console.log(persona1.idiomas[0])
+    console.log(persona1.idiomas[1])
+    console.log(persona1.idiomas[2])
+    console.log(persona1.trabajo.empresa)
+    console.log(persona1.trabajo.salario)
+    console.log(persona1.trabajo.fechaingreso.dia)
+
+    console.log(persona1["nombre"])
+    console.log(persona1["idiomas"][0])
+    console.log(persona1["trabajo"]["empresa"])
+    console.log(persona1["trabajo"]["fechaingreso"]["dia"])
+</script>
+
+<body>
+
+</body>
+
+</html>

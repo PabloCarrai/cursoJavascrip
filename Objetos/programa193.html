@@ -42,6 +42,7 @@
     function imprimir() {
         document.write(this.codigo + " " + this.descripcion + " " + this.precio + "<br>")
     }
+    // cuando usa this llama como metodo al objeto inicial. y el otro es tratado como objeto comun
     function precioMayor(articulo) {
         if (this.precio > articulo.precio) {
             document.write("El articulo " + this.descripcion + " Tiene un precio mayor que " + articulo.descripcion + "<br>")

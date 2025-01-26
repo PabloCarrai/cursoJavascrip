@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Definir un objeto llamado alumno1.
+    Definir como propiedades: nombres, nota1, nota2 y nota3
+    (almacenar valores de prueba en cada propiedad).
+    Definir un metodo que muestre el nombre y el promedio de
+    notas y un segundo metodo que informe la cantidad de aplazos
+    (notas menores a 4)
+    */
+
+    const alumno1 = {
+        nombres: "Daniela Arazo",
+        nota1: 10,
+        nota2: 9,
+        nota3: 10,
+        mostrarPromedio() {
+            let promedio = (this.nota1 + this.nota2 + this.nota3) / 3
+            document.write(this.nombres + "<br> Promedio de <br>" + promedio + "<br>")
+            document.write("<hr>")
+        },
+        mostrarAplazos() {
+            let contadorNotasMenores4 = 0
+            if (this.nota1 < 4) {
+                contadorNotasMenores4++
+            }
+            if (this.nota2 < 4) {
+                contadorNotasMenores4++
+            }
+            if (this.nota3 < 4) {
+                contadorNotasMenores4++
+            }
+            document.write("Notas menores a 4= " + contadorNotasMenores4 + "<br>")
+            document.write("<hr>")
+        }
+    }
+
+    alumno1.mostrarPromedio()
+    alumno1.mostrarAplazos()
+    alumno1.nota1 = 3
+    alumno1.nota2 = 1
+    alumno1.nota3 = 10
+    alumno1.nombres="Carlos Saraza"
+    alumno1.mostrarPromedio()
+    alumno1.mostrarAplazos()
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

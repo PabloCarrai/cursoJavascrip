@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Definir un objeto llamado
+    tablaMultiplicacion. Sus atributos son el numero(la tabla
+    de multiplicar, 2, 3 etc). terminos, y un metodo que 
+    muestre la tabla por pantalla.
+    Luego mostrar la tabla de multiplicacion del 2,3 y 5
+    */
+    const tablaMultiplicacion = {
+        numero: 2,
+        terminos: 10,
+        imprimir() {
+            document.write("La tabla del " + this.numero + "<br>")
+            document.write("Usando " + this.terminos+" terminos")
+            document.write("<hr>")
+            for (x = 1; x <= this.terminos; x++) {
+                document.write(this.numero + " X " + x + " = " + this.numero * x + "<br>")
+
+            }
+            document.write("<hr>")
+        }
+    }
+
+    tablaMultiplicacion.imprimir()
+    tablaMultiplicacion.numero = 3
+    tablaMultiplicacion.imprimir()
+    tablaMultiplicacion.terminos = 6
+    tablaMultiplicacion.numero = 5
+    tablaMultiplicacion.imprimir()
+</script>
+
+<body>
+
+</body>
+
+</html>
