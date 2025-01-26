@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Metodo asociado a varios objetos
+
+    aca las funciones se definen por afuera de los metodos y propiedades del objeto
+    y se llaman como valor de una propiedad
+    */
+
+    /*
+    Definir dos objetos que permitan almacenar los 
+    datos de un articulo con las respoisabilidades de imprimir
+    los datos y mostra run mensaje de cual de dos articulos tiene
+    un precio mayor. 
+    */
+
+    const articulo1 = {
+        codigo: 1,
+        descripcion: "Papas",
+        precio: 21.4,
+        imprimir: imprimir,
+        precioMayor: precioMayor
+    }
+
+    const articulo2 = {
+        codigo: 2,
+        descripcion: "Manzanas",
+        precio: 3.5,
+        imprimir: imprimir,
+        precioMayor: precioMayor
+    }
+
+    // aca declaro la funcion por afuera del metodo, y funciona igual
+    function imprimir() {
+        document.write(this.codigo + " " + this.descripcion + " " + this.precio + "<br>")
+    }
+    function precioMayor(articulo) {
+        if (this.precio > articulo.precio) {
+            document.write("El articulo " + this.descripcion + " Tiene un precio mayor que " + articulo.descripcion + "<br>")
+        } else {
+            document.write("El articulo " + articulo.descripcion + " Tiene un precio mayor que " + this.descripcion + "<br>")
+        }
+    }
+
+    articulo1.imprimir()
+    articulo2.imprimir()
+    articulo1.precioMayor(articulo2)
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
