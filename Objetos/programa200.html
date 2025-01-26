@@ -6,7 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<script></script>
+<script>
+    /*
+    
+    
+    
+    Se tiene la definicion de un objeto que
+    representa un curso.
+
+    const curso1 = {
+        nombre: "React",
+        duracion: 40,
+        descripcion: "Introduccion a la biblioteca Reac para el desarrollo de interfaces visuales",
+        instructor: {
+            nombre: "Ana Martinez",
+            experiencia: 2,
+            descripcion: "Instructora con mas de 5 años de experiencia en desarrollo web"
+        },
+        prerequisitos: ["HTML", "Javascript"]
+    }
+
+    - Confeccionar un metodo que muestre el nombre del curso, su
+    duracion, el nombre del instructor y los prerrequisitos.
+    - Agregar como prerrequisito "CSS" al curso1
+    - Modificar los años de experiencia por el valor 4.
+    - Eliminar del objeto la descripcion del instructor
+
+    
+    */
+
+    const curso1 = {
+        nombre: "React",
+        duracion: 40,
+        descripcion: "Introduccion a la biblioteca Reac para el desarrollo de interfaces visuales",
+        instructor: {
+            nombre: "Ana Martinez",
+            experiencia: 2,
+            descripcion: "Instructora con mas de 5 años de experiencia en desarrollo web"
+        },
+        prerequisitos: ["HTML", "Javascript"],
+        mostrarDatos() {
+            document.write("Curso  " + this.nombre + "<br>")
+            document.write("Duracion " + this.duracion + " horas " + "<br>")
+            document.write("Instructor/a " + this.instructor.nombre + "<br>")
+            document.write("Requisitos <br>")
+            for (let x = 0; x < this.prerequisitos.length; x++) {
+                document.write(this.prerequisitos[x] + " - ")
+            }
+            document.write("<hr>")
+
+        }
+    }
+
+    curso1.mostrarDatos()
+    curso1.prerequisitos = ["CSS"]
+    curso1.mostrarDatos()
+    curso1.instructor.experiencia = 4
+    curso1.mostrarDatos()
+    delete curso1.instructor.descripcion
+    curso1.mostrarDatos()
+
+</script>
 
 <body>
 
