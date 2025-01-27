@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Se tiene la definicion de un objeto que
+    representa una pelicula:
+
+
+    const pelicula1 = {
+        titulo: "La Guerra de las Galaxias",
+        duracion: 121,
+        descripcion: "Una pelicula de ciencia ficcion epica que sigue a un grupo de heroes en su lucha contra el Imperio",
+        actores: ["Mark Hamill", "Harrison Ford", "Carrie Fisher"],
+        calificacion: 8.7,
+        generos: ["Ciencia Ficcion", "Aventura"],
+        director: {
+            nombre: "George Lucas",
+            peliculasFamosas: ["La Guerra de las Galaxias", "Indiana Jones"]
+        }
+    }
+
+    - Imprimir el titulo de la pelicula, la cantidad de actores
+    principales y sus nombres en un metodo que se debe agregar al
+    objeto pelicula1.
+    - Agregar el genero de fantasia a la pelicula.
+    - Cambiar la calificacion por el valor 9.
+    - Mostrar la cantidad de peliculas famosas del director George Lucas(en otro metodo)
+
+    */
+
+    const pelicula1 = {
+        titulo: "La Guerra de las Galaxias",
+        duracion: 121,
+        descripcion: "Una pelicula de ciencia ficcion epica que sigue a un grupo de heroes en su lucha contra el Imperio",
+        actores: ["Mark Hamill", "Harrison Ford", "Carrie Fisher"],
+        calificacion: 8.7,
+        generos: ["Ciencia Ficcion", "Aventura"],
+        director: {
+            nombre: "George Lucas",
+            peliculasFamosas: ["La Guerra de las Galaxias", "Indiana Jones"]
+        },
+        imprimir() {
+            const cactores = this.actores.length
+            document.write("Titulo: " + "<i><b>" + this.titulo + "</b></i>" + "<br>")
+            document.write("Cantidad de Actores Principales: " + "<i><b>" + cactores + "</b></i>" + "<br>")
+            document.write("Actores: ")
+            for (let elemento of this.actores) {
+                document.write("<i><b>" + elemento + "</b></i>" + " - ")
+            }
+            document.write("<hr>")
+        },
+        mostrarPeliculasFamosas() {
+            const cpeliculasFamosas = this.director.peliculasFamosas.length
+            document.write("Cantidad de peliculas Famosas de George Lucas: " + cpeliculasFamosas + "<br>")
+            document.write("Peliculas: ")
+            for (let elemento of this.director.peliculasFamosas) {
+                document.write("<i><b>" + elemento + "</b></i>" + " - ")
+            }
+            document.write("<hr>")
+
+
+        }
+    }
+
+    pelicula1.imprimir()
+    pelicula1.generos.push("fantasia")
+    console.log(pelicula1.generos)
+    pelicula1.calificacion = 9
+    console.log(pelicula1.calificacion)
+    console.log(pelicula1.mostrarPeliculasFamosas())
+
+</script>
+
+<body>
+
+</body>
+
+</html>
