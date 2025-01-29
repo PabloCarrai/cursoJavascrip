@@ -43,10 +43,39 @@
             apellido: "Perez",
             edad: 23,
             prescripcion: "Se receta paracetamol en dosis grande"
+        },
+        farmacias: {
+            autorizadas: ["Moreno 2", "Los trapitos", "Miserere 2"],
+            porcentajeDescuento: {
+                "Moreno2": 30,
+                "Los Trapitos": 40,
+                "Miserere 2": 25
+            }
         }
     }
-    const computadora1 = {}
-    const eventoDeportivo1 = {}
+
+    const computadora1 = {
+        tipo: ["Portatil", "Notebook", "Industrial", "AllInOne"],
+        almacenamiento: {
+            "Disco Rigido": "500GB",
+            "Memoria Ram": "128GB",
+            "Tarjeta de Video": true,
+            "Lectora de Blue Ray": false
+        },
+        precio: 23434500,
+        SO: ["Windows", "Gnu/Linux", "Otros"]
+
+    }
+    const eventoDeportivo1 = {
+        titulo: "Campeonato de futsal sub 22",
+        capacidad: 23000,
+        valorEntrada: {
+            alpublico: 2500,
+            menores: 2600,
+            familiares: 2000,
+            socios: "Gratis"
+        }
+    }
 
     console.log(libro1)
     console.log(receta1)
