@@ -56,24 +56,30 @@
     }
 
     function paisMayorPoblacion(paises) {
+        let maximo = 0
         for (let pais of paises) {
-            console.log(pais)
+            maximo = Math.max(pais.poblacion)
+            if (pais.poblacion == maximo) {
+                //console.log(pais.nombre)
+            }
         }
+        console.log(maximo)
+
     }
 
     function cantidadIdioma(paises, idioma) {
-        let contador=0 
+        let contador = 0
         document.write("<br>Paises: <br>")
-        for (let pais of paises){
-            if(pais.idioma==idioma){
-                document.write(pais.nombre+" - ")
+        for (let pais of paises) {
+            if (pais.idioma == idioma) {
+                document.write(pais.nombre + " - ")
                 contador++
             }
         }
-        document.write("<br> Hablan <br>"+idioma+" - "+contador)
+        document.write("<br> Hablan <br>" + idioma + " - " + contador)
         document.write("<hr>")
     }
-    
+
     function paisesSoja(paises) {
         document.write("<h1>Siembran soja</h1>")
         document.write("<hr>")
@@ -87,10 +93,18 @@
         }
     }
 
-    function promediarVidaMujeres(paises) { }
+    function promediarVidaMujeres(paises) {
+        let promedioVaron = 0
+        let promedioMujer = 0
+        for (let pais of paises) {
+            promedioVaron += pais.expectativavida.hombres
+            promedioMujer += pais.expectativavida.mujeres
 
-
-
+        }
+        promedioMujer = promedioMujer / 4
+        document.write("<br> Promedio de edad<br>")
+        document.write("Mujeres es " + promedioMujer)
+    }
 
     const paises = [
         {
@@ -145,14 +159,12 @@
 
 
     //imprimir(paises)
-
-
-    //paisMayorPoblacion(paises)
+    paisMayorPoblacion(paises)
     //cantidadIdioma(paises, "Español")
     //cantidadIdioma(paises, "Portugues")
-    
-    paisesSoja(paises)
-    
+
+    //paisesSoja(paises)
+
     //promediarVidaMujeres(paises)
 
 
