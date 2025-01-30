@@ -61,7 +61,19 @@
         }
     }
 
-    function cantidadIdioma(paises, idioma) { }
+    function cantidadIdioma(paises, idioma) {
+        let contador=0 
+        document.write("<br>Paises: <br>")
+        for (let pais of paises){
+            if(pais.idioma==idioma){
+                document.write(pais.nombre+" - ")
+                contador++
+            }
+        }
+        document.write("<br> Hablan <br>"+idioma+" - "+contador)
+        document.write("<hr>")
+    }
+    
     function paisesSoja(paises) {
         document.write("<h1>Siembran soja</h1>")
         document.write("<hr>")
@@ -74,6 +86,7 @@
             }
         }
     }
+
     function promediarVidaMujeres(paises) { }
 
 
@@ -122,7 +135,7 @@
             poblacion: 19_000_000,
             moneda: "Peso Chileno",
             idioma: "Español",
-            agricultura: ["maiz", "cebada","soja"],
+            agricultura: ["maiz", "cebada"],
             expectativavida: {
                 hombres: 80,
                 mujeres: 82
@@ -137,7 +150,9 @@
     //paisMayorPoblacion(paises)
     //cantidadIdioma(paises, "Español")
     //cantidadIdioma(paises, "Portugues")
+    
     paisesSoja(paises)
+    
     //promediarVidaMujeres(paises)
 
 
