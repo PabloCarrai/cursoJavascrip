@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Arreglo con objetos como elementos
+    */
+    /*
+    const arreglo1 = [10, 20, 70, 13, "Enero"]
+    const personas = ["Marcos", "Carlos", "Ana"]
+    const matriz = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+    */
+    /*
+    
+    */
+
+    function imprimirDatos(arreglo) {
+
+        document.write("<h1>Datos de la persona</h1>")
+        document.write("<hr>")
+        for (let persona of arreglo) {
+            document.write("Nombre: " + persona.nombre + "<br>")
+            document.write("Edad: " + persona.edad + "<br>")
+            document.write("Idiomas:<br>")
+            for (let idioma of persona.idiomas){
+                document.write(idioma + "<br>")
+            }
+            document.write("Salarios:<br>")
+            for (let salario of persona.trabajo.salarios){
+                document.write(salario + "<br>")
+
+            }
+            document.write("<hr>")
+
+        }
+
+    }
+
+    function imprimirTresIdiomas(arreglo) {
+        document.write("<h1>Hablan mas de 3 Idiomas</h1>")
+        document.write("<hr>")
+        for (let persona of arreglo) {
+            if (persona.idiomas.length==3){
+                document.write(persona.nombre+" "+persona.apellido+"<br>")
+            }
+        }
+        document.write("<hr>")
+    }
+
+    function imprimirChino(arreglo) {
+        document.write("<h1>Hablan Chino</h1>")
+        document.write("<hr>")
+        for (let personas of arreglo){
+            for (let x of personas.idiomas){
+                if(x=="Chino"){
+                    document.write(personas.nombre+" "+personas.apellido+"<br>")                   
+                    }
+
+                }            
+            }
+        document.write("<hr>")
+        }         
+        
+    function gastarMas10mil(arreglo){
+        
+        document.write("<h1>Gastaron + de 10000</h1>")
+        document.write("<hr>")
+        
+        for (let elementoDelArreglo of arreglo){
+            let contador = 0
+            for(let salario of elementoDelArreglo.trabajo.salarios){
+                contador += salario                
+            }
+            if (contador >= 10000){
+                document.write(elementoDelArreglo.nombre+" "+elementoDelArreglo.apellido+"<br>")
+
+            }
+        }
+
+    }
+        
+    
+    const personas = [
+        {
+            nombre: "Diego",
+            apellido: "Garcia",
+            edad: 45,
+            idiomas: ["Español", "Ingles", "Frances"],
+            trabajo: {
+                empresa: "Google",
+                fechaingreso: "01/01/2020",
+                salarios: [5000, 5000, 5000]
+            }
+        },
+        {
+            nombre: "Pedro",
+            apellido: "Martinez",
+            edad: 25,
+            idiomas: ["Español", "Portuguez", "Chino"],
+            trabajo: {
+                empresa: "twitter",
+                fechaingreso: "01/01/2020",
+                salarios: [1000, 2000, 3000]
+
+            }
+        },
+
+        {
+            nombre: "Juan",
+            apellido: "Perez",
+            edad: 30,
+            idiomas: ["Español"],
+            trabajo: {
+                empresa: "Facebook",
+                fechaingreso: "01/01/2020",
+                salarios: [3000, 2000, 2000]
+
+            }
+        },
+        {
+            nombre: "Maria",
+            apellido: "Gonzalez",
+            edad: 45,
+            idiomas: ["Español", "Ingles", "Chino"],
+            trabajo: {
+                empresa: "Instagram",
+                fechaingreso: "01/01/2020",
+                salarios: [3000, 4000, 4000]
+
+            }
+        }
+    ]
+
+    imprimirDatos(personas)
+    imprimirTresIdiomas(personas)
+    imprimirChino(personas)
+    gastarMas10mil(personas)
+
+    /*
+    
+    1- Confeccionar una funcon que imprima el nombre, apellido, 
+    edad, los idiomas que hagla la persona y los ultimos 3
+    salarios. 
+    2- Imprimir los nombres de trabajadores que hablan 3 idiomas
+    3- Imprimir las personas que hablan el idioma chino.
+    4- Personas que han gastado mas de 10000 en los ultimos 3 meses
+    */
+
+//    console.log(personas)
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

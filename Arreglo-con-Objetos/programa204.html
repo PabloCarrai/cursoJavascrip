@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<script>
+
+    /*
+    
+    
+    Confeccionar las siguientes funciones:
+    1- Imprimir todos los datos.
+    imprimir(paises)
+
+    2- Pais con mayor poblacion.
+    paisMayorPoblacion(paises)
+
+    3- Confeccionar una funcion que se le envie un idioma y luego
+    imprima la cantidad de paises que hablan dicho idioma. 
+    cantidadIdioma(paises, "Español")
+    cantidadIdiomas(paises, "Portugues")
+
+    4- Imprimir paises que siembren soja
+    paisesSoja(paises)
+    
+    5- Promedio de vida de las mujeres teniendo en cuenta las 4
+    paises
+    */
+
+    function imprimir(paises) {
+        //console.log(paises)
+        for (let elemento of paises) {
+            document.write("<h1>Paises</h1>")
+            document.write("Pais: " + elemento.nombre + "<br>")
+            document.write("Capital: " + elemento.capital + "<br>")
+            document.write("Poblacion: " + elemento.poblacion + "<br>")
+            document.write("Moneda: " + elemento.moneda + "<br>")
+            document.write("Idioma: " + elemento.idioma + "<br>")
+            document.write("Agricultura: <br>")
+            for (let agricultura of elemento.agricultura) {
+                document.write(agricultura + " - ")
+
+            }
+            document.write("<br>")
+            document.write("Expectativa de vida en Hombre - ")
+            document.write(elemento.expectativavida.hombres + "<br> ")
+            document.write("Expectativa de vida en Mujeres - ")
+            document.write(elemento.expectativavida.mujeres + "<br>")
+            document.write("<hr>")
+
+        }
+    }
+
+    function paisMayorPoblacion(paises) {
+        for (let pais of paises) {
+            console.log(pais)
+        }
+    }
+
+    function cantidadIdioma(paises, idioma) { }
+    function paisesSoja(paises) {
+        document.write("<h1>Siembran soja</h1>")
+        document.write("<hr>")
+        for (let pais of paises) {
+            for (let elemento of pais.agricultura) {
+                if (elemento == "soja") {
+                    document.write(pais.nombre + "<br>")
+                }
+
+            }
+        }
+    }
+    function promediarVidaMujeres(paises) { }
+
+
+
+
+    const paises = [
+        {
+            nombre: "Argentina",
+            capital: "Buenos Aires",
+            poblacion: 46_000_000,
+            moneda: "Peso Argentino",
+            idioma: "Español",
+            agricultura: ["trigo", "maiz", "soja"],
+            expectativavida: {
+                hombres: 75,
+                mujeres: 79
+            }
+        },
+        {
+            nombre: "Brasil",
+            capital: "Brasilia",
+            poblacion: 200_000_000,
+            moneda: "Real",
+            idioma: "Portugues",
+            agricultura: ["trigo", "cebada"],
+            expectativavida: {
+                hombres: 74,
+                mujeres: 78
+            }
+        },
+        {
+            nombre: "Uruguay",
+            capital: "Montevideo",
+            poblacion: 3_000_000,
+            moneda: "Peso Uruguayo",
+            idioma: "Español",
+            agricultura: ["soja"],
+            expectativavida: {
+                hombres: 81,
+                mujeres: 84
+            }
+        },
+        {
+            nombre: "Chile",
+            capital: "Santiago",
+            poblacion: 19_000_000,
+            moneda: "Peso Chileno",
+            idioma: "Español",
+            agricultura: ["maiz", "cebada","soja"],
+            expectativavida: {
+                hombres: 80,
+                mujeres: 82
+            }
+        }
+    ]
+
+
+    //imprimir(paises)
+
+
+    //paisMayorPoblacion(paises)
+    //cantidadIdioma(paises, "Español")
+    //cantidadIdioma(paises, "Portugues")
+    paisesSoja(paises)
+    //promediarVidaMujeres(paises)
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
