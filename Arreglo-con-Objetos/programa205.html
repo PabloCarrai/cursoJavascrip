@@ -20,10 +20,79 @@
     4. Imprimir la cantidad total de medallas de cada participante. 
     */
 
-    function imprimir(deportistas) { }
-    function medallasOro(deportistas) { }
-    function ordenarDMayorMenor(deportistas) { }
-    function imprimirCantidadMedallas(deportistas) { }
+    function imprimir(deportistas) {
+        document.write("<h1>Deportista</h1>")
+        document.write("<hr>")
+        for (let deportista of deportistas) {
+            //console.log(deportista)
+            document.write("Nombre: " + deportista.nombre + "<br>")
+            document.write("Apellido: " + deportista.apellido + "<br>")
+            document.write("Edad: " + deportista.edad + "<br>")
+            document.write("Deporte: " + deportista.deporte + "<br>")
+            for (let medalla of deportista.medallas) {
+                document.write("Tipo: " + medalla.tipo + "<br>")
+                document.write("Cantidad: " + medalla.cantidad + "<br>")
+            }
+
+
+
+
+            document.write("<hr>")
+        }
+    }
+
+    function medallasOro(deportistas) {
+        document.write("<h1>Ganaron Oro:</h1>")
+        for (let deportista of deportistas) {
+            for (let medalla of deportista.medallas) {
+                if (medalla.tipo == "oro") {
+                    document.write(deportista.nombre + " - ")
+                }
+            }
+        }
+        document.write("<hr>")
+    }
+
+    function ordenarDMayorMenor(deportistas) {
+        let auxiliar = []
+        for (let deportista of deportistas) {
+            auxiliar.push(deportista.edad)
+        }
+        document.write("Edades sin ordenar " + auxiliar + "<br>")
+        auxiliar.sort()
+        document.write("Edades ordenadas " + auxiliar + "<br>")
+        document.write("<hr>")
+
+    }
+
+    function imprimirCantidadMedallas(deportistas) {
+        document.write("<h1>Resumen de medallas Totales</h1>")
+        for (let deportista of deportistas) {
+            let cplata = 0
+            let coro = 0
+            let cbronce = 0
+            for (let medalla of deportista.medallas) {
+                if (medalla.tipo == "oro") {
+                    coro += medalla.cantidad
+                }
+                if (medalla.tipo == "bronce") {
+                    cbronce += medalla.cantidad
+                }
+                if (medalla.tipo == "plata") {
+                    cplata += medalla.cantidad
+                }
+
+
+            }
+            document.write(" " + deportista.nombre + " " + deportista.apellido + "<br>")
+            document.write("Cant. de Oro " + coro + "<br>")
+            document.write("Cant. de Plata " + cplata + "<br>")
+            document.write("Cant. de Bronce " + cbronce + "<br>")
+            document.write("<hr>")
+
+        }
+
+    }
 
 
 
@@ -102,8 +171,10 @@
         }
     ]
 
-
-
+    //imprimir(deportistas)
+    //medallasOro(deportistas)
+    //ordenarDMayorMenor(deportistas)
+    imprimirCantidadMedallas(deportistas)
 </script>
 
 <body>
