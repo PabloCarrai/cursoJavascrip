@@ -32,7 +32,7 @@
     */
 
     function imprimir(paises) {
-        //console.log(paises)
+
         for (let elemento of paises) {
             document.write("<h1>Paises</h1>")
             document.write("Pais: " + elemento.nombre + "<br>")
@@ -56,27 +56,26 @@
     }
 
     function paisMayorPoblacion(paises) {
-        let maximo = 0
+        document.write("<h1>Pais con mayor poblacion</h1>")
+        let mayorPoblacion = paises[0]
         for (let pais of paises) {
-            maximo = Math.max(pais.poblacion)
-            if (pais.poblacion == maximo) {
-                //console.log(pais.nombre)
+            if (pais.poblacion > mayorPoblacion.poblacion) {
+                mayorPoblacion = pais
             }
         }
-        console.log(maximo)
-
+        document.write(mayorPoblacion.nombre + " tiene " + mayorPoblacion.poblacion + " habitantes")
     }
 
     function cantidadIdioma(paises, idioma) {
         let contador = 0
-        document.write("<br>Paises: <br>")
+        document.write("<h1>Paises: </h1>")
         for (let pais of paises) {
             if (pais.idioma == idioma) {
-                document.write(pais.nombre + " - ")
+                //document.write(pais.nombre + " - ")
                 contador++
             }
         }
-        document.write("<br> Hablan <br>" + idioma + " - " + contador)
+        document.write("Hablan " + idioma + " - " + contador)
         document.write("<hr>")
     }
 
@@ -86,24 +85,22 @@
         for (let pais of paises) {
             for (let elemento of pais.agricultura) {
                 if (elemento == "soja") {
-                    document.write(pais.nombre + "<br>")
+                    document.write(pais.nombre + " - ")
                 }
-
             }
         }
     }
 
     function promediarVidaMujeres(paises) {
-        let promedioVaron = 0
+        document.write("<hr>")
         let promedioMujer = 0
         for (let pais of paises) {
-            promedioVaron += pais.expectativavida.hombres
             promedioMujer += pais.expectativavida.mujeres
-
         }
-        promedioMujer = promedioMujer / 4
-        document.write("<br> Promedio de edad<br>")
+        promedioMujer = promedioMujer / paises.length
+        document.write("<h1>Promedio de edad</h1>")
         document.write("Mujeres es " + promedioMujer)
+        document.write("<hr>")
     }
 
     const paises = [
@@ -158,14 +155,12 @@
     ]
 
 
-    //imprimir(paises)
+    imprimir(paises)
     paisMayorPoblacion(paises)
-    //cantidadIdioma(paises, "Español")
-    //cantidadIdioma(paises, "Portugues")
-
-    //paisesSoja(paises)
-
-    //promediarVidaMujeres(paises)
+    cantidadIdioma(paises, "Español")
+    cantidadIdioma(paises, "Portugues")
+    paisesSoja(paises)
+    promediarVidaMujeres(paises)
 
 
 
