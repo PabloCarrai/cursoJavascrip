@@ -21,6 +21,9 @@
     */
 
     function imprimir(deportistas) {
+        // otra forma
+        // deportistas.array.forEach(deportista => console.log(deportista))
+
         document.write("<h1>Deportista</h1>")
         document.write("<hr>")
         for (let deportista of deportistas) {
@@ -42,6 +45,9 @@
     }
 
     function medallasOro(deportistas) {
+        // otra forma 
+        // const deportistasOro = deportistas.filter(deportista=> deportista.medallas.filter(medalla => medalla.tipo=="oro").length==1)
+        // console.log(deportistasOro)
         document.write("<h1>Ganaron Oro:</h1>")
         for (let deportista of deportistas) {
             for (let medalla of deportista.medallas) {
@@ -54,15 +60,20 @@
     }
 
     function ordenarDMayorMenor(deportistas) {
-        let auxiliar = []
-        for (let deportista of deportistas) {
-            auxiliar.push(deportista.edad)
+        // metodo de ordenamiento burbuja
+        for (let k = 1; k < deportistas.length; k++) {
+            for (let i = 0; i < deportistas.length - k; i++) {
+                if (deportistas[i].edad > deportistas[i + 1].edad) {
+                    let aux = deportistas[i]
+                    deportistas[i] = deportistas[i + 1]
+                    deportistas[i + 1] = aux
+                }
+            }
         }
-        document.write("Edades sin ordenar " + auxiliar + "<br>")
-        auxiliar.sort()
-        document.write("Edades ordenadas " + auxiliar + "<br>")
-        document.write("<hr>")
-
+        console.log(deportistas)
+        //otro metodo
+        //deportistas.sort((a, b) => a.edad - b.edad)
+        //console.log(deportistas)
     }
 
     function imprimirCantidadMedallas(deportistas) {
@@ -91,6 +102,10 @@
             document.write("<hr>")
 
         }
+        //otra forma 
+        //const deportistasMedallas = deportistas.map(deportista =>
+        //    deportista.nombre+" "+deportista.medallas.reduce((acumulador, medalla) => acumulador + medalla.cantidad, 0))
+        //console.log(deportistasMedallas)
 
     }
 
