@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    Se usa al tener que crear varios objetos similares
+
+    */
+
+    /*
+    
+    
+    Declarar una funcoin constructora para poder
+    crear objetos que representen un articulo. Como parametro
+    debe llegar el codigo, la descripcion y el precio. 
+    Definir un metodo que imprima todos los datos y otro metodo
+    que retorne el precio del articulo
+    */
+
+    // otra manera de crear objetos
+    function Articulo(codigo, descripcion, precio) {
+        this.codigo = codigo
+        this.descripcion = descripcion
+        this.precio = precio
+        this.imprimir = function () {
+            document.write(this.codigo + " " + this.descripcion + " " + this.precio + "<br>")
+        }
+        this.getPrecio = function () {
+            return this.precio
+        }
+    }
+
+    // la nueva forma de definir los objetos
+    // esto actua como una instancia de un objeto
+    const articulo1 = new Articulo(1, "Zapatilla", 10)
+    const articulo2 = new Articulo(2, "Medias", 20)
+    const articulo3 = new Articulo(3, "Pantalon", 30)
+    const articulo4 = new Articulo(4, "camiza", 40)
+
+
+    // llamadas a los mismos metodos
+    articulo1.imprimir()
+    articulo2.imprimir()
+    articulo3.imprimir()
+    articulo4.imprimir()
+    const totalPrecios = articulo1.getPrecio() + articulo2.getPrecio() + articulo3.getPrecio() + articulo4.getPrecio()
+    document.write("Total es " + totalPrecios)
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    
+    Declarar una funcon constructora para crear
+    objetos que representen a una Persona. Definir como atributos
+    el nombre, apellido y edad.
+    Crear un arreglo con 5 personas.
+    Imprimir el nombre de la persona con mayor edad(se sabe que
+    todas las personas tienen una edad distinta)
+    */
+
+    function Persona(nombre, apellido, edad) {
+        this.nombre = nombre
+        this.apellido = apellido
+        this.edad = edad
+        this.imprimir = function () {
+            document.write("Nombre: " + this.nombre + " Apellido: " + this.apellido + " Edad:" + this.edad + "<br>")
+        }
+    }
+
+    function maximaEdadObjeto(objetos) {
+        let nombre
+        for (let elemento of objetos) {
+            let maximo = elemento.edad[0]
+            for (let element of elemento) {
+                if (element.edad > maximo) {
+                    maximo = element.edad
+                    nombre = element.nombre
+                }
+            }
+        }
+        console.log("maximo " + maximo + " nombre" + nombre)
+    }
+
+    const persona1 = new Persona("Eduardo", "Zanchez", 22)
+    const persona2 = new Persona("Dante", "chez", 23)
+    const persona3 = new Persona("Maria", "Tanch", 24)
+    const persona4 = new Persona("Eduardo", "lopez", 19)
+    const persona5 = new Persona("Miguel", "nchez", 25)
+
+    const arreglo5Personas = [persona1, persona2, persona3, persona4, persona5]
+    maximaEdadObjeto(arreglo5Personas)
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

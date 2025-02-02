@@ -23,6 +23,33 @@
 
     */
 
+    function imprimir(objeto) {
+        let mostrarElemento = objeto.forEach(element => console.log(element)
+        )
+        console.log(mostrarElemento)
+    }
+
+    function imprimirMasCuarto(objeto) {
+        let mostrarElemento = objeto.filter(cuartosGarage => {
+            if ((cuartosGarage.caracteristicas.cuartos >= 4 && 
+                cuartosGarage.caracteristicas.garage == true)) {
+                console.log(cuartosGarage)
+            }
+        })
+        console.log(mostrarElemento)
+    }
+
+    function imprimirViviendaTipo(objeto, tipo) {
+        let mostrarElemento = objeto.filter(elemento => {
+            if (elemento.tipo == tipo) {
+                console.log(elemento)
+            }
+
+        })
+        console.log(mostrarElemento)
+
+    }
+    
     const inmuebles = [
         {
             id: 1,
@@ -81,6 +108,11 @@
             }
         }
     ]
+
+    imprimir(inmuebles)
+    imprimirMasCuarto(inmuebles)
+    imprimirViviendaTipo(inmuebles, "Casa")
+    imprimirViviendaTipo(inmuebles, "Departamento")
 
 
 </script>
