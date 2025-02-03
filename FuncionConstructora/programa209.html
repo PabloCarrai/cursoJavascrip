@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Implementar una funcion constructora que cree
+    objetos de tipo Naipe español(los palos de esta baraja
+    pueden ser oro, copa, espada y basto)
+    Un naipe tiene como atributo el numero y su palo. 
+
+    Crear un objeto llamado mazoCartas que tenga un atributo de
+    tipo Array vacio. 
+    En un metodo llamado crear proceder a cargar en el arreglo
+    mazo objetos de tipo Naipe con las 28 carptas de la baraja
+    española.
+
+    Imprimir (se debe mostrar todas las cartas del mazo)
+
+    extraer(debe retornar la carta ubicada en la posicion cero
+    del mazo)
+
+    cantidad(debe retornar la cantidad de cartas del mazo)
+
+    mezclar(debe intercambiar los elementos del arreglo en forma
+    aleatoria)
+    */
+    function Naipe(numero, palo) {
+        this.numero = numero
+        this.palo = palo
+        this.imprimir = function () {
+            console.log(this.numero + " - " + this.palo)
+        }
+    }
+
+    const mazoCartas = {
+
+        mazo: [],
+        crear() {
+            for (let x = 1; x <= 12; x++) {
+                this.mazo.push(new Naipe(x, "oro"))
+                this.mazo.push(new Naipe(x, "copa"))
+                this.mazo.push(new Naipe(x, "espada"))
+                this.mazo.push(new Naipe(x, "basto"))
+            }
+        },
+        imprimir() {
+            this.mazo.forEach((naipe) => naipe.imprimir())
+        },
+        extraer() {
+            return this.mazo.shift()
+        },
+        cantidad() {
+            return this.mazo.length
+        },
+        mezclar() {
+            this.mazo.sort(() => 0.5 - Math.random())
+        }
+    }
+
+    mazoCartas.crear()
+    mazoCartas.imprimir()
+    console.log("cantidad de cartas", mazoCartas.cantidad())
+    console.log("Primer carta ")
+    console.log(mazoCartas.extraer())
+    console.log("cantidad de cartas", mazoCartas.cantidad())
+    mazoCartas.mezclar()
+    console.log("El mazo de cartas luego de mezclarlas")
+    mazoCartas.imprimir()
+
+</script>
+
+<body>
+
+</body>
+
+</html>
