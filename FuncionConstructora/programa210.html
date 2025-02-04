@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Declarar una funcion constructora que represente un Usuario
+    (nombre, clave)
+
+    Almacenar en un arreglo los datos de 3 usuarios. 
+    Ingresar por teclado el nombre del usuario, validar que 
+    dicho nombre no se encuentre almacenado en el arreglo de 
+    objetos. 
+    En el caso de que no se encuentre al macenado, pedir el 
+    ingreso de la clave y posteriormente proceder a crear un 
+    objeto de tipo Usuario e insertarlo en el arreglo. 
+
+    Repetir el proceso hasta que se carguen 3 usuarios. 
+    Mostrar finalmente por pantalla los nombres y claves de 
+    los 3 usuarios llamando a un metodo que imprima los datos del 
+    usuario definido en la funcion constructora. 
+
+    */
+    function Usuarios(nombre, clave) {
+        this.nombre = nombre
+        this.clave = clave
+        this.imprimir = function () {
+            document.write("Usuario  " + this.nombre + " Clave  " + this.clave + "<br>")
+        }
+    }
+
+    const usuarios = []
+    while (usuarios.length != 3) {
+        let nombre = prompt("Ingrese nombre  ")
+        let clave = prompt("Ingrese clave  ")
+        if (usuarios.some(elemento => elemento.nombre == nombre)) {
+            alert("Usuario existente", nombre)
+        } else {
+            usuarios.push(new Usuarios(nombre, clave))
+        }
+    }
+
+    for (let usuario of usuarios) {
+        usuario.imprimir()
+    }
+
+    //o
+    //usuarios.forEach(usuario => usuario.imprimir())
+
+
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
