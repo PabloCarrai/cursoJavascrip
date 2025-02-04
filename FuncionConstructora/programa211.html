@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Declarar una funcion constructora que
+    represente el lanzamiento de un dado. 
+    En la funcion constructora generar un valor aleatorio
+    comprendido entre 1 y 6, esto se hace:
+
+    this.numero = Math.floor(Math.random() * 6) + 1
+
+    Almacenar en un arreglo 5 dados.
+    Mostrar cuantos 1,2,3,4,5,6 salieron. 
+
+    function Dado() { }
+    const cubilete = []
+    // Insertar 5 dados en el arreglo. 
+    // Imprimir los datos que salieron
+    // Contar cuantos 1,2,3,4,5,6 salieron. 
+
+    */
+
+
+    function Dado() {
+        this.numero = Math.floor(Math.random() * 6) + 1
+        this.imprimir = function () {
+            return "Salio el " + this.numero + "<br>"
+        }
+    }
+
+    const cubilete = []
+    // Insertar 5 dados en el arreglo. 
+    for (x = 1; x <= 5; x++) {
+        cubilete.push(new Dado())
+    }
+
+    document.write("<h1>Numeros de los Dados</h1>")
+    // Imprimir los datos que salieron
+    for (let elemento of cubilete) {
+        document.write(elemento.imprimir())
+    }
+    //otra para la misma
+    //cubilete.forEach(dado => dado.imprimir())
+
+
+    // Contar cuantos 1,2,3,4,5,6 salieron. 
+    let cuno = 0
+    let cdos = 0
+    let ctres = 0
+    let ccuatro = 0
+    let ccinco = 0
+    let cseis = 0
+    for (let elemento of cubilete) {
+        switch (elemento.numero) {
+            case 1:
+                cuno++
+                break
+            case 2:
+                cdos++
+                break
+            case 3:
+                ctres++
+                break
+            case 4:
+                ccuatro++
+                break
+            case 5:
+                ccinco++
+                break
+            case 6:
+                cseis++
+                break
+        }
+    }
+
+    document.write("<h1>Conteo de numeros </h1>")
+    document.write("El 1 salio " + cuno + " ves<br>")
+    document.write("El 2 salio " + cdos + " ves<br>")
+    document.write("El 3 salio " + ctres + " ves<br>")
+    document.write("El 4 salio " + ccuatro + " ves<br>")
+    document.write("El 5 salio " + ccinco + " ves<br>")
+    document.write("El 6 salio " + cseis + " ves<br>")
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
