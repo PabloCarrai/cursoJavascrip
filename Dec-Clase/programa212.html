@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    //inicializo los atributos, los metodos van fuera
+    class Articulo {
+        constructor(codigo, descripcion, precio) {
+            this.codigo = codigo
+            this.descripcion = descripcion
+            this.precio = precio
+        }
+        //Fura del constructor van los metodos
+        imprimir() {
+            document.write(this.codigo + " " + this.descripcion + " " + this.precio + "<br>")
+        }
+        getPrecio() {
+            return this.precio
+        }
+    }
+
+    // si o si necesito usar el new en uso de clases
+    const articulo1 = new Articulo(1, "Zapatillas", 10)
+    const articulo2 = new Articulo(2, "Medias", 20)
+    const articulo3 = new Articulo(3, "Pantalon", 30)
+    const articulo4 = new Articulo(4, "Camisa", 40)
+    articulo1.imprimir()
+    articulo2.imprimir()
+    articulo3.imprimir()
+    articulo4.imprimir()
+    const totalPrecios = articulo1.getPrecio() + articulo2.getPrecio() + articulo3.getPrecio() + articulo4.getPrecio()
+    document.write("El total de precios estimados es " + totalPrecios + "<br>")
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

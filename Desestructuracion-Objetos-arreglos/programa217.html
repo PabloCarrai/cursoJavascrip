@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // ejemplo
+    const arreglo = [10, 20, 30]
+    const [primero, segundo] = arreglo
+    console.log(primero)
+    console.log(segundo)
+    const [, , tercero] = arreglo
+    console.log(tercero)
+
+    // en objetos seria mas o menos igual 
+    // se le pasa la propiedad y se usa llaves en ves de []
+    const articulo1 = {
+        codigo: 1,
+        descripcion: "Papas",
+        precio: 1.5
+    }
+
+    const { codigo, precio } = articulo1
+    console.log(codigo)
+    console.log(precio)
+
+
+    // otro ejemplo
+    const inmueble1 = {
+        codigo: 1,
+        direccion: "Colon 120",
+        precio: 1_000_000,
+        habitaciones: 3,
+        baños: 2,
+        garage: true,
+        superficie: 170,
+        imagen: "https://www.prueba.com/fotos/inmueble.jpg",
+        ubicacion: {
+            lat: 10.12,
+            lng: 8.12
+        },
+        tipo: "Casa"
+    }
+
+    // si quiero lat y lng
+    const { lat, lng } = inmueble1.ubicacion
+    console.log(lat)
+    console.log(lng)
+
+    // usando en el parametro de una funcion
+    function mostrarUbicacion({ lat, lng }) {
+        console.log(lat)
+        console.log(lng)
+    }
+    // aca paso lo que tengo que desestructurar
+    mostrarUbicacion(inmueble1.ubicacion)
+
+    const persona1 = {
+        nombre: "Juan",
+        apellido: "Perez",
+        estudios: "Ingeniero"
+    }
+    // cuando el atributo no existe devuelve undefine
+    const { edad } = persona1
+    console.log(edad)
+
+    // Se puede asignar valor por defecto en el caso de que el atributo no exista. 
+    const { documento = 1 } = persona1
+    console.log(documento)
+
+    // si quiere desestructurar una variable y renombrar la misma se puede hacer luego del :
+    const persona2 = {
+        documento: 234345456,
+        nombre: "Juan",
+        apellido: "Perez",
+        edad: 20
+    }
+    const { documento: dni } = persona2
+    console.log(dni)
+
+    // Desestructurar un valor y el resto en otro objeto
+    const { nombre, ...articulo } = articulo1
+    console.log(articulo)
+
+    /*
+    
+    Se tiene un arreglo que representan un conjunto de 
+    empleados:
+
+    const empleados = [{
+        nombre: "Juan",
+        edad: 30,
+        sueldos: [2000, 2200, 2400]
+    }, {
+        nombre: "Maria",
+        edad: 25,
+        sueldos: [1800, 1900, 2000]
+
+    }, {
+        nombre: "Pedro",
+        edad: 35,
+        sueldos: [2500, 2600, 2700]
+
+    }]
+
+    Confeccionar una funcion que reciba solo la propiedad
+    sueldos y retorne la suma de todos sus sueldos.
+    Llamar a la funcion para cada empleado y mostrar el 
+    sueldo acumulador de cada empleado
+
+    */
+
+    function desempaquetarSueldo(objeto) {
+        for (let elemento of objeto) {
+            console.log(elemento)
+        }
+
+    }
+
+    const empleados = [{
+        nombre: "Juan",
+        edad: 30,
+        sueldos: [2000, 2200, 2400]
+    }, {
+        nombre: "Maria",
+        edad: 25,
+        sueldos: [1800, 1900, 2000]
+
+    }, {
+        nombre: "Pedro",
+        edad: 35,
+        sueldos: [2500, 2600, 2700]
+
+    }]
+
+    function totalSueldos({ sueldos }) {
+        return sueldos.reduce((acumulador, sueldo) => acumulador += sueldo)
+
+    }
+    //recorre cada objeto del arreglo
+    empleados.forEach((empleados) => console.log(totalSueldos(empleados)))
+
+</script>
+
+<body>
+
+</body>
+
+</html>
