@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // metodos de string
+    //toUpperCase() copia actual en mayusculas
+    //toLowerCase() copia actual en minusculas
+
+    let cadena1 = "Administracion"
+    let cadena2 = cadena1.toUpperCase()
+    //console.log(cadena1)
+    //console.log(cadena2)
+    //console.log(cadena1.toLocaleLowerCase())
+
+    //trim() retorna una copia sin los espacio al principio o final
+    //trimEnd() retorna una copia sin los espacio al final
+    //trimStart() retorna una copia sin los espacio al inicio
+    let nombre = '  Maria   '
+    //console.log(nombre.length)
+    //console.log(nombre.trimStart().length)
+    //console.log(nombre.trimEnd().length)
+    //console.log(nombre.trim().length)
+
+    // includes(string, [posicion])
+    // returna true si el string contiene el string a buscar que le pasamos como primr parametro. El segundo parametro es
+    // opcional y es la posicio de inicio de la busqueda
+    const titulo = "Administracion"
+    // Contiene la cadena tra
+    //console.log(titulo.includes('tra'))
+    // Contiene la cadena Tra
+    //console.log(titulo.includes('Tra'))
+    // contiene la cadena Admin
+    //console.log(titulo.includes('Admin'))
+    // Contiene la cadena Admin a partir del indice 4
+    //console.log(titulo.includes('Admin', 4))
+
+    //indeOf(string.[posicion]) devuelve la posicion de la primera ocurrencia del string pasado como parametro. El segundo parametro es opcional
+    // retorna un -1 si no lo encuentra
+    //console.log(titulo)
+    //console.log(titulo.indexOf("min"))
+    //console.log(titulo.indexOf("mon"))
+    //console.log(titulo.indexOf("min", 5))
+
+    //endsWith(string, [posicion])
+    // retorna true si el string finaliza con el string que le pasamos como primr parametro. El segundo parametro es opcional. Y es el numero de caracteres principal a tener en cuenta en la comparacion
+    // finaliza en ion
+    //console.log(titulo.endsWith("ion"))
+    // finaliza con min
+    //console.log(titulo.endsWith("min"))
+    //finaliza con min teniendo en cuenta los 5 primeros caracteres
+    //console.log(titulo.endsWith("min", 5))
+
+    //startsWith(string, [posicion])
+    // Retorna true si el string actual comienza con el string que le pasamos como parametro. El segundo parametro es opcional y es la posicio de inicio de busqueda
+    // comienza la cadena Admin
+    //console.log(titulo.startsWith("Admin"))
+    // comienza la cadena admin
+    //console.log(titulo.startsWith("admin"))
+    // comienza la cadena mi
+    //console.log(titulo.startsWith("mi"))
+    // comienza la cadena mi en 2 posicion
+    //console.log(titulo.startsWith("mi", 2))
+
+    //split(separador,[limite])
+    // Retorna un arreglo con todas las partes de la cadena que se 
+    // separan por el separador. El segundo parametro es opcional y es
+    // el numero maximo de elementos que se retornaran
+    const cadena = "uno dos tres cuatro cinco"
+    console.log(cadena.split(" "))
+    const meses = "enero,febrero,marzo,abril,mayo,junio,lulio,agosto,septiembre,octubre,noviembre,diciembre"
+    console.log(meses.split(","))
+    console.log(meses.split(",", 6))
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
