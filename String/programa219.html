@@ -11,8 +11,8 @@
     //toUpperCase() copia actual en mayusculas
     //toLowerCase() copia actual en minusculas
 
-    let cadena1 = "Administracion"
-    let cadena2 = cadena1.toUpperCase()
+    //let cadena1 = "Administracion"
+    //let cadena2 = cadena1.toUpperCase()
     //console.log(cadena1)
     //console.log(cadena2)
     //console.log(cadena1.toLocaleLowerCase())
@@ -20,7 +20,7 @@
     //trim() retorna una copia sin los espacio al principio o final
     //trimEnd() retorna una copia sin los espacio al final
     //trimStart() retorna una copia sin los espacio al inicio
-    let nombre = '  Maria   '
+    //let nombre = '  Maria   '
     //console.log(nombre.length)
     //console.log(nombre.trimStart().length)
     //console.log(nombre.trimEnd().length)
@@ -70,12 +70,59 @@
     // Retorna un arreglo con todas las partes de la cadena que se 
     // separan por el separador. El segundo parametro es opcional y es
     // el numero maximo de elementos que se retornaran
-    const cadena = "uno dos tres cuatro cinco"
-    console.log(cadena.split(" "))
-    const meses = "enero,febrero,marzo,abril,mayo,junio,lulio,agosto,septiembre,octubre,noviembre,diciembre"
-    console.log(meses.split(","))
-    console.log(meses.split(",", 6))
+    //const cadena = "uno dos tres uno dos tres"
+    //console.log(cadena.split(" "))
+    //const meses = "enero,febrero,marzo,abril,mayo,junio,lulio,agosto,septiembre,octubre,noviembre,diciembre"
+    //console.log(meses.split(","))
+    //console.log(meses.split(",", 6))
 
+    //slice(inicio, [fin])
+    // retorna un trozo de la cadena actual. El primer parametro es
+    //el indice de inicio el segundo es opcional y es el de fin(sin incluirlo)
+    //console.log(titulo.slice(0, 3))
+    //console.log(titulo.slice(2, 6))
+    //console.log(titulo.slice(2))
+    //console.log(titulo.slice(-2))
+    //console.log(titulo.slice(-4, -2))
+
+
+    //replace(string-actual,string-nuevo)
+    // Retorna una nueva cadena que es una copia del string actual
+    // pero con la primera ocurrencia reemplazada por la cadena nueva
+    //console.log(cadena.replace("uno", "one"))
+    // replaceAll(string-actual,string-nuevo)
+    // retorna una nueva cadena que es una copia del string
+    // actual pero con todas las ocurrencias reemplazadas por la cadena nueva
+    //console.log(cadena.replaceAll("uno", "one"))
+
+    //repeat(cantidad)
+    // retorna una nueva cadena que es una copia del string actual repetida la cantidad de veces que le pasamos como parametro
+    //const estrella = "*"
+    //console.log(estrella.repeat(5))
+
+    //padStart(numero, [string])
+    // Rellena el principio del string actual con una cadena determinada que le pasamos eventualmente en el segundo parametro, sino rellena con espacios en blanco
+    //const cadena = "uno"
+    //let cadena2 = cadena.padStart(5)
+    //console.log(cadena2)
+    //cadena2 = cadena.padStart(5, "*")
+    //console.log(cadena2)
+    //cadena2 = cadena.padStart(5, "12345")
+    //console.log(cadena2)
+
+    //padEnd(numero, [string])
+    // rellena el string actual con una cadena determinada que le pasamos eventualmente en el segundo parametro, sino rellena con espacios en blanco
+    //let cadena2 = cadena.padEnd(5)
+    //console.log(cadena2)
+    //cadena2 = cadena.padEnd(5, "*")
+    //console.log(cadena2)
+    //cadena2 = cadena.padEnd(5, "12345")
+    //console.log(cadena2)
+
+    //at(indice)
+    // retorna el caracter de la posicion indicada en indice, comienza a enumerarse en cero. En el caso de pasar un valor negativo se comienza desde el final del string
+    console.log(titulo.at(0))
+    console.log(titulo.at(-1))
 
 
 </script>
