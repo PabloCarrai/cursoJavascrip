@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    Se tiene un arreglo con un conjunto de 
+    objetos que representan personas.
+
+    const personas = [
+        {
+            nombre: "Juan Perez",
+            edad: 30,
+        },
+        {
+            nombre: "Maria Lopez",
+            edad: 25,
+        },
+        {
+            nombre: "Pedro Martinez",
+            edad: 35,
+
+        },
+        {
+            nombre: "Peña Lara",
+            edad: 28
+        }
+    ]
+
+    Confeccionar una funcion que reciba el arreglo personas y 
+    parte del inicio del nombre a buscar.
+    Buscar e imprimir todas las personas que comienzan con dicha
+    cadena (mostrar indistintamente se encuentre en mayuscula o 
+    minusculas), resolver el problema de tres formas:
+    - Accediendo al arreglo por medio de subindices. 
+    - Recorriendo el arreglo mediante el for of
+    - Filtrando el arreglo mediante el metodo filter
+
+    function mostrarPersonas(personas, parteNombre) { }
+
+    
+    */
+
+
+    const personas = [
+        {
+            nombre: "Juan Perez",
+            edad: 30,
+        },
+        {
+            nombre: "Maria Lopez",
+            edad: 25,
+        },
+        {
+            nombre: "Pedro Martinez",
+            edad: 35,
+
+        },
+        {
+            nombre: "Peña Lara",
+            edad: 28
+        }
+    ]
+
+    function mostrarPersonas(personas, parteNombre) {
+        for (elemento of personas) {
+            // metodo for of
+            if (elemento.nombre.includes(parteNombre)) {
+                console.log(`Nombre : ${elemento.nombre} Edad: ${elemento.edad}`)
+            }
+          
+
+
+        }
+        console.log(personas.forEach(e => e.nombre.filter(parteNombre)))
+
+    }
+
+    nombreABUscar = prompt("Ingrese parte del nombre a buscar")
+    mostrarPersonas(personas, nombreABUscar)
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
