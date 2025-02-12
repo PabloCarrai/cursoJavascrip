@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    Se tienen dos string con una lista de 
+    comidas y postres separados por coma.
+    Crear dos arreglos que almacenen las comidas en uno y los 
+    postres en otros.
+    
+    const listaComidas = "pizza,hamburguesa,empanada,churrasco,chuleta"
+    const listaPostres = "helado,pastel,tarta,flan"
+    const comidas = 0 //convertimos el string listaComidas a un arreglo
+    const postres = 0 // convertimos el string listaPostres a un arreglo
+
+    Seguidamente llamar a una funcion que le enviemos los dos arreglo
+    y nos retorne otro arreglo con elementos de tipo
+    objeto que surjan de la conbinacion de cada comida con 
+    cada postre.
+
+
+
+    */
+
+    function generarMenus(comidas, postres) {
+        const menus = []
+        // cargamos todas las convinaciones de los dos arreglos
+        return menus
+    }
+
+    const listaComidas = "pizza,hamburguesa,empanada,churrasco,chuleta"
+    const listaPostres = "helado,pastel,tarta,flan"
+    const comidas = listaComidas.split(",") //convertimos el string listaComidas a un arreglo
+    const postres = listaPostres.split(",") // convertimos el string listaPostres a un arreglo
+
+    //console.log(comidas)
+    //console.log(postres)
+    let prueba = []
+    let menu = new Object()
+
+    for (let x = 0; x < comidas.length; x++) {
+        for (let y = 0; y < postres.length; y++) {
+            prueba.push(new menu.comida = comidas[x])
+            //prueba.push({comida: comidas[x],postre: postres[y]})            
+        }
+    }
+    console.log(prueba)
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

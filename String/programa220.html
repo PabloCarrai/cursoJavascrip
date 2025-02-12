@@ -69,21 +69,24 @@
     function mostrarPersonas(personas, parteNombre) {
         for (elemento of personas) {
             // metodo for of
-            if (elemento.nombre.includes(parteNombre)) {
-                console.log(`Nombre : ${elemento.nombre} Edad: ${elemento.edad}`)
+            if (elemento.nombre.toLowerCase().startsWith(parteNombre.toLowerCase())) {
+                console.log(`Nombre: ${elemento.nombre} Edad: ${elemento.edad}`)
             }
-          
-
-
         }
-        console.log(personas.forEach(e => e.nombre.filter(parteNombre)))
+        // usando indices
+        for (let x = 0; x < personas.length; x++) {
+            if (personas[x].nombre.toLowerCase().startsWith(parteNombre.toLowerCase())) {
+                console.log(`Nombre: ${personas[x].nombre} Edad: ${personas[x].edad}`)
+            }
+        }
 
+        // Usando filter
+        const personaIn = personas.filter(e => e.nombre.toLowerCase().startsWith(parteNombre.toLowerCase()))
+        console.log(personaIn)
     }
 
     nombreABUscar = prompt("Ingrese parte del nombre a buscar")
     mostrarPersonas(personas, nombreABUscar)
-
-
 
 </script>
 
