@@ -28,9 +28,21 @@
 
     */
 
+
+    class Menu {
+        constructor(comida, postre) {
+            this.comida = comida
+            this.postre = postre
+        }
+    }
+
     function generarMenus(comidas, postres) {
-        const menus = []
-        // cargamos todas las convinaciones de los dos arreglos
+        let menus = []
+        for (let x = 0; x < comidas.length; x++) {
+            for (let y = 0; y < postres.length; y++) {
+                menus.push(new Menu(`${comidas[x]}`, `${postres[y]}`))
+            }
+        }
         return menus
     }
 
@@ -39,19 +51,8 @@
     const comidas = listaComidas.split(",") //convertimos el string listaComidas a un arreglo
     const postres = listaPostres.split(",") // convertimos el string listaPostres a un arreglo
 
-    //console.log(comidas)
-    //console.log(postres)
-    let prueba = []
-    let menu = new Object()
-
-    for (let x = 0; x < comidas.length; x++) {
-        for (let y = 0; y < postres.length; y++) {
-            prueba.push(new menu.comida = comidas[x])
-            //prueba.push({comida: comidas[x],postre: postres[y]})            
-        }
-    }
+    let prueba = generarMenus(comidas, postres)
     console.log(prueba)
-
 
 </script>
 

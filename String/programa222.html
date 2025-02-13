@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    /*
+    
+    
+    Elaborar una funcion que reciba como
+    primer parametro una oracion y como segundo parametro una
+    palabra.
+    Generar otra oracion remplazando las aparicion de la palabra
+    por asteriscos(hay que cargar tantos asteriscos como el
+    largo de la palabra)
+    */
+
+    function reemplazar(oracion, palabra) {
+        return oracion.replaceAll(palabra, '*'.repeat(palabra.length))
+    }
+    const oracion = `La Argentina se encuentra en sudemerica 
+    Argentina tiene la poblacion de 45000000 de habitantes`
+
+    //const nuevaOracion=oracion.replaceAll("Argentina","Brazil")
+    //console.log(nuevaOracion)
+
+    const nuevaOracion = reemplazar(oracion, "Argentina")
+    console.log(nuevaOracion)
+
+</script>
+
+<body>
+
+</body>
+
+</html>
