@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    
+    
+    Se tiene un arreglo con elementos de
+    tipo objeto donde se almacenan 10 frases celebres y sus 
+    autores. 
+
+    const frasesCelebres = [
+        {
+            frase: "La vida es 10% lo que te sucede y 90% como reaccionas a ello",
+            autor: "Charles R. Swindoll"
+        },
+        {
+            frase: "El amor es una fuerza mas formidable que cualquier otra. Es invisible, no puede ser visto ni medido, pero es lo suficientemente poderoro para transformarte en un momento y ofrecerte mas alegria que cualquier posesion material podria hacerlo",
+            autor: "Barbara de Angelis"
+        },
+        {
+            frase: "Cada momento es especial para quien tiene la visión de reconocerlo como tal",
+            autor: "Henry Miller"
+        },
+        {
+            frase: "La vida es muy peligrosa. No por las personas que hacen el mal, sino por las que se sientan a ver lo que pasa",
+            autor: "Albert Einstein"
+        },
+        {
+            frase: "Asegúrate de que colocas tus pies en el lugar correcto y luego, mantente firme",
+            autor: "Abraham Lincoln"
+        },
+        {
+            frase: "La felicidad no brota de la razón, sino de la imaginación",
+            autor: "Immanuel Kant"
+        },
+        {
+            frase: "No se puede encontrar la paz evitando la vida",
+            autor: "Virginia Woolf"
+        },
+        {
+            frase: "Lo que haces por ti se desvanece cuando mueres. Lo que haces por el resto conforma tu legado",
+            autor: "Kalu Ndukwe Kalu"
+        },
+        {
+            frase: "Buenos amigos, buenos libros y tener una conciencia tranquila: esta es la vida ideal",
+            autor: "Mark Twain"
+        },
+        {
+            frase: "Cuando las oportunidades no llamen a tu puerta, construye una",
+            autor: "Milton Berle"
+        }
+    ]
+
+    Confeccionar una funcion que reciba el arreglo y una palabra. 
+    Retornar un nuevo arreglo con todas las frases que contienen
+    dicha palabra:
+
+    function frasesIncluyen(frasesCelebres, palabra) { }
+    const frasesAmor = frasesCelebres(frasesCelebres, "amor")
+    console.log(frasesAmor)
+
+    */
+
+    function frasesIncluyen(objeto, palabra) {
+        let auxiliar = []
+        objeto.forEach(elemento => {
+            if (elemento.frase.toLowerCase().includes(palabra.toLowerCase())) {
+                auxiliar.push(elemento)
+            }
+        });
+        return auxiliar
+    }
+
+    const frasesCelebres = [
+        {
+            frase: "La vida es 10% lo que te sucede y 90% como reaccionas a ello",
+            autor: "Charles R. Swindoll"
+        },
+        {
+            frase: "El amor es una fuerza mas formidable que cualquier otra. Es invisible, no puede ser visto ni medido, pero es lo suficientemente poderoro para transformarte en un momento y ofrecerte mas alegria que cualquier posesion material podria hacerlo",
+            autor: "Barbara de Angelis"
+        },
+        {
+            frase: "Cada momento es especial para quien tiene la visión de reconocerlo como tal",
+            autor: "Henry Miller"
+        },
+        {
+            frase: "La vida es muy peligrosa. No por las personas que hacen el mal, sino por las que se sientan a ver lo que pasa",
+            autor: "Albert Einstein"
+        },
+        {
+            frase: "La felicidad es amor, no otra cosa. El que sabe amar es feliz",
+            autor: "Hermann Hesse"
+        },
+        {
+            frase: "El amor es el anhelo de salir de uno mismo",
+            autor: "Charles Baudelaire"
+        },
+        {
+            frase: "No se puede encontrar la paz evitando la vida",
+            autor: "Virginia Woolf"
+        },
+        {
+            frase: "Lo que haces por ti se desvanece cuando mueres. Lo que haces por el resto conforma tu legado",
+            autor: "Kalu Ndukwe Kalu"
+        },
+        {
+            frase: "Buenos amigos, buenos libros y tener una conciencia tranquila: esta es la vida ideal",
+            autor: "Mark Twain"
+        },
+        {
+            frase: "Cuando las oportunidades no llamen a tu puerta, construye una",
+            autor: "Milton Berle"
+        }
+    ]
+
+
+    const frasesAmor = frasesIncluyen(frasesCelebres, "amor")
+
+    console.log(frasesAmor)
+
+</script>
+
+<body>
+
+</body>
+
+</html>
