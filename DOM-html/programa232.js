@@ -7,10 +7,17 @@ palabra ingresada se encuentra contenida en la frase.
 */
 
 
-
+function averiguarPalabra() {
+    // esto se usa en imput, por eso el value
+    const texto = document.querySelector("#editor1").value
+    const frase = document.querySelector('#frase').textContent
+    if (frase.toLocaleLowerCase().includes(texto.toLocaleLowerCase())) {
+        document.querySelector("#resultado").innerHTML = `La palabra <b> ${texto} </b> se encuentra en la frase`
+    } else {
+        document.querySelector("#resultado").innerHTML = `La palabra <b> ${texto} </b> no se encuentra en la frase`
+    }
+}
 
 document.querySelector("#boton1").addEventListener("click", () => {
-    const prueba = document.querySelector("#editor1").value
-    console.log(prueba)
+    averiguarPalabra()
 })
-
