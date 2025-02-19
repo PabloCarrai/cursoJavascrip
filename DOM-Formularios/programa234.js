@@ -21,19 +21,15 @@ const frutas = [
     { nombre: "melon", calorias: 34 }
 ]
 
-function buscarCalorias(buscar) {
-    let resultado
+function buscarCalorias(buscar) {    
     for (let fruta of frutas) {
         if (fruta.nombre.includes(buscar)) {
-            resultado = `Las calorias de la fruta ${fruta.nombre} es ${fruta.calorias}`
-            console.log(resultado)
-            document.querySelector("#resultado").textContent += resultado
-        }
+            document.querySelector("#resultado").textContent =`Las calorias de la fruta ${fruta.nombre} es ${fruta.calorias}`
+        }        
     }
-
 }
 
-//console.log(frutas)
+
 for (let fruta of frutas) {
     document.querySelector("#parrafo").innerHTML += fruta.nombre + " - "
 }
