@@ -37,11 +37,23 @@ const frutas = [
     { nombre: "melon", calorias: 34 }
 ]
 
-function listarFrutaCalorias(buscar) {
-    for (let fruta of frutas) {
-        if (fruta.nombre.includes(buscar)) {
-            document.querySelector("#resultado").textContent = `Las calorias de la fruta ${fruta.nombre} es ${fruta.calorias}`
-        }
+
+function listarFrutaCalorias() {
+    const altascalorias = document.querySelector("#altascalorias")
+    const bajacalorias = document.querySelector("#bajacalorias")
+    if (altascalorias.checked) {
+        frutas.map(frutitas => {
+            if (frutitas.calorias >= 50) {
+                document.querySelector("#resultado").innerHTML += `${frutitas.nombre} con ${frutitas.calorias} Calorias` + "<br>"
+            }
+        })
+    }
+    if (bajacalorias.checked) {
+        frutas.map(frutitas => {
+            if (frutitas.calorias < 50) {
+                document.querySelector("#resultado").innerHTML += `${frutitas.nombre} con ${frutitas.calorias} Calorias` + "<br>"
+            }
+        })
     }
 }
 
@@ -50,6 +62,9 @@ for (let fruta of frutas) {
     document.querySelector("#parrafo").innerHTML += fruta.nombre + " - "
 }
 
-document.querySelector("#calorias").addEventListener("click", () => {
-    //listarFrutaCalorias(document.querySelector("#fruta").value)
+
+document.querySelector("#verlistado").addEventListener("click", () => {
+    listarFrutaCalorias()
 })
+
+
