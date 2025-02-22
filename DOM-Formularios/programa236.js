@@ -39,6 +39,7 @@ const frutas = [
 
 
 function listarFrutaCalorias() {
+    document.querySelector("#resultado").innerHTML = ''
     const altascalorias = document.querySelector("#altascalorias")
     const bajacalorias = document.querySelector("#bajacalorias")
     if (altascalorias.checked) {
