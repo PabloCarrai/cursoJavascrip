@@ -20,9 +20,10 @@ function chequearCantidadCheckboxActivos() {
             ctrue++
 
         }
-        if (ctrue > 2) {
-            document.querySelector("#resultado").innerHTML = `Cantidad de elecciones ${ctrue}, solo puedes elegir 2 carreras`
-
+        if (ctrue <= 2) {
+            document.querySelector("#resultado").innerHTML = `Eleccion adecuada de cantidad de materia`
+        } else {
+            document.querySelector("#resultado").innerHTML = `Elijio ${ctrue} de materias, solo puede elegir 2`
         }
     }
 }
