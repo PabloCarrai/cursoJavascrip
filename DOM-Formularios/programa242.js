@@ -15,19 +15,19 @@ const palabrasCensuradas = ["inutil", "tonto", "bobo"]
 
 */
 
-function revisarOracion(oracion, palabrasCensuradas) {
-    for (let palabra of palabrasCensuradas) {
-        console.log(palabra)
-        console.log(oracion)
-        console.log(oracion.includes(palabra)) //{
-        //document.querySelector("#resultado").innerHTML = "Hay palabras ofensivas en los comentarios. Por favor modifique sus comentarios"
-        //}
-    }
-}
-
-
 const palabrasCensuradas = ["inutil", "tonto", "bobo"]
 
+function revisarOracion(oracion, palabrasCensuradas) {
+    document.querySelector("#resultado").textContent = " Gracias "
+    const palabrasIndividuales = oracion.split(" ")
+    for (let palabra of palabrasCensuradas) {
+        for (let palabrasind of palabrasIndividuales) {
+            if (palabra == palabrasind) {
+                document.querySelector("#resultado").textContent = "Hay palabras ofensivas en los comentarios. Por favor modifique sus comentarios"
+            }
+        }
+    }
+}
 
 document.querySelector("#confirmar").addEventListener("click", () => {
     const oracion = document.querySelector("#comentarios").value
