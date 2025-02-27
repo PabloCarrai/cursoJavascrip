@@ -12,8 +12,7 @@ operador pueda corroborar los textos ingresados.
 */
 
 function verificarClaves(clave1, clave2) {
-    
-    alert(`Primer Clave ${clave1} Segunda Clave ${clave2}`)
+    alert(`Primer Clave ${clave1}  \nSegunda Clave ${clave2}`)
 }
 
 function clavesValidas(clave1, clave2) {
