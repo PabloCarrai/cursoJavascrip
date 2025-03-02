@@ -1,0 +1,17 @@
+.americano {
+    color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.europeo {
+    color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#mostrar {
+    padding: 10px;
+}
+
+#resultado {
+    background-color: yellow;
+}
