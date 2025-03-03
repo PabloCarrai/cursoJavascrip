@@ -10,8 +10,4 @@ document.querySelector("#actualizar").addEventListener("click", () => {
     let alto = parseInt(document.querySelector("#alto").value)
     let color = document.querySelector("#color").value
     actualizarPropiedades(ancho, alto, color)
-
-    //console.log(typeof ancho,typeof alto,typeof color)
-
-
 })
