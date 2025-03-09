@@ -14,13 +14,12 @@ function cambiarImagen(operacion) {
 
 
 document.querySelector("#siguiente").addEventListener("click", () => {
+    let estado = false
     if (contador > 4) {
         contador = 4
-        document.querySelector("#siguiente").disabled = true
-
+        document.querySelector("#siguiente").disabled = estado
     } else {
-        document.querySelector("#siguiente").disabled = false
-
+        document.querySelector("#siguiente").disabled = estado
     }
     console.log(contador)
     document.querySelector("#imagen").src = cambiarImagen("suma")
@@ -28,12 +27,15 @@ document.querySelector("#siguiente").addEventListener("click", () => {
 })
 
 document.querySelector("#anterior").addEventListener("click", () => {
+    let estado = true
     if (contador < 1) {
         contador = 1
-        document.querySelector("#anterior").disabled = true
-        
+        document.querySelector("#anterior").disabled = estado
     } else {
-        document.querySelector("#anterior").disabled = false
+        if (contador != 1) {
+            estado = true
+            document.querySelector("#anterior").disabled = estado
+        }
     }
     console.log(contador)
     document.querySelector("#imagen").src = cambiarImagen("resta")
