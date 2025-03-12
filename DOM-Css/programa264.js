@@ -54,5 +54,5 @@ function segundoMetodo(lista) {
 }
 
 
-primerMetodo(lista)
-//segundoMetodo(lista)
+//primerMetodo(lista)
+segundoMetodo(lista)
