@@ -15,7 +15,7 @@ function adivinarAleatorio(numero) {
 
 }
 document.querySelector("#verificar").addEventListener("click", () => {
-    const valor = document.querySelector("#numero").value
+    const valor = parseInt(document.querySelector("#numero").value)
     let listaExistente = document.querySelector("#intentos")
     let liitem = document.createElement("li")
     liitem.innerHTML = adivinarAleatorio(valor)
