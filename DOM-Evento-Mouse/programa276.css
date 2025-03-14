@@ -1,0 +1,24 @@
+#recuadros {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cuadrado {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+    border: 5px solid black;
+}
+
+.rojo {
+    background-color: red;
+}
+
+.verde {
+    background-color: green;
+}
+
+.azul {
+    background-color: blue;
+}
