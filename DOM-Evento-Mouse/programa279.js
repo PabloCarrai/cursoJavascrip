@@ -20,11 +20,13 @@ let valores = []
 for (let x = 1; x <= 10; x++) {
     valores.push(x)
 }
-const minimo = Math.min(...valores)
-console.log(valores)
-console.log(obtenerMinimo(valores))
-for (let x = 0; x < 3; x++) {
-    valores.shift()
+
+
+
+while (valores.length > 0) {
+    console.log(valores)
+    let valorAeliminar = parseInt(prompt("Ingrese un numero"))
+    let indice = valores.filter((valor)=>{return valor!==valorAeliminar})
+    console.log(indice)
+    console.log(valores)
 }
-console.log(obtenerMinimo(valores))
-console.log(valores)
