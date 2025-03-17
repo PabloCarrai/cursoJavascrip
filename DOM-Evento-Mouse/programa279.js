@@ -12,21 +12,28 @@ orden, caso de equivocarse proceder a mostra run mensaje
 que perdio. 
 */
 
-function obtenerMinimo(lista) {
-    return Math.min(...lista)
-}
-
-let valores = []
+const ancho = window.innerWidth - 50
+const alto = window.innerHeight - 50
+let proximo = 1
 for (let x = 1; x <= 10; x++) {
-    valores.push(x)
-}
-
-
-
-while (valores.length > 0) {
-    console.log(valores)
-    let valorAeliminar = parseInt(prompt("Ingrese un numero"))
-    let indice = valores.filter((valor)=>{return valor!==valorAeliminar})
-    console.log(indice)
-    console.log(valores)
+    const divs = document.createElement("div")
+    divs.textContent = x
+    divs.classList.add("numero")
+    const posx = Math.floor(Math.random() * ancho)
+    const posy = Math.floor(Math.random() * alto)
+    divs.style.left = posx + "px"
+    divs.style.top = posy + "px"
+    document.querySelector("#numeros").append(divs)
+    divs.addEventListener("click", evento => {
+        const valor = parseInt(evento.target.textContent)
+        if (valor == proximo) {
+            proximo++
+            evento.target.remove()
+            if(document.querySelector("#numeros").children.length==0){
+                alert("Has ganado")
+            }
+        } else {
+            alert("Perdio")
+        }
+    })
 }
