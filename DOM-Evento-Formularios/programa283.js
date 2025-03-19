@@ -6,12 +6,12 @@ Utilizar primero la captura del evento change y luego del
 evento input
 */
 
-
 const tfuente = document.querySelector("#tamanofuente")
 const texto = document.querySelector("#resultado")
+const spamTexto = document.querySelector("#tamano")
 
 tfuente.addEventListener("input", () => {
-    texto.style.fontSize = `${tfuente}px`
+    spamTexto.textContent = `${tfuente.value}`
+    texto.style.fontSize = `${tfuente.value}px`
+    
 })
-
-
