@@ -1,0 +1,11 @@
+#cuadro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mensaje {
+    font-size: 24px;
+    font-weight: bold;
+}
