@@ -1,7 +1,6 @@
 
-function generarNumero() {
-
-    const numero = Math.floor(Math.random() * 100)
+function generarNumero(valor = 10) {
+    const numero = Math.floor(Math.random() * valor)
     return numero
 }
 
@@ -25,21 +24,29 @@ function nuevoNumero() {
 function adivinamos() {
     if (document.querySelector("#numero").textContent == document.querySelector("#intento").value) {
         alert("acertaste")
-    }else{alert("Perdiste")}
+        jugamos(101)
+    } else {
+        alert("Perdiste")
+    }
 }
 
+function jugamos(valor) {
+    ocultarMostrarNumero("mostrar")
+    //asignamos un numero
+    nuevoNumero(valor)
+    // a los 3 segundo ocultamos el texto
+    setTimeout(() => {
+        ocultarMostrarNumero("ocultar")
+    }, 3000)
 
-//asignamos un numero
-nuevoNumero()
-// a los 3 segundo ocultamos el texto
-setTimeout(() => {
-    ocultarMostrarNumero("ocultar")
-}, 3000)
 
+}
+
+jugamos()
 
 //console.log(document.querySelector("#numero").textContent)
 //console.log(document.querySelector("#intento").value)
 
 document.querySelector("#confirmar").addEventListener("click", () => {
-    adivinamos()    
+    adivinamos()
 })
