@@ -7,24 +7,22 @@ function generarNumero(valor = 10) {
 function ocultarMostrarNumero(tarea) {
     const numero = document.querySelector("#numero")
     if (tarea == "ocultar") {
-        alert("oculto")
         numero.style.visibility = "hidden"
     }
     if (tarea == "mostrar") {
-        alert("visible")
         numero.style.visibility = "visible"
 
     }
 }
 
-function nuevoNumero() {
-    document.querySelector("#numero").textContent = generarNumero()
+function nuevoNumero(valor) {
+    document.querySelector("#numero").textContent = generarNumero(valor)
 }
 
 function adivinamos() {
     if (document.querySelector("#numero").textContent == document.querySelector("#intento").value) {
         alert("acertaste")
-        jugamos(101)
+        console.log(jugamos(101))
     } else {
         alert("Perdiste")
     }
