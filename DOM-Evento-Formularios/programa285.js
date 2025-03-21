@@ -22,7 +22,7 @@ function nuevoNumero(valor) {
 function adivinamos() {
     if (document.querySelector("#numero").textContent == document.querySelector("#intento").value) {
         alert("acertaste")
-        console.log(jugamos(101))
+        jugamos(101)
     } else {
         alert("Perdiste")
     }
@@ -36,14 +36,9 @@ function jugamos(valor) {
     setTimeout(() => {
         ocultarMostrarNumero("ocultar")
     }, 3000)
-
-
 }
 
 jugamos()
-
-//console.log(document.querySelector("#numero").textContent)
-//console.log(document.querySelector("#intento").value)
 
 document.querySelector("#confirmar").addEventListener("click", () => {
     adivinamos()
