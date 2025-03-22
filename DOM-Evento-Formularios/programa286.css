@@ -1,0 +1,18 @@
+body {
+    background-color: yellow;
+    margin: 0px;
+}
+
+#recuadro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: green;
+    box-sizing: border-box;
+}
+
+#temporizador {
+    font-size: 96px;
+    font-weight: bold;
+}
