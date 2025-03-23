@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // esta funcion dispara lo javascript antes de que se cargue todo el DOM
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector("#boton1").addEventListener("click", () => {
+                alert("si")
+            })
+        })
+
+
+    </script>
+
+    <button id="boton1">Presioname</button>
+
+</body>
+
+</html>
