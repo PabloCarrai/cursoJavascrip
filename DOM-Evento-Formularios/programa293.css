@@ -1,0 +1,20 @@
+   #tablero {
+     display: grid;
+     grid-template-columns: repeat(8, 60px);
+     grid-template-rows: repeat(8, 60px);
+   }
+
+   .casilla {
+     width: 60px;
+     height: 60px;
+     font-size: 50px;
+     text-align: center;
+   }
+
+   .casillanegra {
+     background-color: gray;
+   }
+
+   .casillablanca {
+     background-color: yellow;
+   }
