@@ -26,8 +26,15 @@ function agregarElemento() {
 }
 
 function generarJSON() {
-    const liItem = document.querySelectorAll("#listado li")
-    console.log(liItem)
+    const liItem = document.querySelectorAll("li")
+    const listaItems = [...liItem]
+    let listaAux=[]
+    const objetoLI = new Object()
+    for (let elemento of listaItems) {
+        listaAux.push(objetoLI[elemento.textContent] = elemento.textContent)
+    }
+    console.log(listaAux)
+    
 }
 
 document.querySelector("#agregar").addEventListener("click", () => {
