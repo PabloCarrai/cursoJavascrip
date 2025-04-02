@@ -17,30 +17,21 @@ elementos de tipo objeto en javascript y posteriormente
 aplicar el metodo stringify a dicho arreglo)
 */
 
-function agregarElemento() {
-    const tarea = document.querySelector("#tarea")
-    const ul_lista = document.querySelector("#listado")
+const tareas = document.querySelector("#tareas")
+const tarea = document.querySelector("#tarea")
+document.querySelector("#agregar").addEventListener("click", () => {
     const li = document.createElement("li")
     li.textContent = tarea.value
-    ul_lista.appendChild(li)
-}
-
-function generarJSON() {
-    const liItem = document.querySelectorAll("li")
-    const listaItems = [...liItem]
-    let listaAux=[]
-    const objetoLI = new Object()
-    for (let elemento of listaItems) {
-        listaAux.push(objetoLI[elemento.textContent] = elemento.textContent)
-    }
-    console.log(listaAux)
-    
-}
-
-document.querySelector("#agregar").addEventListener("click", () => {
-    agregarElemento()
+    tareas.appendChild(li)
+    tarea.value = ""
 })
 
-document.querySelector("#generar") - addEventListener("click", () => {
-    generarJSON()
+document.querySelector("#generar").addEventListener("click", () => {
+    const todosLi = document.querySelectorAll("#tareas li")
+    const arreglo = []
+    todosLi.forEach(elemento => {
+        arreglo.push({ tarea: elemento.textContent })
+    })
+    const formatoJSON = JSON.stringify(arreglo)
+    alert(formatoJSON)
 })
