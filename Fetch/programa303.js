@@ -43,5 +43,5 @@ function recuperarTemperatura(prov){
 }
 
 function mostrarTemperatura(provincia){
-    document.querySelector("#resultado").textContent=`Provincia: ${provincia.provincia} su temperatura es ${provincia.temperatura}` 
+    document.querySelector("#resultado").textContent=`Provincia: ${provincia} su temperatura es ${provincia.temperatura}` 
 }
