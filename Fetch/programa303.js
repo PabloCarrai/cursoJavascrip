@@ -38,10 +38,10 @@ listaenlaces.forEach(enlace => {
 
 function recuperarTemperatura(prov){
     fetch(prov)
-    .then(respuesta => respuesta.json)
+    .then(respuesta => respuesta.json())
     .then(provincia => mostrarTemperatura(provincia))
 }
 
 function mostrarTemperatura(provincia){
-    document.querySelector("#resultado").textContent=`Provincia: ${provincia} su temperatura es ${provincia.temperatura}` 
+    document.querySelector("#resultado").textContent=`Provincia: ${provincia.provincia} su temperatura es ${provincia.temperatura}` 
 }
