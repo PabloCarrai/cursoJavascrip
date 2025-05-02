@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Agregar marca de agua a la imagen</h1>
+    <form id="formulario1" enctype="multipart/form-data">
+        <div>
+            <label for="texto">Texto de la marca de agua:</label>
+            <input type="texto" name="texto" id="texto">
+        </div>
+        <div>
+            <label for="imagen">Imagen:</label>
+            <input type="file" id="imagen" name="imagen" accept="image/jpeg">
+        </div>
+        <div id="imagenoriginal"></div>
+        <button type="submit">Enviar</button>
+        <div id="resultado"></div>
+    </form>
+    <script src="programa308.js"></script>
+
+</body>
+
+</html>
