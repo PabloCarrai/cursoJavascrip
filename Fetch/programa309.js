@@ -6,11 +6,15 @@ formulario1.addEventListener("submit", evento => {
         method: "POST",
         body: datosFormularios
     })
-    .then(respuesta=>respuesta.blob())
-    .then(blob=>{
-        const urlDelObjeto=URL.createObjectURL(blob)
-        const img=document.createElement("img")
-        img.src=urlDelObjeto
-        document.querySelector("#resultado").appendChild(img)
-    })
+        .then(respuesta => respuesta.blob())
+        .then(blob => {
+            const urlDelObjeto = URL.createObjectURL(blob)
+            const img = document.createElement("img")
+            img.src = urlDelObjeto
+            document.querySelector("#resultado").appendChild(img)
+        })
+        .catch(error => {
+            console.log(error.message)
+            document.querySelector("#resultado").textContent = "Problemas con el servidor"
+        })
 })

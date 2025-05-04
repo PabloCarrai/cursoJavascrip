@@ -1,0 +1,32 @@
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#codigo {
+    width: 90vw;
+    height: 70vh;
+}
+
+#validar {
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+#resultado {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.correcto {
+    color: green;
+    background-color: greenyellow;
+}
+
+.incorrecto {
+    color: red;
+    background-color: lightpink;
+}
